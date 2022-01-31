@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="1fac350b63f9cdd13f2a806c4b0df46c" category="summary">NetApp은 주기적으로 Converged Systems Advisor를 업데이트하여 새로운 기능, 개선 사항 및 버그 수정을 제공합니다.</block>
+  <block id="5a78e583f1007c774adcf85474a63773" category="doc">Converged Systems Advisor의 새로운 기능</block>
+  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 상호 운용성 매트릭스 툴</block>
+  <block id="65d73807e625a264821492e5d4d33a03" category="paragraph">FlexPod 구성 요소가 CSA 에이전트에서 지원되는지 확인하려면 을 참조하십시오<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block> (IMT).</block>
+  <block id="49f34bfa1825e63e5d97c99ba28bc215" category="section-title">2020년 7월 31일</block>
+  <block id="7f6806da5c10db2d4b7238eff6a3048e" category="paragraph">이번 릴리즈에는 다음과 같은 향상된 기능이 포함되어 있습니다.</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-xref"></block>
+  <block id="1d1dc74e655dfdea0a8ddb51d61996a5" category="list-text"><block ref="1f29bdfefe55e3bb65f3709ed5f0ba05" category="inline-xref-macro-rx"></block></block>
+  <block id="247614e0a41492cd6d4a3eeb5bca6333" category="list-text"><block ref="6a66f062dad1a3503157e2346c820d3c" category="inline-xref-macro-rx"></block></block>
+  <block id="e472339f84111c01e68b8257137a2b22" category="list-text"><block ref="56e3284e19e0b171a2242f210e14f6df" category="inline-xref-macro-rx"></block></block>
+  <block id="47d666e6df1427f5d1fd84e8f73f7230" category="section-title">스토리지 변경 감지(diffs)를 위한 새로운 기능</block>
+  <block id="217ff35f7d6b3469892b68928ba39705" category="paragraph">이제 스토리지 시스템에서 발생한 변경 사항을 감지할 수 있습니다. 변경 사항을 확인하려면 * Storage Inventory * 페이지에서 * View Configuration Difference * 를 클릭합니다. 그런 다음 이전 구성 데이터 및 시간을 선택합니다. 이 데이터는 최신 스토리지 구성과 비교됩니다. 변경 사항은 빠른 검토를 위해 강조 표시됩니다.</block>
+  <block id="d12b8ca6afcdf0d8044a82908222bbaf" category="section-title">클러스터 인터커넥트 스위치에 대한 확장 구성 보증</block>
+  <block id="f8046d35bf2bc5985759f821ad3a42eb" category="paragraph">Converged Systems Advisor 포털에서는 다음과 같은 모델의 ONTAP 클러스터 인터커넥트 스위칭의 지원 가능성을 모니터링하기 위해 구성 보증 검사가 확장되었습니다.</block>
+  <block id="1d8bdbbecd2a7992d9b2c5314cbc8da8" category="list-text">Cisco Nexus 3132Q-V</block>
+  <block id="21cefb007c9064d8adcf6c162e74b0bf" category="list-text">Cisco Nexus 3232C</block>
+  <block id="f8215ac1ab39569e2ede8f10c0a8405a" category="list-text">Cisco Nexus 92300YC</block>
+  <block id="85b827a1928acc59a94521cd88bfd8c3" category="section-title">NVMe 설계를 위한 최초 적용 범위</block>
+  <block id="fa5c0cce16f3f3a76bf624862e41bcbd" category="paragraph">ONTAP의 NVMe FlexPod 스토리지 설계 지원 가능성을 모니터링하기 위해 초기 구성 보증 검사가 추가되었습니다.</block>
+  <block id="51dfc4332789916d0d45402bb63b0740" category="summary">파트너 또는 리셀러로서 클라이언트 인프라의 배포를 검증할 수 있습니다.</block>
+  <block id="33dd6d0a84d49364e0252ed85d6c8008" category="doc">파트너 및 리셀러를 위한 배포를 검증합니다</block>
+  <block id="3e63df2d8130d6beb5aedd0b3a623455" category="paragraph">파트너 또는 리셀러는 대시보드에 표시되는 데이터를 검토하거나 상태 보고서를 생성하여 고객 인프라 구축을 확인할 수 있습니다.</block>
+  <block id="bf49a2af93184828c602f30985ab7b3e" category="list-title">시작하기 전에</block>
+  <block id="7cb24243c2f9dc81564e7c17ee96502a" category="list-text">고객 사이트에 새 FlexPod를 설치했거나 기존 FlexPod를 사용하고 있습니다.</block>
+  <block id="b828c89f48e5931a2f3e94a1a8a438bb" category="list-text">FlexPod 장치에서 계정을 만들었습니다.</block>
+  <block id="891db3e486cd7319b253443e598258a9" category="list-text">TACACS+ 서버를 사용하는 경우 CSA 사용자 권한을 부여했습니다.</block>
+  <block id="ea4bf3bfa43cc087b048001387e44202" category="list-text">에이전트를 다운로드하고 설치했습니다.</block>
+  <block id="c2a536bd136ebbff93df02f66cdfa216" category="inline-link-macro">에이전트를 설정하고 배포합니다</block>
+  <block id="6b604d4a2761364bcc54cdca23050f1f" category="paragraph">을 참조하십시오 <block ref="c493233aaa3279340a41c1d7e26d3e4f" category="inline-link-macro-rx"></block>.</block>
+  <block id="ab8671fbf18903d8d9040f241c26f3c4" category="list-text">에이전트에 대한 네트워킹을 설정하고 선택적으로 에이전트에 SSL 인증서를 설치했습니다.</block>
+  <block id="284f34a0af39b4a6009a8dd20ad8a40a" category="list-text">NetApp 자격 증명을 사용하여 고객이 포털에 인프라를 추가할 CI를 작성했습니다.</block>
+  <block id="74b63237fcb1f920a090dda1571975fa" category="inline-link-macro">포털에 인프라를 추가합니다</block>
+  <block id="c65ffe1d7cf10fedb9d945fa4f2747c0" category="paragraph">을 참조하십시오 <block ref="7fb29a0e0fb1c8ef914768025b76cc3b" category="inline-link-macro-rx"></block> CSA 포털에서 CI를 작성하려면</block>
+  <block id="c694cfbda1d422c56933f41ed2f42d12" category="list-text">필요에 따라 다른 사용자와 인프라를 공유했습니다.</block>
+  <block id="95928bd14e09a05a7b9ffbd1c4bcd1bd" category="paragraph">파트너와 리셀러는 고유한 NetApp 자격 증명을 사용하여 CSA 포털에 로그인하여 검증 프로세스를 시작합니다.</block>
+  <block id="a58c9e4d78fea3ec21310844f2a1a057" category="inline-link">Converged Systems Advisor 포털</block>
+  <block id="383cbb4f450bb9faa09fc9988b680b22" category="list-text">에 로그인합니다<block ref="eb9f0f7fac75ca880e49216162865e36" category="inline-link-rx"></block> NetApp 자격 증명을 사용합니다.</block>
+  <block id="f0e9f34f0828883f7e388c1c501c43be" category="list-text">[CI 선택]을 클릭한 다음 해당 고객의 해당 CI를 클릭하거나 검색 상자에 CI 이름을 입력합니다. CI에 대한 대시보드가 표시됩니다.</block>
+  <block id="2619c13f9c80221c7c784b18d2577797" category="paragraph">파트너 또는 리셀러는 다음 방법을 사용하여 고객의 인프라를 검증할 수 있습니다.</block>
+  <block id="aa33dea2c5b586714ddaff5b57479455" category="list-text">대시보드에서 인프라스트럭처의 다양한 측면을 확인할 수 있습니다.</block>
+  <block id="045a4a98e67e0ccc2e5fa0bc9433dc20" category="list-text">* 펌웨어 상호 운용성 * 은 설치된 소프트웨어 버전을 표시합니다. 자세한 내용을 보려면 각 제목을 클릭하십시오.</block>
+  <block id="ea2d295b0de68cb7f17155b911364d3f" category="list-text">* 지원 계약 * 은 계약이 만료되는 시점을 표시합니다. 자세한 내용을 보려면 * 세부 정보 보기 * 를 클릭하십시오.</block>
+  <block id="a2fecfd4fc9e1ff1687f192020980447" category="list-text">* 상담원 상태 * 는 모니터되는 장치를 포함하여 상담원에 대한 세부 정보를 표시합니다.</block>
+  <block id="d33175282e5e9dd3f4c93082e969592b" category="list-text">* 용량 * 은 디스크 공간, 네트워크 포트 및 UCS 블레이드 섀시의 활용률을 보여 줍니다. 각 활용도에 대한 세부 정보를 보려면 링크를 클릭하십시오.</block>
+  <block id="fa20339c0bb6d12c4a44d9897faea4bc" category="list-text">* 상태 * 는 인프라의 스토리지, 컴퓨팅, 네트워크 및 가상화 기능에 대한 규칙의 상태를 그래픽으로 표시합니다. 추가 세부 정보를 보려면 그래픽의 색상 영역을 클릭합니다.</block>
+  <block id="58f7fb86ef80cd20f35da08ef88659a7" category="list-text">* 규칙 요약 * 은 실패한 규칙 및 경고에 대한 경고를 표시합니다. 각 행의 왼쪽에 있는 화살표를 클릭하거나 장치 이름을 클릭하여 추가 세부 정보를 봅니다.</block>
+  <block id="6c43bac8f5c611f216fc4d5a14ab648e" category="list-text">작업 표시줄에서 * 보고서 -&gt; 상태 보고서 * 를 선택하여 자세한 통합 시스템 상태 보고서를 생성합니다. 브라우저에서 보거나 PDF 파일로 다운로드하거나 이메일로 공유할 수 있습니다.</block>
+  <block id="666dfdc92a9ae18acf492302e071d09e" category="summary">통합 인프라를 다른 사용자와 공유하는 경우 읽기 전용, 쓰기 또는 소유자 권한을 제공할 수 있습니다.</block>
+  <block id="f4040f71a7d553f2519487070892b115" category="doc">사용자 역할</block>
+  <block id="f9736c983077f8f7ecce4803263c835c" category="paragraph">통합 인프라를 다른 사용자와 공유하는 경우 읽기 전용, 쓰기 또는 소유자 권한을 제공해야 합니다.</block>
+  <block id="08a7773f23ba1fab2a1f9f0cc4fd2242" category="paragraph">다음 표에서는 각 사용자 역할이 수행할 수 있는 작업을 보여 줍니다.</block>
+  <block id="eaeb30f9f18e0c50b178676f3eaef45f" category="cell">작업</block>
+  <block id="d8bd6e60adcc01ce20f509ea6800de8f" category="cell">읽기 전용</block>
+  <block id="1129c0e4d43f2d121652a7302712cff6" category="cell">쓰기</block>
+  <block id="b6f4a2ec6356bbd56d49f2096bf9d3d3" category="cell">소유자</block>
+  <block id="5c2cfa1c6483a2055e455e9fe917150c" category="cell">시스템을 봅니다</block>
+  <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">예</block>
+  <block id="7a873aab992e5e0739ab89574668b232" category="cell">시스템 이름을 업데이트합니다</block>
+  <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="cell">아니요</block>
+  <block id="39bb7ebe2d2851afbd84381cb85b6bab" category="cell">지원 계약 세부 정보를 업데이트합니다</block>
+  <block id="3fa7e1f59dbad21ae04cb45eb44902ab" category="cell">데이터 수집 간격을 편집합니다</block>
+  <block id="12e7c44e5b7cb54e6ce9a17051959801" category="cell">새 데이터 수집을 요청합니다</block>
+  <block id="e8c371197783251f857e86da91b8fe35" category="cell">시스템을 공유합니다</block>
+  <block id="bd8040acd9ca680be2aa7f93ebb36e14" category="cell">예, 읽기 전용 또는 쓰기 액세스</block>
+  <block id="e89e5b89aea3717ddc42c434fe92255b" category="cell">예, 읽기 전용, 쓰기 또는 소유자 액세스 가능</block>
+  <block id="3c13d4713cd753567d8d7ae5dbf2a445" category="cell">시스템의 구성 요소를 수정합니다</block>
+  <block id="be62ee4908c8d3dca05c47093c17858d" category="cell">시스템을 삭제합니다</block>
+  <block id="fead888004a92d6dfa05d65937791d7a" category="summary">포털에 인프라를 추가합니다.</block>
+  <block id="09482af74c0fb235cb990c21fd64ac8a" category="paragraph">에이전트를 구성한 후 각 FlexPod 디바이스에 대한 정보를 Converged Systems Advisor 포털로 전송합니다. 이제 포털에서 이러한 각 구성 요소를 선택하여 모니터링할 수 있는 전체 인프라를 생성해야 합니다.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
+  <block id="6143810a5758d40ca944c87e723c2336" category="list-text">에 있습니다<block ref="eb9f0f7fac75ca880e49216162865e36" category="inline-link-rx"></block>에서 * 인프라 추가 * 를 클릭합니다.</block>
+  <block id="b6fc266df6b5347cf745a3bb726ee8fb" category="list-text">다음 단계를 완료하여 인프라를 추가합니다.</block>
+  <block id="e5995527f37c1280c19b1f208371dc88" category="list-text">인프라에 대한 기본 세부 정보를 입력합니다.</block>
+  <block id="3f1895854fcfd3f43e655e98f5e23785" category="paragraph">Cisco ACI 인프라를 추가하려는 경우, FlexPod에서 Cisco UCS Manager를 사용하는지 묻는 메시지에 * 예 * 를 입력하고, FlexPod에 포함된 네트워크 구성 유형을 묻는 메시지가 표시되면 * ACI 모드에서 * Nexus 스위치를 입력합니다.</block>
+  <block id="b0b7f31250da7bf765e10779d0365272" category="list-text">FlexPod 구성에 포함된 각 장치를 선택합니다.</block>
+  <block id="c7151a24306478a168450ab965978056" category="admonition">장치를 선택하면 자격 열에 * 자격 * 또는 * 자격 없음 * 이 표시됩니다. 다른 상담원이 장치를 발견한 경우 해당 장치는 사용할 수 없습니다.</block>
+  <block id="5ccd3ae8019aaa20043decdb88b02c77" category="list-text">필요한 구성 요소를 모두 선택하면 각 장치 유형 옆에 녹색 확인 표시가 나타납니다.</block>
+  <block id="a00e5d02f688427a8d0d4d44e6ca5323" category="inline-image-macro">표에 선택된 4개의 장치와 각 장치에 대한 녹색 확인 표시가 나타나 필요한 구성 요소를 모두 선택했음을 나타냅니다.</block>
+  <block id="619835ed3a90c1cb330d44e60f8274be" category="paragraph"><block ref="619835ed3a90c1cb330d44e60f8274be" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ab6978789cc8f83bdbe9c52865c923d2" category="inline-link-macro">Converged Systems Advisor 일련 번호</block>
+  <block id="8cbaf181bdfa1c67af784fdd2194eaa5" category="list-text">을 추가합니다 <block ref="f595728f50d76ab728ff7bd8910a61b2" category="inline-link-macro-rx"></block> 키 기능을 잠금 해제하려면</block>
+  <block id="797a00180da92226080260f480aefccc" category="list-text">요약 내용을 검토하고 라이센스 계약 조건에 동의하고 * 인프라 추가 * 를 클릭합니다.</block>
+  <block id="1d6a8b8a7a248d55ebc08413d1f0351f" category="admonition">파트너 또는 리셀러인 경우 라이센스 또는 일련 번호 추가 단계를 건너뛰고 * 인프라 추가 * 를 클릭하면 됩니다.</block>
+  <block id="4bf1a4af8a8cb8351b634079b83482c9" category="paragraph">Converged Systems Advisor는 포털에 인프라를 추가하고 각 디바이스에 대한 구성 데이터를 수집하기 시작합니다. 상담원이 장치에서 정보를 수집할 때까지 몇 분 정도 기다립니다.</block>
+  <block id="8b130f5642a0375b57405ab988e2f3c8" category="section-title">다른 사용자와 인프라 공유</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp Support 사이트</block>
+  <block id="b68d29191b4bf17413d0de2fb367a174" category="paragraph">통합 인프라를 공유하면 다른 사람이 Converged Systems Advisor 포털에 로그인해서 구성을 보고 모니터링할 수 있습니다. 인프라를 공유하는 사람에게 이 있어야 합니다<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block> 계정.</block>
+  <block id="b757778aa184cb17827f163a931435c8" category="list-text">Converged Systems Advisor 포털에서 * 설정 아이콘 * 을 클릭한 다음 * 사용자 * 를 클릭합니다.</block>
+  <block id="1334f18240a22161ba3220b536dafca8" category="inline-image-macro">사용자 페이지에 대한 링크가 포함된 설정 메뉴를 표시합니다.</block>
+  <block id="3309334356038ffefd55e44fd5bdf676" category="paragraph"><block ref="3309334356038ffefd55e44fd5bdf676" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3b855a8cec281d1ddcd757db875bf3d" category="list-text">User 테이블에서 구성을 선택합니다.</block>
+  <block id="b7a1706b38d181dd429f28a8d8b01a9a" category="inline-image-macro">인프라 공유 아이콘입니다.</block>
+  <block id="b6dc779a70da38c6a44e7e3ac6b8c105" category="list-text">를 클릭합니다 <block ref="1298afe1dc7b9f75c44b6fc7c17da58f" category="inline-image-macro-rx" type="image"></block> 아이콘을 클릭합니다.</block>
+  <block id="08db01e9434b8967d82716afd99a12da" category="list-text">제공할 사용자 역할 옆에 하나 이상의 이메일 주소를 입력합니다.</block>
+  <block id="38d0e6accfd7998dd4374f37ab584784" category="inline-link-macro">각 역할 간의 차이점을 확인합니다</block>
+  <block id="c8b1c03512472d09b840b43806763819" category="paragraph"><block ref="9a80d53ca716b5bdc550d031e48e1f7b" category="inline-link-macro-rx"></block>.</block>
+  <block id="877183fb9a9e175360206e3b5c15f472" category="admonition">첫 번째 이메일 주소 다음에 * Enter * 를 눌러 단일 필드에 여러 이메일 주소를 입력할 수 있습니다.</block>
+  <block id="2939fe6c5b77679da5984bbe596d4b9a" category="list-text">보내기 * 를 클릭합니다.</block>
+  <block id="27d99b7c3e654fa561ca825398cd698b" category="paragraph">사용자는 Converged Systems Advisor 액세스에 대한 지침이 포함된 이메일을 받아야 합니다.</block>
+  <block id="3b2546b817f28d703c31d7aed00be35b" category="summary">Converged Systems Advisor를 사용하는 동안 문제가 발생하는 경우 다음 정보를 참조하여 문제를 해결할 수 있습니다.</block>
+  <block id="463cc44c201d5ae719550157ac2a413b" category="doc">Converged Systems Advisor 문제 해결</block>
+  <block id="428d0d725fffa01833d1c1657a9cc053" category="section-title">웹 브라우저를 통해 상담원에게 연결할 수 없습니다</block>
+  <block id="1bcbf11c77c23773c9cd5195b4d8ac35" category="paragraph">웹 브라우저를 통해 에이전트에 연결하여 FlexPod 장치 검색을 구성해야 합니다. 웹 브라우저를 통해 연결할 수 없는 경우 상담원이 csa.netapp.com 에 대한 아웃바운드 인터넷 연결을 가지고 있는지 확인합니다. 인터넷 연결 없이는 Agent 애플리케이션을 시작할 수 없으므로 웹 인터페이스에 액세스할 수 없습니다.</block>
+  <block id="8304febf8351132b2b9a821976ba71e7" category="inline-link-macro">에이전트 가상 머신을 사용하도록 구성합니다</block>
+  <block id="188d24abd8a88712d74796685ffaa46e" category="paragraph">인터넷 액세스에 프록시 서버가 필요한 경우 <block ref="d49ad811ca1415593c51e7dfbe6a5e10" category="inline-link-macro-rx"></block>.</block>
+  <block id="7b88f77ca44f1eb0b8273fa36ebbb216" category="section-title">상담원이 장치를 검색할 수 없습니다</block>
+  <block id="d80389ce860d30c8106b32799e3e3061" category="paragraph">상담원이 FlexPod 장치를 검색할 수 없는 경우 다음을 확인하십시오.</block>
+  <block id="52a6ce76970c0a52517ae2b898732a02" category="list-text">에이전트가 각 FlexPod 장치에 대해 열려 있는지 확인합니다.</block>
+  <block id="60bf94fc90364efe96c1ada472fecdd1" category="paragraph">확인하려면 에이전트에서 각 장치를 Ping합니다.</block>
+  <block id="286407c3fa4f709f217f24946aae87f3" category="list-text">로컬 네트워크가 172.17.x.x 서브넷을 사용 중인지 확인합니다.</block>
+  <block id="eb093e4c122374d8c203c9c40f0afc9a" category="paragraph">에이전트는 내부적으로 172.17.x.x 서브넷을 사용합니다. 로컬 네트워크가 동일한 서브넷을 사용하는 경우 에이전트의 서브넷을 변경해야 합니다.</block>
+  <block id="f28c30feee14e0e3a4891672e11903c9" category="list-text">에이전트의 가상 머신 콘솔에 로그인합니다.</block>
+  <block id="44c57355f2137f5740ef1cdb5f9c7035" category="paragraph">기본 사용자 이름은 CSA이며 기본 암호는 NetApp입니다. 로그인한 후 기본 암호를 변경해야 합니다.</block>
+  <block id="8ab2a3d62ebd7af039152e14f12d58ac" category="list-text">다음 내용으로 파일 '/etc/docker/daemon.json'을 추가합니다.</block>
+  <block id="ea680b088905eba82105c090c1d63e93" category="paragraph">BIP 주소는 충돌하지 않는 IP 주소일 수 있습니다. 172 범위에 있을 필요는 없습니다.</block>
+  <block id="c93bb56c92330fc7f15bdb5f83e6cebc" category="list-text">가상 머신을 재부팅합니다.</block>
+  <block id="b36869091223af043b61346977f2e3d7" category="section-title">SSH를 사용하여 에이전트 VM에 연결할 수 없습니다</block>
+  <block id="ce5f0b7deafe1859b1b53204e08d13e5" category="paragraph">에이전트 VM에 대한 SSH는 기본적으로 해제되어 있습니다.</block>
+  <block id="a3902f858969f391d50709c249064a7c" category="list-text">SSH를 시작하려면 vCenter의 콘솔을 통해 에이전트 VM에 로그인하고 다음 명령을 실행합니다.</block>
+  <block id="44a23a7131a2e87264023226122897b4" category="paragraph">'SUDO su'의 'stemctl start ssh'입니다</block>
+  <block id="1f697227c3ddcc4288f43237b393d856" category="list-text">SSH가 설정되어 있는지 확인하려면 다음 명령을 실행합니다.</block>
+  <block id="5285394e5834a03059adcf3a5c96ba35" category="paragraph">'stemctl is-enabled ssh'를 선택합니다</block>
+  <block id="efbf3282c28d88b8f4ac719755b8f812" category="list-text">에이전트 VM에서 SSH의 상태를 확인하려면 다음 명령을 실행합니다.</block>
+  <block id="e8088ad97b5eacf66e0007a17928a4b0" category="paragraph">'stemctl status ssh'입니다</block>
+  <block id="7153dae840d94fd333315e2381595ab1" category="list-text">재부팅 후에도 SSH가 유지되도록 하려면 다음 명령을 실행합니다.</block>
+  <block id="d334971ac8733188439f1850f5f8bfc3" category="paragraph">'SUDO su's stemctl enable ssh'를 선택합니다</block>
+  <block id="fea69bb2f9adb3acd9912f4b8845328f" category="summary">Converged Systems Advisor를 시작하려면 환경을 준비해야 합니다.</block>
+  <block id="ebd4d70d369b168865892524fb385472" category="doc">환경을 준비합니다</block>
+  <block id="0f7a50e7e27ae4b8a6ada4185d771634" category="paragraph">Converged Systems Advisor를 시작하려면 환경을 준비해야 합니다. 환경 준비에는 구성을 확인하고 NetApp Support 사이트 계정에 등록하는 작업이 포함됩니다.</block>
+  <block id="9c76809ba74f487564d81d73527b3fe2" category="inline-link-macro">Converged Systems Advisor의 작동 방식에 대해 알아보십시오</block>
+  <block id="ebd37a66dc59778d2804027afa1f58a5" category="paragraph">원하는 대로 할 수 있습니다 <block ref="771043ac6a9633eb387c627af684f340" category="inline-link-macro-rx"></block> 시작하기 전에</block>
+  <block id="acae4ba9c958f18bf1b49e96b4af9738" category="list-text">에서 지원을 확인합니다<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>:</block>
+  <block id="41a3fbf39e4637ff6ae392a274957047" category="list-text">Converged Systems Advisor가 FlexPod 통합 인프라를 지원하는지 확인합니다.</block>
+  <block id="68bbe7c77d8372a4b1f52aca16c1d943" category="list-text">Converged Systems Advisor 에이전트에 대해 지원되는 VMware ESXi 서버가 있는지 확인합니다.</block>
+  <block id="bc7fdfa6747d9e82b4939e6908125106" category="paragraph">대역폭 사용을 최소화하려면 FlexPod 통합 인프라와 동일한 데이터 센터에 에이전트를 설치하는 것이 좋습니다.</block>
+  <block id="5ac5af6f1a6d7ab3113bf48bce81f5b0" category="list-text">에이전트를 설치하는 네트워크에서 구성 요소 간의 연결이 허용되는지 확인합니다.</block>
+  <block id="0c44c7a8e009741e355249ae724ea5bf" category="list-text">구성 데이터를 수집할 수 있도록 에이전트는 각 FlexPod 구성 요소에 연결되어 있어야 합니다.</block>
+  <block id="dbaf3f863e61397546349245ecfbdfa0" category="list-text">또한 상담원은 다음 끝점과 통신하기 위해 아웃바운드 인터넷 연결이 필요합니다.</block>
+  <block id="6464743ee6a2ff8ae3e8cab2528f5a6e" category="list-text">csa.netapp.com</block>
+  <block id="8df6590d0d74f73adbfe5f8379f58893" category="list-text">docker.com</block>
+  <block id="0b505db73d92bac18356fa3feb3cf7e3" category="list-text">Docker.IO를 참조하십시오</block>
+  <block id="f15b13a8a13824d20ee27e7fa1a637a9" category="list-text">로 이동합니다<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block> 계정이 없는 경우 계정을 등록합니다.</block>
+  <block id="b3b0d32e083781e38eb5aa3923fbd5b8" category="paragraph">에이전트를 구성하고 포털에 액세스하려면 NetApp Support 사이트 계정이 필요합니다.</block>
+  <block id="84337504add563b4ec594010634eff77" category="summary">Converged Systems Advisor의 기능을 잠금 해제하려면 라이센스가 필요합니다. 각 FlexPod 통합 인프라에 대한 몇 가지 라이센스 옵션 중에서 선택할 수 있습니다.</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="doc">라이센싱</block>
+  <block id="794df3791a8c800841516007427a2aa3" category="cell">라이센스</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="cell">피처</block>
+  <block id="6f1bf85c9ebb3c7fa26251e1e335e032" category="cell">약관</block>
+  <block id="9654f0c8da8f367f3742a2c03f71cdd5" category="cell">라이센스가 없습니다</block>
+  <block id="6c05ba238f74e7e5841e247c02782965" category="paragraph">제품 기능을 보여 주는 제한적 버전:</block>
+  <block id="13fb576ab15b58ff9f2c42c2ca9fba59" category="list-text">24시간 평가 기간 동안 FlexPod 구성 모니터링</block>
+  <block id="8b88eb36420b3734f1a32cc92729f737" category="list-text">FlexPod 모범 사례 규정 준수를 확인할 수 있는 상태 대시보드</block>
+  <block id="5c94f844e0c2aa342c0fc3c39b222f44" category="list-text">제한된 인벤토리 및 수정(라이선스 버전으로 제공)</block>
+  <block id="b24ce0cd392a5b0b8dedc66c25213594" category="list-text">무료</block>
+  <block id="41108d73c7c8c7e5306ab8252c1fee46" category="list-text">1회 사용(24시간)</block>
+  <block id="eb6d8ae6f20283755b339c0dc273988b" category="cell">표준</block>
+  <block id="d812b7d7941c1b7e96f8c371e1b23668" category="list-text">FlexPod 구성을 지속적으로 모니터링합니다</block>
+  <block id="7d841c4ea708b59b4c75cfe062d368ff" category="list-text">컴퓨팅, 네트워크, 스토리지 및 하이퍼바이저를 위한 펌웨어 상호 운용성</block>
+  <block id="04d40b337323b71473e55502652986f0" category="list-text">변경 사항을 파악하고 구성 드리프트를 방지하는 라이프사이클 관리 도구입니다</block>
+  <block id="7aedb869ed87ea13dba5ebd6c35b375a" category="list-text">고급 문제 해결을 위한 상세 인벤토리 및 시스템 다이어그램</block>
+  <block id="3f0ea683d61b7d4cab7f17b7ca918290" category="list-text">NetApp에서 직접 제공하는 지원</block>
+  <block id="8a8d17b8bc23dd596aa82fa82f407a6e" category="paragraph">구독 기반 라이센스:</block>
+  <block id="ecd2535bf841c57eafcac599e5fb523e" category="list-text">최소 12개월</block>
+  <block id="b9b5754ccad548be3f9f4b58d1234564" category="list-text">최대 60개월</block>
+  <block id="8d5e7e72f12067991186cdf3cb7d5d9d" category="cell">프리미엄</block>
+  <block id="9c014c91b2b7fffa5bffd53c69726d82" category="paragraph">표준 라이센스에 포함된 모든 기능과 함께 다음 기능이 제공됩니다.</block>
+  <block id="c5562ce2e22a86c247849904ecef3dc8" category="list-text">보고</block>
+  <block id="ba4e88caeeb0ee1bb85ccef6dc858be5" category="paragraph">FlexPod 상태, 상호 운용성 및 인벤토리에 대한 포괄적인 실시간 보고</block>
+  <block id="3ee2dd0d0cd3925e0e213578441f88ac" category="list-text">알림 및 알림</block>
+  <block id="b861373e1977a76436240aebcf8a34e0" category="paragraph">구성 상태 및 상태 변경에 대한 정기적인 알림</block>
+  <block id="19e149b86fe87374d6b13ab3c1aa59c1" category="summary">VMware ESXi 서버에 Converged Systems Advisor 에이전트를 구축합니다.</block>
+  <block id="299c9bc2f2558e7ca5b14d172d438580" category="doc">에이전트를 설정하고 배포합니다</block>
+  <block id="5cd2b1880169837e25d4f1460662faad" category="paragraph">VMware ESXi 서버에 Converged Systems Advisor 에이전트를 구축해야 합니다. 에이전트는 FlexPod 통합 인프라의 각 장치에 대한 구성 데이터를 수집하여 해당 데이터를 Converged Systems Advisor 포털로 전송합니다.</block>
+  <block id="57750ce19329b425174cbc93e6a43e62" category="list-text"><block ref="0bf5e97b243054f72da9a63ad8890d33" category="inline-xref-macro-rx"></block></block>
+  <block id="2214fd2fdaa4608476ac6f7c414cfc1c" category="list-text"><block ref="970f7963be3b539669866471b49eb842" category="inline-xref-macro-rx"></block></block>
+  <block id="b2dad7356075346268f85e3b33bd7d98" category="list-text"><block ref="9707b20d628746abe74ac98ac3cf317d" category="inline-xref-macro-rx"></block></block>
+  <block id="78bdb79e38127e38c9f36e8fa078ac0f" category="list-text"><block ref="73d26a40aa0069c926cf11f2b34f94d9" category="inline-xref-macro-rx"></block></block>
+  <block id="e9df7b526871e1af66c58d80e0a5111a" category="section-title">에이전트를 다운로드하고 설치합니다</block>
+  <block id="3e29de7ce6b52ed5b2efb0ccd6d814af" category="paragraph">VMware ESXi 서버에 Converged Systems Advisor 에이전트를 구축해야 합니다.</block>
+  <block id="a1808424c169f18629e29f0d62f1fcdb" category="paragraph">대역폭 사용을 최소화하려면 FlexPod 구성과 동일한 데이터 센터에 있는 VMware ESXi 서버에 에이전트를 설치해야 합니다. 에이전트는 HTTPS 포트 443을 사용하여 구성 데이터를 Converged Systems Advisor 포털로 전송할 수 있도록 각 FlexPod 구성 요소와 인터넷에 연결되어 있어야 합니다.</block>
+  <block id="5731b3791a0c926c2e0d4fd691c8b8ae" category="paragraph">에이전트는 OVF(Open Virtualization Format) 템플릿을 사용하여 VMware vSphere 가상 머신으로 구축됩니다. 이 템플릿은 vCPU 1개와 RAM 2GB(여러 대 이상의 FlexPod 시스템에 더 많은 메모리가 필요할 수 있음)가 포함된 Debian 기반입니다.</block>
+  <block id="2f5f4104d2369384772742794186a5ee" category="list-text">에이전트 다운로드:</block>
+  <block id="c45ae599d04d2b26de9c536e2bd168db" category="list-text">에 로그인합니다<block ref="eb9f0f7fac75ca880e49216162865e36" category="inline-link-rx"></block>.</block>
+  <block id="283dd3a1146b22159cc711daf4b83a86" category="list-text">Download Agent * 를 클릭합니다.</block>
+  <block id="763956d175b6f4a7857600adc356352a" category="list-text">VMware ESXi 서버에 OVF 템플릿을 구축하여 에이전트를 설치합니다.</block>
+  <block id="c46511864b55b0df238295aa98452ec4" category="paragraph">일부 VMware 버전에서는 OVF 템플릿을 구축할 때 경고가 표시될 수 있습니다. 가상 머신은 최신 버전의 vCenter에서 개발되었으며 이전 버전의 하드웨어 호환성으로 인해 경고가 발생할 수 있습니다. 경고를 승인하기 전에 구성 옵션을 검토한 후 설치를 진행해야 합니다.</block>
+  <block id="a0a3282ed6dd2a46a69cacb4c53cd598" category="section-title">에이전트에 대한 네트워킹을 설정합니다</block>
+  <block id="329cd1f5e59ba758295de91326be0e01" category="paragraph">에이전트 및 FlexPod 장치 간의 통신 및 에이전트와 여러 인터넷 엔드포인트 간의 통신을 활성화하려면 에이전트 가상 시스템에서 네트워킹이 올바르게 설정되어 있는지 확인해야 합니다. 시스템이 초기화될 때까지 가상 머신에서 네트워킹 스택이 비활성화됩니다.</block>
+  <block id="724bb0e043ebedd4c528a2ad4d7b0adb" category="list-text">아웃바운드 인터넷 연결을 통해 다음 끝점에 액세스할 수 있는지 확인합니다.</block>
+  <block id="42f326fc7913ed803404dc30e968aa06" category="list-text">VMware vSphere Client를 사용하여 에이전트의 가상 머신 콘솔에 로그인합니다.</block>
+  <block id="bdad4c067bbbc6dec75356d1c530686d" category="paragraph">기본 사용자 이름은 CSA이며 기본 암호는 NetApp입니다.</block>
+  <block id="d59729c9e3b22da01a8010c4c446e0c7" category="admonition">보안을 위해 SSHD는 기본적으로 비활성화되어 있습니다.</block>
+  <block id="95f7e4a76daadedf42ba81d66ec78941" category="list-text">메시지가 나타나면 기본 암호를 변경하고 암호를 기록해 둡니다. 암호를 복구할 수 없기 때문입니다.</block>
+  <block id="17b9e6bd62d19982683ebb767f9317b1" category="paragraph">암호를 변경하면 시스템이 재부팅되고 에이전트 소프트웨어가 시작됩니다.</block>
+  <block id="11dfdf5f669d5123bb4032af68545aba" category="list-text">서브넷에서 DHCP를 사용할 수 없는 경우 표준 Debian 도구를 사용하여 고정 IP 주소와 DNS 설정을 구성한 다음 에이전트를 재부팅합니다.</block>
+  <block id="a0e6a5fd5358310f791eeb5382cc260d" category="inline-link-macro">자세한 지침을 보려면 여기를 클릭하십시오</block>
+  <block id="86259f9852f91497e3e1d2fd3d115bfc" category="paragraph"><block ref="675b653dc4a3b6331b86bde725aa69f3" category="inline-link-macro-rx"></block>.</block>
+  <block id="df4283c930edcdb46c45530338d7eaf6" category="inline-link">Man 페이지</block>
+  <block id="6a8cb1a182d8afbf0f4cc04515d5716a" category="paragraph">Debian 가상 머신의 네트워크 구성은 DHCP로 기본 설정됩니다. NetworkManager가 설치되어 있고 nmtui 명령에서 시작할 수 있는 텍스트 사용자 인터페이스를 제공합니다( 참조)<block ref="95715ffe5b6c7600e8f0d16b6b6064ce" category="inline-link-rx"></block> 자세한 내용 참조).</block>
+  <block id="f93e60fa5e03356de106feb392f31b27" category="inline-link">데비안 위키의 네트워크 구성 페이지</block>
+  <block id="fc239c96114ecfe7779c0eda49dec747" category="paragraph">네트워킹에 대한 추가 도움말은 을 참조하십시오<block ref="9f18f481b02a08531df854d052dfd37c" category="inline-link-rx"></block>.</block>
+  <block id="48aa8739f4f4121f8aa3ae2d609c08c2" category="list-text">보안 정책에 따라 에이전트가 FlexPod 디바이스 및 다른 네트워크와 통신하도록 한 네트워크에 있어야 하고, 다른 네트워크가 인터넷과 통신하도록 지시된 경우 vCenter에 두 번째 네트워크 인터페이스를 추가하고 올바른 VLAN 및 IP 주소를 구성하십시오.</block>
+  <block id="09c910e2b610ff827c810320a5bb1bf1" category="list-text">인터넷 액세스에 프록시 서버가 필요한 경우 다음 명령을 실행합니다.</block>
+  <block id="9c161583590077a38147451093c8e3b7" category="paragraph">'SUDO CSA_SET_PROXY'입니다</block>
+  <block id="a42c5a3e72e626b0102050296595b5f6" category="paragraph">명령은 두 개의 프롬프트를 생성하고 프록시 항목에 필요한 형식을 표시합니다. 첫 번째 프롬프트를 사용하여 HTTP 프록시를 지정할 수 있고 두 번째 프롬프트에서는 HTTPS 프록시를 지정할 수 있습니다.</block>
+  <block id="6078750bfcc811063bfb2a2ceaba55e2" category="paragraph">아래 HTTP 프록시를 'http://user:password@proxy-server:proxy-port` 형식으로 입력합니다</block>
+  <block id="565c0cc9c79be5003d947c57c93b6855" category="paragraph">인터넷 액세스에 HTTP 프록시가 필요하지 않으면 공백으로 둡니다.</block>
+  <block id="264420168f7168ebab16ddf30346c7b2" category="list-text">네트워크가 가동되면 시스템이 업데이트되고 시작될 때까지 약 5분 정도 기다립니다.</block>
+  <block id="421c75e0d71b645e17e0c5021c658416" category="paragraph">상담원이 작동 중일 때 브로드캐스트 메시지가 콘솔에 나타납니다.</block>
+  <block id="babc70026f560cfa0d6c61295c5225d6" category="list-text">에이전트에서 다음 CLI 명령을 실행하여 연결을 확인합니다.</block>
+  <block id="a2daedf39c86073e7c4cd232bfbd100e" category="paragraph">명령이 실패하면 DNS 설정을 확인합니다. 에이전트 가상 머신은 유효한 DNS 구성과 csa.netapp.com 연결 기능이 있어야 합니다.</block>
+  <block id="427cb0ec1b7b1f159c664b2e33c2ab42" category="section-title">에이전트에 SSL 인증서를 설치합니다</block>
+  <block id="ffaa787fcbf7a79905f4077f8a8c365a" category="paragraph">선택 사항: 필요한 경우 에이전트에 SSL 인증서를 설치합니다.</block>
+  <block id="ec184748fa512f7e90e12fac5d2da94f" category="paragraph">가상 시스템이 처음 부팅될 때 에이전트는 자체 서명된 인증서를 만듭니다. 필요한 경우 해당 인증서를 삭제하고 고유한 SSL 인증서를 사용할 수 있습니다.</block>
+  <block id="befa1cf57e6e8a9ac1352c5e81a8ed05" category="paragraph">Converged Systems Advisor는 * OpenSSL 버전 1.0.1 이상 * TLS 1.1 및 TLS 1.2와 호환되는 모든 암호화를 지원합니다</block>
+  <block id="146553325b51e54bcf0792d1cf4e39a1" category="list-text">'/opt/ssa/certs'로 이동합니다</block>
+  <block id="760317b4e4066ad5978fae4a5b173735" category="list-text">상담원이 만든 자체 서명된 인증서를 삭제합니다.</block>
+  <block id="3f40ebc6677d56438abc875acca060ee" category="list-text">SSL 인증서를 붙여 넣습니다.</block>
+  <block id="9ead19f5a06efd01e02fd83050e576f0" category="list-text">가상 머신을 다시 시작합니다.</block>
+  <block id="92a159a5819ea2a230346fe9a8561216" category="section-title">에이전트를 구성하여 FlexPod 인프라를 검색합니다</block>
+  <block id="a93da1113a93232875b14fb26869da02" category="paragraph">FlexPod 통합 인프라의 각 장치에서 구성 데이터를 수집하도록 에이전트를 구성해야 합니다. 구성 데이터를 수집하려면 자격 증명이 필요합니다. 에이전트를 구성할 때 자격 증명을 제공해야 합니다.</block>
+  <block id="d6649c6eb0292890a97eb268a7e94af9" category="list-text">웹 브라우저를 열고 에이전트 가상 머신의 IP 주소를 입력합니다.</block>
+  <block id="bf8b4438caf3a61a994abe5231b39201" category="list-text">고객의 NetApp Support 사이트 계정 사용자 이름 및 암호를 사용하여 상담원에게 로그인합니다.</block>
+  <block id="e6b0b23d462e5d837da86ce23da0f93d" category="admonition">고객 대신 CSA의 라이선스 버전을 배포하는 모든 파트너의 경우 이 단계에서 고객 계정을 사용하는 것이 중요합니다(NetApp 지원 및 기록 관리).</block>
+  <block id="7608393b2da1bb3b5d734c44470e02be" category="list-text">에이전트가 검색할 FlexPod 장치를 추가합니다.</block>
+  <block id="fd6f3efc498de1b121d4286a7865dda4" category="paragraph">두 가지 옵션이 있습니다.</block>
+  <block id="1364b2acff150024c37f0452146b6d84" category="list-text">FlexPod 장치에 대한 세부 정보를 하나씩 입력하려면 * 장치 추가 * 를 클릭합니다.</block>
+  <block id="c750134cf0be6481ba8ff6528300b71a" category="list-text">장치 가져오기 * 를 클릭하여 모든 장치에 대한 세부 정보가 포함된 CSV 템플릿을 작성하고 업로드합니다.</block>
+  <block id="458a6d581be6d26cc492ea80b79c1cd9" category="paragraph">참고: * 사용자 이름과 암호는 이전에 장치에 대해 생성한 계정에 대한 것입니다. * UCS 환경에 LDAP 사용자 관리가 구성되어 있는 경우 사용자 이름 앞에 사용자의 도메인을 추가해야 합니다. 예: local\csA-readonly</block>
+  <block id="ee74ecd3efa95b8078ceb5dc392b12fd" category="inline-image-macro">각 필수 장치를 상태 열에 녹색 확인 표시로 표시합니다.</block>
+  <block id="ed3bafb82e73ad72d2174d40ff5e566e" category="paragraph">FlexPod 인프라의 각 장치가 표에 확인 표시를 하여 표시되어야 합니다.<block ref="7e0f6190afd11994fbf2acbbb620f788" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7a49965d9cfff28dae6c97f9b420a932" category="summary">NetApp Converged Systems Advisor는 FlexPod 통합 인프라 구현을 검증, 모니터링 및 최적화하여 비즈니스 애플리케이션에 최고의 성능과 가용성을 보장합니다.</block>
+  <block id="04fbad68af42342b74d64c44c053aeb6" category="doc">Converged Systems Advisor</block>
+  <block id="1fde0727b387439572ade83eecff4f68" category="section-title">새로운 기능 알아보기</block>
+  <block id="9019b4a8afd649f588dde381d9d2c1cb" category="inline-link-macro">Converged Systems Advisor의 새로운 기능</block>
+  <block id="cfaf20a40a53abf04e998d745a541106" category="paragraph"><block ref="cfaf20a40a53abf04e998d745a541106" category="inline-link-macro-rx"></block></block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="section-title">시작하십시오</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="inline-link-macro">빠른 시작</block>
+  <block id="30974525ad850301dc82692fbf1875de" category="paragraph"><block ref="30974525ad850301dc82692fbf1875de" category="inline-link-macro-rx"></block></block>
+  <block id="11a009d53ca4078eeb1d7f09553e18d5" category="section-title">Converged Systems Advisor에 대해 자세히 알아보십시오</block>
+  <block id="3b878279a04dc47d60932cb294d96259" category="inline-link-macro">개요</block>
+  <block id="433e74eb36d7b9b81d0daefd838e9fc3" category="list-text"><block ref="433e74eb36d7b9b81d0daefd838e9fc3" category="inline-link-macro-rx"></block></block>
+  <block id="2d242bb36ec91b32005f9296ff03a912" category="inline-link-macro">있습니다</block>
+  <block id="299cf6f7124b7dd4cdecf41a2dde5691" category="list-text"><block ref="299cf6f7124b7dd4cdecf41a2dde5691" category="inline-link-macro-rx"></block></block>
+  <block id="a136464e5f9b093e6667a604b15e3605" category="list-text"><block ref="a136464e5f9b093e6667a604b15e3605" category="inline-link-macro-rx"></block></block>
+  <block id="2c73d1eaa92fa653dab6b18c453721b0" category="section-title">도움을 얻고 동료들과 교류하십시오</block>
+  <block id="d0bd79212ef041ed73ac193cda56b985" category="inline-link">NetApp 커뮤니티: 통합 인프라</block>
+  <block id="9c57c6e5c44386158ad4e62b7404eb56" category="paragraph"><block ref="9c57c6e5c44386158ad4e62b7404eb56" category="inline-link-rx"></block></block>
+  <block id="ade2db7ff69f464a3b4134ab103d943b" category="summary">Converged Systems Advisor는 서비스형 소프트웨어(SaaS) 플랫폼으로, 온프레미스 에이전트와 클라우드 기반 포털로 구성됩니다.</block>
+  <block id="77a689c1bae0e53995786b80a8e17081" category="doc">Converged Systems Advisor의 작동 방식</block>
+  <block id="0a00ece35e033d1841a339c210e04460" category="paragraph">다음 그림에서는 Converged Systems Advisor 구성 요소 간의 관계를 보여 줍니다.</block>
+  <block id="21662a34f2c5913ae9ffdfc6a87df49d" category="inline-image-macro">데이터 센터와 클라우드 기반 포털에 설치된 FlexPod 및 Converged Systems Advisor 에이전트를 보여 주는 개념도</block>
+  <block id="15141ad14b4848210c9524f5d11800b6" category="paragraph"><block ref="15141ad14b4848210c9524f5d11800b6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ee3f80be147065bd8cb81d11a0fb5bb8" category="list-text">사내에 상주하는 Converged Systems Advisor 에이전트는 사용자가 제공하는 자격 증명을 사용하여 FlexPod 통합 인프라에서 구성 데이터를 수집합니다.</block>
+  <block id="5d64a5d6c8d20705c06e727402864f7a" category="list-text">에이전트는 데이터를 Converged Systems Advisor 포털로 전송합니다.</block>
+  <block id="adcb1449e4f973f9450c864800b1b9c7" category="list-text">사용자는 웹 브라우저를 통해 Converged Systems Advisor 포털에 로그인하여 FlexPod 통합 인프라를 검증, 모니터링 및 최적화합니다.</block>
+  <block id="e6fd1f675823f4d8c0538e7f54e2e725" category="inline-link-macro">Converged Systems Advisor로 데이터를 안전하게 유지하는 방법에 대해 알아보십시오</block>
+  <block id="4c4f62ffb153bddcdb3f3b3c38e73c3b" category="paragraph"><block ref="c922e371de9560d3839bd4c1500caf95" category="inline-link-macro-rx"></block>.</block>
+  <block id="76349c2170a5e8f7ab2e2e2ce564165d" category="summary">Converged Systems Advisor를 시작하려면 환경을 준비하고 에이전트를 설치 및 설정한 다음 포털에 통합 인프라를 추가해야 합니다.</block>
+  <block id="7e156a5779175bc209a90f37db31f6e0" category="doc">Converged Systems Advisor를 시작하십시오</block>
+  <block id="0c6612b13f695372bd37700714ed1430" category="paragraph">Converged Systems Advisor를 시작하려면 환경을 준비하고 에이전트를 설치 및 설정한 다음 포털에 통합 인프라를 추가해야 합니다.</block>
+  <block id="713856a9e25b955fc362c74ba01c8c73" category="paragraph">환경 준비에는 구성 지원 확인, 에이전트 계정 생성 및 NetApp Support 사이트 계정 등록이 포함됩니다.</block>
+  <block id="52bf1942dcfb1c141867def7c2796418" category="inline-xref">각 FlexPod 구성 요소에서 계정을 만듭니다</block>
+  <block id="f50dcc97b97d9278ef4fdb3ef6e1da3f" category="list-text"><block ref="42cd4f375d7c524be1664eb35460cb25" category="inline-xref-macro-rx"></block>.</block>
+  <block id="a478c363f47702e06b92b7c1d5f4089c" category="paragraph">구성 데이터를 수집하려면 자격 증명이 필요합니다. 에이전트를 구성할 때 자격 증명을 제공해야 합니다.</block>
+  <block id="d87b78a031b9948c6c89981ce3d89f1b" category="section-title">FlexPod 장치에서 계정을 생성하는 중입니다</block>
+  <block id="0cd05894cf4c7bb8f868ffe1d1290fea" category="paragraph">Cisco UCS Manager 및 Cisco Nexus 스위치에서 읽기 전용 계정을 설정해야 합니다. ONTAP 시스템 및 VMware에는 관리자 계정이 필요합니다. APIC에서 다른 사용자에 대해 읽기 전용 액세스 계정을 설정할 수 있습니다. 에이전트는 이러한 계정을 사용하여 각 장치에서 구성 데이터를 수집합니다.</block>
+  <block id="2099da3d792d28b71a89dc894beb5412" category="section-title">Cisco UCS Manager의 읽기 전용 계정을 생성합니다</block>
+  <block id="d0a91502d061d00cbb9e6dc6cffd77d8" category="list-text">Cisco UCS Manager에 로그인합니다.</block>
+  <block id="6096415620060705d9595c8fcdea6a16" category="list-text">_CSA-readonly_라는 로컬에서 인증된 사용자를 생성합니다.</block>
+  <block id="8b21b866bd2a7de4e562a060cc292063" category="admonition">모든 새 사용자는 기본적으로 읽기 전용입니다.</block>
+  <block id="2d8f09b5e52b0c5b7187bbebd4f2579f" category="section-title">Nexus 스위치에 대한 읽기 전용 계정을 생성합니다</block>
+  <block id="8f3824888496549aad15cdf6df65ad33" category="list-text">SSH 또는 텔넷을 사용하여 각 Nexus 스위치에 로그인합니다.</block>
+  <block id="3b38f09e87b817db54392ca6b1472e1e" category="list-text">글로벌 구성 모드 시작:</block>
+  <block id="bedbd0468de13d5fb35dc8cafead626c" category="list-text">새 사용자 생성:</block>
+  <block id="33779c44170cc34cb1bbefd6d30a5208" category="list-text">구성을 저장합니다.</block>
+  <block id="18ee0f6fb35c83513ae3e270c131adf7" category="paragraph">TACACS+ 서버를 사용 중이고 CSA 사용자 권한을 부여해야 하는 경우 로 이동합니다 <block ref="1f496b11ca6becda819d4556c4ea6608" category="inline-xref-macro-rx"></block>.</block>
+  <block id="441b67283784cf29a2752c9221d9104d" category="section-title">ONTAP에 대한 관리자 계정을 만듭니다</block>
+  <block id="2eb574bbc5428e7dea15be69deaa1c65" category="list-text">OnCommand 시스템 관리자에 로그인하고 설정 아이콘을 클릭합니다.</block>
+  <block id="ff04c64278a2550f801d1574ac8721bb" category="inline-image-macro">System Manager의 설정 아이콘</block>
+  <block id="f75f73a91fb7e1b449135d8a270ae45d" category="paragraph"><block ref="8402a9390d1a047bb229c69f6d499dcc" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="a3bb348ea680d62531cc238832ec85a9" category="list-text">사용자 페이지에서 * 추가 * 를 클릭합니다.</block>
+  <block id="420a2546a3b1365ceef517f1c2fbedff" category="list-text">사용자 이름과 암호를 입력하고 관리자 액세스 권한이 있는 사용자 로그인 방법으로 * ssh *, * ontapi * 및 * console * 을 추가합니다.</block>
+  <block id="8bdd45b91a31a8690735acc4dc31dd7c" category="inline-image-macro">에는 새 ONTAP 사용자에게 ssh 및 ontapi 권한이 있는 System Manager의 사용자 추가 화면이 나와 있습니다.</block>
+  <block id="635784ac2bb89e09681e74e579ca8fcb" category="paragraph"><block ref="635784ac2bb89e09681e74e579ca8fcb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d50762e2e2ae9423f1ddc5c966abf6f8" category="section-title">VMware에 대한 읽기 전용 계정을 생성합니다</block>
+  <block id="8ab62d7f9f3a4115127d107eb3bb968e" category="list-text">vCenter에 로그인합니다.</block>
+  <block id="b49e1321d03903b7162f038b7d1172a4" category="list-text">vCenter 메뉴에서 * Administration * 을 선택합니다.</block>
+  <block id="0fe0ca267ec8a3414939edcddc2655f8" category="list-text">역할에서 * 읽기 전용 * 을 선택합니다.</block>
+  <block id="0f1e92f24deba3a45e3d35cf0d9904e7" category="list-text">Clone role action * 아이콘을 클릭하고 이름을 * CSA * 로 변경합니다.</block>
+  <block id="1bb04863ceac05afe9ad4fdad53ae507" category="list-text">새로 생성된 * CSA * 역할을 선택합니다.</block>
+  <block id="1fa75ccc3b524ebb284b414f693d9ea3" category="list-text">Edit role * 아이콘을 클릭합니다.</block>
+  <block id="530c373900375f89da032a2be406339b" category="list-text">Edit role * 에서 * Global * 을 선택한 다음 * Licenses * 를 선택합니다.</block>
+  <block id="c1c72f117598ab72cba25e02bccc6ce1" category="list-text">측면 표시줄에서 * Single Sign On -&gt; Users and groups -&gt; Create a new user * 를 선택합니다.</block>
+  <block id="6bc62772cb888790f62ed044695c938b" category="list-text">도메인 vpshere.local에서 새 사용자 * CSRO * 의 이름을 지정합니다.</block>
+  <block id="f0492f189d9f3e559364e7a80d965b66" category="list-text">측면 표시줄의 * 액세스 제어 * 에서 * 글로벌 권한 * 을 선택합니다.</block>
+  <block id="c4d670cd7c54761045ecf7ea7b25881d" category="list-text">사용자 * CSRO * 를 선택하고 역할 * CSA * 를 할당합니다.</block>
+  <block id="be4288b6ed1d0ecfaaf07da5641ac434" category="list-text">웹 클라이언트에 로그인합니다.</block>
+  <block id="e28a0e6a0ac7170c91b6d87fdc748f98" category="paragraph">사용자 ID: * CSARO@vsphere.loca l * 및 이전에 만든 암호를 사용합니다.</block>
+  <block id="7be11821733a031669f85a1a5370ba38" category="section-title">APIC에서 읽기 전용 계정을 생성합니다</block>
+  <block id="633f9fb33a1388464d4bf0b5da121e14" category="list-text">관리자 * 를 클릭합니다.</block>
+  <block id="3a8f71da9eee0ee42f05f2f8d1d0f8f2" category="list-text">새 로컬 사용자 생성 * 을 클릭합니다.</block>
+  <block id="e291dc9a4f7b47bba8f92fc5d0e3dde4" category="list-text">사용자 ID * 에서 사용자 정보를 입력합니다.</block>
+  <block id="4f92120b362aa5d46fe2dd945e59a62b" category="list-text">Security * 에서 모든 보안 도메인 옵션을 선택합니다.</block>
+  <block id="67af9425d7e9ad7680fec5bf53372882" category="list-text">필요한 경우 * + * 를 클릭하여 사용자 인증서와 SSH 키를 추가합니다.</block>
+  <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">다음 * 을 클릭합니다.</block>
+  <block id="0dc0ee3389edaea118e1a45a6903949a" category="list-text">도메인에 대한 역할을 추가하려면 * + * 를 클릭합니다.</block>
+  <block id="0cc4bd8e3fd7dbb38ce965c9c9e4ecfc" category="list-text">드롭다운 메뉴에서 * 역할 이름 * 을 선택합니다.</block>
+  <block id="250e8d621353745811bcc80cd5d064bb" category="list-text">역할 권한 유형 * 에 대해 * 읽기 * 를 선택합니다.</block>
+  <block id="1859e92122e266181cafb9c13d7400a0" category="list-text">마침 * 을 클릭합니다.</block>
+  <block id="275fe1c07e5b801ba6ba209e8429002d" category="section-title">에이전트 배포</block>
+  <block id="78101ef6c0779de08b1416b9c3192d77" category="list-text"><block ref="35db1a96bdc74882892c9a3ad7bed133" category="inline-xref-macro-rx"></block></block>
+  <block id="560f339ffbc95c1d9e2bbea8745d7de3" category="list-text"><block ref="fb6f86724092168a486d00273ca30c97" category="inline-xref-macro-rx"></block></block>
+  <block id="afaf395cc9e80eeef6c225888e99a98a" category="inline-xref">필요한 경우 에이전트에 SSL 인증서를 설치합니다</block>
+  <block id="1b38ed85a443a952ad76b68bf23769fa" category="list-text"><block ref="103fd69b0420c45c6e760ec436c53011" category="inline-xref-macro-rx"></block></block>
+  <block id="ce173e4ce871869d4655c419893b22c0" category="list-text"><block ref="206a2ab2cff5047902495fb5dc2a8730" category="inline-xref-macro-rx"></block></block>
+  <block id="ff7b3a545ce0d3e37f3491c0365fd883" category="section-title">에이전트를 다운로드하고 설치합니다</block>
+  <block id="7c18ca1754eac6117d06a06207ce5382" category="section-title">에이전트에 대한 네트워킹 설정</block>
+  <block id="6493001546d3670c20983d0c9086630f" category="paragraph">HTTP 프록시에 대한 프롬프트는 다음과 같습니다.</block>
+  <block id="0c93fbbaac62b215373a9e38e9977f90" category="inline-image-macro">HTTP 프록시 프롬프트를 보여 주는 스크린샷</block>
+  <block id="602bfc44630c83752cb212e8e3fa3034" category="paragraph"><block ref="602bfc44630c83752cb212e8e3fa3034" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="19f77703ec1a53feaa16f7a9751f0a54" category="section-title">에이전트에 SSL 인증서 설치</block>
+  <block id="9533f62043c0f6a64722739ba689fbd0" category="paragraph">Converged Systems Advisor는 다음을 지원합니다.</block>
+  <block id="aca50f4ea5e538572c25e7ef1c877f50" category="list-text">OpenSSL 버전 1.0.1 이상과 호환되는 모든 암호</block>
+  <block id="014f10162fac6ab78ea8f52a63b4b609" category="list-text">TLS 1.1 및 TLS 1.2</block>
+  <block id="c9b14be3bee9b401f753a94ca3ded907" category="section-title">에이전트를 구성하여 FlexPod 인프라를 검색합니다</block>
+  <block id="cce04dd5930e941a442176af284fb516" category="paragraph">FlexPod 통합 인프라의 각 장치에서 구성 데이터를 수집하도록 에이전트를 구성해야 합니다.</block>
+  <block id="6fe5959541c89cbce478c554777ac5d8" category="list-text">NetApp Support 사이트 계정의 사용자 이름과 암호를 입력하여 에이전트에 로그인합니다.</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">다음 사항에 유의하십시오.</block>
+  <block id="6624e3ce2082bff6a9538a57b6e135ac" category="list-text">사용자 이름과 암호는 이전에 장치에 대해 생성한 계정에 대한 것입니다.</block>
+  <block id="6e4517322a6a78e6e22096c260aea198" category="list-text">UCS 환경에 LDAP 사용자 관리가 구성되어 있는 경우 사용자 이름 앞에 사용자의 도메인을 추가해야 합니다. 예: local\csA-readonly</block>
+  <block id="64c2f93dc8ddeec207e25d7b17093c26" category="paragraph">FlexPod 인프라의 각 장치가 표에 확인 표시를 하여 표시되어야 합니다.</block>
+  <block id="7e0f6190afd11994fbf2acbbb620f788" category="paragraph"><block ref="7e0f6190afd11994fbf2acbbb620f788" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="91dd7b0081abea60a0763bc35637f5ba" category="section-title">포털에 인프라 추가</block>
+  <block id="775d2ba16d79b874e995444c31ce184d" category="paragraph">필요한 구성 요소를 모두 선택하면 각 장치 유형 옆에 녹색 확인 표시가 나타납니다.</block>
+  <block id="4f043b26c1328f0930d8b487af491e8a" category="section-title">TACACS+ 서버를 사용하여 CSA 사용자 권한을 부여합니다</block>
+  <block id="62a7d89267f8f25ef4b1bd80b1bb9b82" category="paragraph">TACACS+ 서버를 사용하는 경우 스위치에 대한 CSA 사용자 권한을 부여해야 하는 경우, 사용자 권한 그룹을 만들고 CSA가 필요로 하는 특정 설정 명령에 대한 그룹 액세스 권한을 부여해야 합니다.</block>
+  <block id="85ad73480f819de59e2df469c4b46dc4" category="paragraph">다음 명령은 TACACS+ 서버의 구성 파일에 기록되어야 합니다.</block>
+  <block id="fc0cbb5a7205b6cf0664d8b69726908a" category="list-text">다음 명령을 입력하여 읽기 전용 액세스 권한이 있는 사용자 권한 그룹을 생성합니다. group=group_name{default service=deny service=exec{priv-lvl=0}}</block>
+  <block id="bdc54b3290834bff5f9c73e4644958ce" category="list-text">CSA에 필요한 명령에 대한 액세스 권한을 부여하려면 다음을 입력합니다. cmd= show{permit" environment "permit" version "permit" feature-set "permit" feature-set "permit" feature-set" interface "permit" interface transceiver "permit" inventory "permit" inventory" license "permit" module "permit" port-channel database "permit" ntp "ntp-config" running-config-config" mgmt0-config "CDP neighbor detail" permit "VLAN" permit "VPC" permit "VPC peer-keepalive" permit "Mac address-table" permit" lacp port-channel "permit" policy-map "permit" policy-map "permit" policy-map system type queuing "permit" policy-map system type network-qos -qos" zoneset active "permit" zoneset active "permit" logeset active "permit" 데이터베이스 세부 정보" "zoneset active" permit "vsan" permit "vsan usage" permit "vsan membership"}</block>
+  <block id="73a4aebaeec211620a602108d2b9404c" category="list-text">CSA 사용자 계정을 새로 생성된 그룹에 추가하려면 다음을 입력합니다. user=user_account{member=group_name login=file/etc/passwd}</block>
+  <block id="e7d336fd675578d55b211bb25a960940" category="section-title">알림을 구성하는 중입니다</block>
+  <block id="af30d3755f96862e145057d908a2e786" category="paragraph">프리미엄 라이센스가 있는 경우 Converged Systems Advisor는 이메일 알림을 통해 FlexPod 인프라의 변경 사항에 대해 경고할 수 있습니다.</block>
+  <block id="cd34eac38f2c4b9f2103eda33482b061" category="list-text">Converged Systems Advisor 포털에서 * 설정 아이콘 * 을 클릭한 다음 * 알림 설정 * 을 클릭합니다.</block>
+  <block id="4e6aad27476e9fe331f476974ff873e5" category="list-text">프리미엄 라이센스가 있는 각 통합 인프라에 대해 수신하려는 알림을 확인하십시오.</block>
+  <block id="d498146c1e8ccfa027b0be4e0ec6c938" category="paragraph">각 알림에는 다음 정보가 포함됩니다.</block>
+  <block id="51931057b0a67bf82ab417b2870f3a3c" category="list-text">수집 실패</block>
+  <block id="4596170a0369f156d6a5f2091e13b52a" category="list-text">Converged Systems Advisor가 통합 인프라에서 데이터를 수집할 수 없는 경우 알림</block>
+  <block id="7abf3c6257605cebf46fa1d1dfb7f567" category="list-text">오프라인 에이전트</block>
+  <block id="f0a59a4f9d275170a08a14a81258c126" category="list-text">Converged Systems Advisor 에이전트가 온라인 상태가 아닐 때 알림을 표시합니다.</block>
+  <block id="3b0e647e86cb4c7b03e82d277f5f75b6" category="list-text">일일 경고 다이제스트</block>
+  <block id="e50c05288bdcd3e7f9ac99e37a5935f4" category="list-text">이전 날짜에 발생한 실패한 규칙에 대한 알림을 제공합니다.</block>
+  <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">저장 * 을 클릭합니다.</block>
+  <block id="e34a46d20515530b01e1c96a225829e4" category="paragraph">이제 Converged Systems Advisor가 통합 인프라와 관련된 사용자에게 이메일 알림을 보냅니다.</block>
+  <block id="f22b831ba6d141bbc230c57682a06371" category="doc">"Converged Systems Advisor의 새로운 기능" 아카이브</block>
+  <block id="c1df1da7a1ce305a3b60af9d5733ac1d" category="section-title">목차</block>
+  <block id="10e44b58c927b3793e7f2955f75f28e1" category="paragraph">이 아카이브에는 다음 릴리스의 정보가 포함되어 있습니다.</block>
+  <block id="08c7a44165e799a355ebdc0f1ea70824" category="list-text"><block ref="145ef373c65808f9e952c78fb0e16c8e" category="inline-xref-macro-rx"></block></block>
+  <block id="2840e6a3600b55dceaa37ee80ec335fe" category="list-text"><block ref="42c4d619be309721d53c234cf3e5ff62" category="inline-xref-macro-rx"></block></block>
+  <block id="0bcb4151c66555aa13c51fb3b2a0a165" category="list-text"><block ref="ff3199e7c1970c02e0fd6c613ab0cce7" category="inline-xref-macro-rx"></block></block>
+  <block id="7b3a2fc382a596f810e0b8e710c8f711" category="list-text"><block ref="d2238c839e2fd698d2dbfb6f4c4e7d87" category="inline-xref-macro-rx"></block></block>
+  <block id="15176397357e4255e6362e5d05e4c485" category="list-text"><block ref="92d4523432902f3accb2306b045d583f" category="inline-xref-macro-rx"></block></block>
+  <block id="5e00a79faef421b2fe94f16e0a17775d" category="list-text"><block ref="b7b5b50c4a5efe1b9e45ea1d0e26a6ae" category="inline-xref-macro-rx"></block></block>
+  <block id="63e51da11fa43c2342d55984be82f013" category="list-text"><block ref="48d43c26a55ab7429e9668ebb7b374a4" category="inline-xref-macro-rx"></block></block>
+  <block id="a6490175aa5211c7fdb6af58bbf5ad58" category="list-text"><block ref="6687bc1c3d75b9a19804b86bf196a6d2" category="inline-xref-macro-rx"></block></block>
+  <block id="ed27e56e8d1aaac52ff5846f18293cad" category="section-title">2020년 4월 30일</block>
+  <block id="d3cafecaed44ca675980389b10250736" category="paragraph">이 릴리스에는 다음과 같은 향상된 기능이 포함되어 있습니다.</block>
+  <block id="76474e02e81d415c3af99611aa7fd9db" category="list-text"><block ref="e91c3dcf41ee65cf857a4e2744c7116f" category="inline-xref-macro-rx"></block></block>
+  <block id="f9cbb438ee7ec2413c4e51c6dd1cc0a1" category="list-text"><block ref="0440a41fa8d53d80c2925fd5b2f412d2" category="inline-xref-macro-rx"></block></block>
+  <block id="5cd898867cfea299e6bb00bf416b9543" category="list-text"><block ref="8800f9920c62cf189ef2790b6cf576c0" category="inline-xref-macro-rx"></block></block>
+  <block id="92189b298e4d66f3b20c9ee7eb4420d1" category="list-text"><block ref="090331b4b8642fa566a355a973455d3b" category="inline-xref-macro-rx"></block></block>
+  <block id="1e3c19e3742fbfc0e6dd22bb91d109a3" category="section-title">Upgrade Advisor</block>
+  <block id="3f23a5d9cd3790369771e0a3bf58d7b4" category="inline-image-macro">스크린샷, width=65%, align=left</block>
+  <block id="7e8467d4e506341be39612804bb6fd31" category="paragraph">이제 VMware vCenter 및 ONTAP 버전과 Nexus 및 UCS 구성 요소의 호환성을 확인할 수 있습니다. 호환성을 확인하려면 펌웨어 상호 운용성 아래의 대시보드에서 Upgrade Advisor를 사용하십시오. 표시되는 모든 버전이 지원됩니다.<block ref="70a9fa1e61ddb2086ced7efe6d468e67" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a44c62f2e89581c2cf4b405ac4bc48d1" category="section-title">클러스터 인터커넥트 스위치</block>
+  <block id="17a266803afb405673de128775490aa3" category="paragraph">* 클러스터 인터커넥트 스위치 * 가 대시보드 보기의 * 펌웨어 상호 운용성 * 에 추가되었습니다. 이제 다음 모델에서 ONTAP 클러스터 인터커넥트 스위치의 지원 가능성을 모니터링할 수 있습니다.</block>
+  <block id="19f18e62543870b928eb9b2e96e164e5" category="paragraph"><block ref="19f18e62543870b928eb9b2e96e164e5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="14203af76d3ed0d9f147b636afc6df00" category="paragraph">이제 에이전트에서 클러스터 인터커넥트 스위치를 * 장치 정보 추가 * 드롭다운 메뉴에 장치로 추가할 수 있습니다.</block>
+  <block id="22584daa6922a9f57595fff0e66aaeac" category="inline-image-macro">스크린샷, 너비 = 35%, 맞춤 = 왼쪽</block>
+  <block id="514f8c728a2790b1558d08079076380c" category="paragraph"><block ref="514f8c728a2790b1558d08079076380c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="77c929b6a6cda6208e81c181eef47740" category="section-title">향상된 용량 카드</block>
+  <block id="721acbf5f459d09509fd8f70d1f967c8" category="paragraph">또한 FlexPod 인프라를 모니터링하고 확장하는 데 도움이 되는 네트워크 포트 사용률 및 UCS 블레이드 서버 활용률에 대한 링크도 추가되었습니다. 대시보드 보기에서 용량 으로 이동하면 두 개의 새 링크가 표시됩니다.<block ref="060bfad4c8cdb501dd093dad2bc44ef5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c678373d74bb6da469f6748ecd369a85" category="paragraph">Port Utilization 네트워크 계층의 인터페이스에 대한 자세한 정보로 이동합니다.<block ref="aca1a8b86c59dfb174ed946d595bbf84" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="648afe57a27e117a191a79a8d6d0abb2" category="paragraph">UCS 블레이드 서버 활용도 링크를 클릭하면 컴퓨팅 계층의 블레이드에 대한 자세한 정보로 이동합니다.<block ref="a13bb6f0073a0a088151d532da9b6312" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="93bbd48ded0a0454703eb895c255d06d" category="section-title">시스템 다이어그램 경고</block>
+  <block id="a6282442e8c29dd3f2b8dc110cfc9ae4" category="paragraph">이제 시스템 다이어그램 보기에 알림이 표시되므로 인프라를 더 잘 모니터링할 수 있습니다.<block ref="f9157057998e51b9fb12515c6a346233" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="69464e68a5cdd0b54694ac92276fa1a3" category="section-title">해결된 문제</block>
+  <block id="6aa177b471b9d5a16c4090627dbb93a9" category="paragraph">이 릴리즈에서 해결된 알려진 문제는 다음과 같습니다.</block>
+  <block id="b066ca6122c9857ad1ee3a44f18cc5e7" category="cell">버그 ID</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">설명</block>
+  <block id="34e17db35518e448663a73c33632b94b" category="inline-link">1253405를 참조하십시오</block>
+  <block id="0ee79ab5ee2af58e1c534d21e395fe77" category="cell"><block ref="68039b95c5a75e0be8228eccc6908ff8" category="inline-link-rx"></block></block>
+  <block id="64131c95b7858ed72eedb62e9a32ff2f" category="cell">Converged Systems Advisor에서 Nexus 스위치 포트 상태가 잘못 표시될 수 있습니다.</block>
+  <block id="d12d95a3af8745784a9064d204004d3c" category="list-text">로 돌아갑니다 <block ref="1a241aed8804786761beb208ad9f11d4" category="inline-xref-macro-rx"></block></block>
+  <block id="48328ffa37012f3f870faa37b9fa666a" category="section-title">2020년 2월 3일</block>
+  <block id="86d9e6345baacd928ad8dada377cab74" category="list-text"><block ref="c553ce28d20d5f7e40a45ea2ba52989a" category="inline-xref-macro-rx"></block></block>
+  <block id="e046a22b8cbc00a605fbea199b8e1ab1" category="list-text"><block ref="115938d820b660b16bc33f86e52bebc4" category="inline-xref-macro-rx"></block></block>
+  <block id="654d496d9bbb3eb7aed8b9d7e7bede02" category="section-title">탐색 기능 향상</block>
+  <block id="c7da2deb892e540c5a400fbfff29bafc" category="list-text">이 릴리스를 통해 * 모든 시스템 보기 * 에서 모든 시스템을 볼 수 있습니다.</block>
+  <block id="8ee281360fa3bd26cbb98359f0a790c5" category="list-text">구성 요소 계층의 구조를 쉽게 확인하고 탐색할 수 있습니다. 드롭다운 메뉴 및 화살표를 사용하여 장치를 볼 수 있습니다.</block>
+  <block id="5df6c4a2075cc06374be4ce2aa57b3d2" category="list-text">또한 Breadcrumb 추적을 사용하여 대시보드(홈) 보기로 쉽게 이동할 수 있습니다.</block>
+  <block id="3533fddef5dd5fcf0e1d388ddf48e22c" category="paragraph"><block ref="3533fddef5dd5fcf0e1d388ddf48e22c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="294ca68e36dc38cbc11f8aeb5a06fb7b" category="section-title">세부 정보를 집계합니다</block>
+  <block id="bcaccaf4d97300681fbb5cfee359717e" category="paragraph">대시보드 보기에서 용량 으로 이동하면 * 집계 세부 정보 * 에 대한 링크를 볼 수 있습니다. 제공된 링크를 사용하여 스토리지 계층의 애그리게이트에 대한 자세한 정보를 확인할 수 있습니다.</block>
+  <block id="2a5652cfbaed3bd793169739d862fe44" category="paragraph"><block ref="2a5652cfbaed3bd793169739d862fe44" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e3d764022cf533eaeab2378fa40c2eda" category="paragraph"><block ref="e3d764022cf533eaeab2378fa40c2eda" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6dd20b51a073e00e72a5886489d9ac23" category="inline-link">1279956</block>
+  <block id="46907cddd9ff63e0466a78c60f4c60b9" category="cell"><block ref="2f1de675eb087c523328ea1df509e554" category="inline-link-rx"></block></block>
+  <block id="31d9ba8fb9df9a35fd5988e6a338be5c" category="cell">단일 노드 MetroCluster에서는 클러스터 세부 정보 페이지의 개요 및 규칙 요약에 IOXM 확장 모듈을 표시하지 않습니다.</block>
+  <block id="cb03043febda9c865a13af70e1efe360" category="section-title">2019년 11월 7일</block>
+  <block id="bf647454e36069fd16f1a7a35cf6a865" category="inline-link-macro">시작하기</block>
+  <block id="5137e1743b8c3f4b2f072f0907d5941c" category="admonition">FlexPod를 Converged Systems Advisor에 추가하면 이 릴리즈의 모든 새로운 기능과 개선 사항이 자동으로 포함됩니다. 의 지침을 따릅니다 <block ref="73c402b67f510704de8228c6214ccf6d" category="inline-link-macro-rx"></block> Converged Systems Advisor에 FlexPod를 통합 인프라로서 추가합니다.</block>
+  <block id="1bcec21d67da91d55b9e2b14c867c995" category="paragraph">이 릴리즈에는 다음과 같은 새로운 기능과 향상된 기능이 포함되어 있습니다.</block>
+  <block id="555719e2c4114db93af1d8b3d3ac0fc0" category="list-text"><block ref="d5b57589f05f189cbc860a5c385e1cb5" category="inline-xref-macro-rx"></block></block>
+  <block id="60ac199a07c4f68f6d2d7bdbef65ec1c" category="list-text"><block ref="31d477d44391b3c0b58e41ee9a37948f" category="inline-xref-macro-rx"></block></block>
+  <block id="9cd9a2aa347af7513b4c663660832244" category="list-text"><block ref="27f68d9d616c3d419db9436ca7436cbc" category="inline-xref-macro-rx"></block></block>
+  <block id="62a8f36b0f440492e49f8e922d741d17" category="section-title">MetroCluster 인식</block>
+  <block id="a5f7ef2db62928a50ba7f96892ad00c8" category="paragraph">Converged Systems Advisor는 이제 MetroCluster FlexPod의 단일 사이트를 통합 인프라로 추가할 수 있도록 지원합니다. 이제 분석을 통해 MetroCluster의 양쪽 상태를 확인할 수 있습니다.</block>
+  <block id="0f63d57e26b097fe542bb83633e6398d" category="section-title">NVMe 인식</block>
+  <block id="22f7ebd445d477df205c0982fa2468e2" category="paragraph">Converged Systems Advisor는 이제 분석을 실행하여 ONTAP 9.4 이상에서 지원되는 NVMe 프로토콜의 구성을 확인합니다.</block>
+  <block id="1a6b93828ae59ab63dc0d438e21af378" category="section-title">향상된 상호 운용성 기능</block>
+  <block id="0547c0a84d599658af4f58d553e0dcd2" category="paragraph">Converged Systems Advisor에는 업데이트된 상호 운용성 카드가 있으며, 각 구성 요소에 지원되는 현재, 가장 가까운 및 최신 버전을 보여주는 팝업으로 연결됩니다. 팝업에는 구성 요소 계층별 개별 상호 운용성 보고서를 표시하는 새 보고서가 추가되었습니다.</block>
+  <block id="7be03ea15608a3afd4b7f1553a8b93b1" category="section-title">2019년 7월 24일</block>
+  <block id="3de14a766018f3a0e190f6963cf79b65" category="list-text"><block ref="285069d07f51b91a90e9daf7e4a22c2c" category="inline-xref-macro-rx"></block></block>
+  <block id="a51081ace27562019c87ffdb141acdcc" category="list-text"><block ref="b6d9e8cd9b98324fab9ceb53ed799778" category="inline-xref-macro-rx"></block></block>
+  <block id="c88b794def2afa5b760b26678860c517" category="section-title">FlexPod에서 Cisco ACI 지원</block>
+  <block id="e0729bd1bd4fb7a2ed7e509b4001a117" category="paragraph">이제 Converged Systems Advisor는 Cisco ACI 네트워킹을 사용하여 FlexPod 설계를 지원합니다. FlexPod의 모든 장치에 대한 지원 및 구성은 다른 FlexPod 장치에 연결된 2개의 동적 결정 리프 스위치도 평가됩니다.</block>
+  <block id="b7e76920c826212726bcd2c4c278cece" category="section-title">단일 FlexPod에서 여러 클러스터 지원</block>
+  <block id="53c03d655b92c79a60b56c91dcfc3d33" category="paragraph">이제 Converged Systems Advisor는 단일 FlexPod에서 여러 클러스터를 지원합니다. Storage ONTAP 규칙은 모든 클러스터에서 처리되고 모든 클러스터는 시스템 다이어그램에 반영됩니다.</block>
+  <block id="6852c0ff45224de595d5295eac339442" category="section-title">2019년 4월 25일</block>
+  <block id="ec290a4ea4f9c1d799baf6e50cdfa64e" category="list-text"><block ref="7dbc36f3c2a4e546cd038b61fa66adad" category="inline-xref-macro-rx"></block></block>
+  <block id="bf5e8a112746ae204916387b6224d8b3" category="list-text"><block ref="bacba7b8b1af2d91560cbd6ddd21cbcf" category="inline-xref-macro-rx"></block></block>
+  <block id="346e5b8d27b5bc4b8b1705dd89b91797" category="section-title">실패한 규칙을 자동으로 해결합니다</block>
+  <block id="0f4328bb9454528512249e468db30c3e" category="paragraph">Converged Systems Advisor는 이제 특정 규칙에 장애가 발생하는 문제를 자동으로 해결할 수 있습니다. 이 기능은 에이전트를 다시 시작하여 자동으로 활성화됩니다.</block>
+  <block id="c783bfb0f4281a0a2dc92570b6e2b20b" category="section-title">기능 억제된 규칙 표시</block>
+  <block id="05814bc364b125b53f0cf12dbf6c8438" category="paragraph">이제 Converged Systems Advisor 내에서 억제된 규칙의 전체 목록을 표시하고 목록에서 억제된 규칙에 대한 경고를 다시 활성화할 수 있습니다.</block>
+  <block id="f16c3ebec6a5ded39b75c6f38f570780" category="inline-link">1211321을 참조하십시오</block>
+  <block id="2d3f80599531b8b63fd835200e3d6727" category="cell"><block ref="a44c06a4b2a6170ea5a33c220414d285" category="inline-link-rx"></block></block>
+  <block id="bc30687d397ed706898ea444df0dde4c" category="cell">통합 인프라의 경우 시스템 다이어그램 이미지가 표시되지 않을 수 있습니다</block>
+  <block id="1c8ff7117059b27ffa62f6bd8a591101" category="inline-link">1211987)을 참조하십시오</block>
+  <block id="042c2d583f25282609b9503d09d51155" category="cell"><block ref="44d8592541f939183de2e0a885375edf" category="inline-link-rx"></block></block>
+  <block id="a50c7fa8095657476c27aec123b192e0" category="cell">스토리지 클러스터 효율성 값이 잘못 표시됩니다</block>
+  <block id="07cd1efd9b1bbc1c1cc4d38e19c07589" category="inline-link">1211995)를 참조하십시오</block>
+  <block id="04c016fc549ac6850c08110fd3409666" category="cell"><block ref="b9702e7ed530a19bec6f645dc7a6866d" category="inline-link-rx"></block></block>
+  <block id="185d625ed6330faeb271f3dce51808d6" category="cell">Nexus 스위치 포트 상태가 잘못 표시될 수 있습니다</block>
+  <block id="b060712ac43c210355429accd269de4e" category="inline-link">1211999</block>
+  <block id="84ac921ab1a975fc2c21ad5f7919e0a3" category="cell"><block ref="b80cb91305a095366aa4a78015bfbc70" category="inline-link-rx"></block></block>
+  <block id="e7db1e98b025a528671c622f3b0fabde" category="cell">공간 예약 상태가 잘못 표시됩니다</block>
+  <block id="5d5316487266b882f235edf2575eaeec" category="section-title">2019년 3월 28일</block>
+  <block id="7aba6d8ee839fe7a78123c0207d3edab" category="inline-link">1211993)을 참조하십시오</block>
+  <block id="9572132c0bc007159a9b08486308eeba" category="cell"><block ref="4b1ffacdbfc8af9ce08b31a0abb940fa" category="inline-link-rx"></block></block>
+  <block id="b637f3519598b2cc4e7b31b1afc6c01c" category="cell">CSA에서 씬 프로비저닝 상태가 잘못 표시됩니다</block>
+  <block id="9251ffcb0c3da1ea28d59acc9376f6a9" category="inline-link">1211998)을 참조하십시오</block>
+  <block id="ee17bbc8d10290ea608a1e55abae6528" category="cell"><block ref="02d3e3a4942ec08f5d2adfe3e0a3a20c" category="inline-link-rx"></block></block>
+  <block id="c2a3227c220126274034a0478eb67de3" category="cell">CSA에서 디스크 공간 사용률 비율이 잘못 표시됩니다</block>
+  <block id="07b3432777ce890e768e06a9216f9e17" category="inline-link">1211990)을 참조하십시오</block>
+  <block id="73b904199eb87ae4c41fb7baa1ef9c3e" category="cell"><block ref="a5f604ba6ece1c21d65563c22d9dfa09" category="inline-link-rx"></block></block>
+  <block id="229885f383807af450d10b03b8f4fe80" category="cell">Nexus 스위치에서 VLAN에 매핑된 인터페이스가 CSA의 실제 장치 출력과 일치하지 않을 수 있습니다</block>
+  <block id="1bc43dc9c0ccf501bb125bee86c0762d" category="inline-link">1212001)을 참조하십시오</block>
+  <block id="c929bc8afa52722c4ea36633f2342986" category="cell"><block ref="0afdd8fc92549c954cf056c0fd2f43e9" category="inline-link-rx"></block></block>
+  <block id="6371eb3c6ede0799d86928f822ecd62a" category="cell">CSA에서 랙 장착 서버의 전원 공급 장치 정보가 잘못 표시될 수 있습니다</block>
+  <block id="885796f1558f69819a19653c55fc70df" category="section-title">2019년 1월 17일</block>
+  <block id="1ce083f756b15c285486292953c6322f" category="list-text"><block ref="411f434e0a9ed872a9f1bb58c9537de4" category="inline-xref-macro-rx"></block></block>
+  <block id="784e8f995a17e4b20cc48d2e3b85733d" category="list-text"><block ref="082d18ba9d4541f4622119fe7163d353" category="inline-xref-macro-rx"></block></block>
+  <block id="ae1f56d899a738074bc45d19117bb7b3" category="list-text"><block ref="eb95827ed3a78b450622544c911aaef6" category="inline-xref-macro-rx"></block></block>
+  <block id="09578b9e2fba7ffc0f760074de6dbd42" category="list-text"><block ref="d7d8cc5a2328c43a800dee79efc9edd7" category="inline-xref-macro-rx"></block></block>
+  <block id="a0927389ed150a6d3dd3f199e2f02203" category="list-text"><block ref="bef3e86ecb3e9b0bd334e2d7808e2f6f" category="inline-xref-macro-rx"></block></block>
+  <block id="549fee24f6eab5da3408e162e7c36792" category="section-title">새로운 FlexPod 장치 지원</block>
+  <block id="3dda465897f38c44199dff7e943f026c" category="paragraph">이제 Converged Systems Advisor는 다음과 같은 FlexPod 디바이스를 지원합니다.</block>
+  <block id="74ef034873be6e75908e22616e82181f" category="list-text">Cisco UCS C-Series 랙 서버</block>
+  <block id="65bc074f6f89fc7a2c4ddd76c483b40a" category="list-text">Nexus 3000 시리즈 스위치</block>
+  <block id="d8ff0147940c2dea2c2e10bee47a16a6" category="list-text">Cisco UCS 스위치는 NetApp 컨트롤러에 직접 연결됩니다</block>
+  <block id="eba015cdb18494bab904be12811fbac4" category="paragraph">지원되는 장치의 전체 목록은 를 참조하십시오<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>.</block>
+  <block id="b55147098ea79a37c44c3f969962658c" category="section-title">호스트 및 가상 시스템에 대한 자세한 정보입니다</block>
+  <block id="1f05349a9a559af8f60a2124d6b92acb" category="paragraph">이제 Converged Systems Advisor가 가상화 환경에 대한 자세한 정보를 제공합니다. 드릴다운하여 다이어그램, 인벤토리 목록 및 규칙 요약 등 개별 호스트 및 가상 머신에 대한 정보를 볼 수 있습니다.</block>
+  <block id="cf577b1db36c3d9fa2729b836cc9ee7d" category="paragraph"><block ref="cf577b1db36c3d9fa2729b836cc9ee7d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6430949860b854b1fbddcf3d7e22cbda" category="section-title">인프라를 추가할 때 간편해진 환경</block>
+  <block id="438a9fb42090e4c9a930857d04f88e11" category="paragraph">이제 Converged Systems Advisor에 인프라를 더 쉽게 추가할 수 있습니다. 포털을 통해 단계별로 정보를 입력할 수 있습니다.</block>
+  <block id="cfa524a6fd491de0c00bd6dd5c436577" category="paragraph"><block ref="cfa524a6fd491de0c00bd6dd5c436577" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="da3321aced7c009c6a3c95bb47c8a5db" category="inline-link-macro">Converged Systems Advisor에 인프라를 추가하는 방법에 대해 알아보십시오</block>
+  <block id="9ea1990012ed7bcb428aa3a678b3cef1" category="paragraph"><block ref="f26c49940495a2374917e5099fe60e0e" category="inline-link-macro-rx"></block>.</block>
+  <block id="b021522d2331d2749a808707884b5d64" category="section-title">파일을 사용하여 장치를 가져옵니다</block>
+  <block id="222bdb07e138433c7340c22a4b2be824" category="paragraph">이제 각 장치에 대한 정보가 포함된 파일을 가져와서 FlexPod 인프라를 검색하도록 Converged Systems Advisor 에이전트를 구성할 수 있습니다. 각 장치를 하나씩 수동으로 추가하는 대신 장치를 가져올 수 있습니다.</block>
+  <block id="3e4f861d1f41e3909e3cb2edcfd8c2c4" category="paragraph"><block ref="3e4f861d1f41e3909e3cb2edcfd8c2c4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2b58ea2ceb1d32edb5672b4763042add" category="inline-link-macro">에이전트를 구성하여 FlexPod 인프라를 검색하는 방법에 대해 알아봅니다</block>
+  <block id="19dde02c5aa9d7eff0a98c1479042e8c" category="paragraph"><block ref="411c46172c11c949d9c5775fe02e578b" category="inline-link-macro-rx"></block>.</block>
+  <block id="af65db9beaf7491f0e97cd298af6d2ec" category="section-title">NetApp Active IQ와 통합</block>
+  <block id="de3967986e98713f03423ebafc1ed7a3" category="paragraph">이제 Converged Systems Advisor에서 Active IQ를 시작할 수 있습니다. 다음 예에서는 스토리지 페이지에서 사용할 수 있는 Active IQ 링크를 보여 줍니다.</block>
+  <block id="dc4eaa1dd902716b8c6730ea5857bf06" category="paragraph"><block ref="dc4eaa1dd902716b8c6730ea5857bf06" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="722caafb4825ef5d8670710fa29087cf" category="cell">4671</block>
+  <block id="4af1d2e9326336996680f2800e8f9255" category="cell">Converged Systems Advisor 포털을 탐색할 때 Firefox가 응답하지 않을 수 있습니다.</block>
+  <block id="7d6548bdc0082aacc950ed35e91fcccb" category="cell">4500을</block>
+  <block id="fa94538c06427a7eee07a7d149129ed6" category="cell">제한 시간이 만료된 후에도 Converged Systems Advisor 포털이 사용자를 로그아웃하지 않습니다. 로그인 상태를 유지하지만 FlexPod 시스템을 볼 수 없습니다.</block>
+  <block id="e465ae46b07058f4ab5e96b98f101756" category="cell">2794</block>
+  <block id="da31ea1df7858bacfe34c952e3742b07" category="cell">VMware 툴이 가상 시스템에 설치되어 있지 않더라도 "VMware 툴 검사"라는 규칙에 대해 Converged Systems Advisor는 "통과"를 표시합니다.</block>
+  <block id="d49a667ac74125df1b94fe71d09ffe0e" category="section-title">2018년 9월 13일</block>
+  <block id="283458aba148e98cebd1c3b4f751c858" category="paragraph">이번 릴리즈의 Converged Systems Advisor에는 다음과 같은 새로운 기능이 포함되어 있습니다.</block>
+  <block id="e49eace41b9f30aba321e27c558d7fc6" category="list-text">고객의 FlexPod 운영을 단순화하는 새로운 사용자 인터페이스 및 사용자 경험</block>
+  <block id="d129f055ca827c53ec3d0376a207f245" category="list-text">VMware 가상화에 대한 상태 및 Best Practice 검증</block>
+  <block id="aeceeff9b721328a53ecf24ddcdb02f7" category="list-text">확장된 Fibre Channel 지원을 통해 Cisco MDS 스위치 지원</block>
+  <block id="6ee6d9fef76364b6211226d197ecc12d" category="summary">시작하려면 FlexPod 장치에 대한 계정을 설정합니다.</block>
+  <block id="763bff2d0a7510e1f497deffa1445dc8" category="doc">FlexPod 장치용 계정을 만듭니다</block>
+  <block id="b73ab54ffa874225e874120d5e960d8d" category="paragraph">시작하려면 FlexPod 장치에 대한 계정을 설정합니다.</block>
+  <block id="3b96bcbc483e9dd6bc3de826b5ffebb4" category="list-text"><block ref="198faeb348646b73e8da0473fcbe5455" category="inline-xref-macro-rx"></block></block>
+  <block id="dcc7b585896b920ed248bedc33fd4226" category="list-text"><block ref="81f1ba78fc4860b0c6197cc3de611053" category="inline-xref-macro-rx"></block></block>
+  <block id="0aa7c76a9a217ac66f5c793b6cb1779f" category="list-text"><block ref="2b75336c52fd5d571ce4755e5e6519ea" category="inline-xref-macro-rx"></block></block>
+  <block id="9d3cabb8bde54e4363132768c56ce892" category="list-text"><block ref="846474009d05c567cc71d50a068b3621" category="inline-xref-macro-rx"></block></block>
+  <block id="2bc3d9e6e8aac0760ec9c02e91515774" category="list-text"><block ref="eff313783d36eafeb3b0aebc4c097d24" category="inline-xref-macro-rx"></block></block>
+  <block id="c5a6e959bd6cf63be1fd9acf96a06c5c" category="list-text"><block ref="bc9cf9da7b1de83caf24ede548f23300" category="inline-xref-macro-rx"></block></block>
+  <block id="3f797dc0f189f9b373d1432af32b220f" category="paragraph">에이전트는 이러한 계정을 사용하여 각 장치에서 구성 정보를 수집합니다.</block>
+  <block id="3d69dc5441492f15abb95321c2cc1ada" category="section-title">Nexus 스위치에 대한 읽기 전용 계정을 생성합니다</block>
+  <block id="c2b8d6852be42f06f88b0c3fbbc5422e" category="list-text">SSH 또는 텔넷을 사용하여 각 Nexus 스위치에 로그인합니다.</block>
+  <block id="ec376469ee262b680d7560c874cb55d3" category="paragraph">TACACS+ 서버를 사용 중이고 CSA 사용자 권한을 부여해야 하는 경우 로 이동합니다 <block ref="5dddc1466e8f7274f5d10e745bddaa1c" category="inline-link-macro-rx"></block>.</block>
+  <block id="92a02a450197db41e0b230ea53ef8ff3" category="section-title">TACACS+ 서버를 사용하여 CSA 사용자 권한을 부여합니다</block>
+  <block id="9594abb61036587b970df022c2515a6e" category="paragraph">TACACS+ 서버를 사용하는 경우 스위치에 대한 CSA 사용자 권한을 부여해야 하는 경우 사용자 권한 그룹을 만들고 CSA에 필요한 특정 설정 명령에 대한 그룹 액세스 권한을 부여해야 합니다.</block>
+  <block id="8e8c3bcc7746453643cf1bcd798bfab0" category="list-text">다음을 입력하여 읽기 전용 액세스 권한이 있는 사용자 권한 그룹을 생성합니다.</block>
+  <block id="a00ed1ca8e2bff8f5a9a44d1f182e66d" category="list-text">CSA에 필요한 명령에 대한 액세스 권한을 부여하려면 다음을 입력합니다.</block>
+  <block id="164354e7a574442b2d5ff39fd82a9775" category="list-text">CSA 사용자 계정을 새로 생성된 그룹에 추가하려면 다음을 입력합니다.</block>
+  <block id="1f060636fe5b0a8ed84fb873b522ba92" category="summary">NetApp 파트너인 경우 구축 검증을 실행하기 전에 고객과 함께 에이전트를 구축하고 포털을 설정할 수 있는 Converged Systems Advisor를 시작할 수 있습니다.</block>
+  <block id="8d10e09bd713073b88005ddecbf5705a" category="doc">파트너를 위한 배포 검증 보고서</block>
+  <block id="62cc019b98cca9e1b65c304991c3dca4" category="paragraph">NetApp 파트너는 구축 검증을 실행하여 FlexPod 통합 인프라가 올바르게 구성되었는지 확인할 수 있습니다. 그런 다음 파트너는 고객에게 보고서를 제공할 수 있습니다.</block>
+  <block id="91ab85eefd69d7cffdeaeafa97f57ef0" category="list-text">고객 목록에서 고객의 구성을 확장합니다.</block>
+  <block id="66b8bcf3d36b277ad8598bfaebbb4a0d" category="inline-image-macro">에는 고객을 위한 3가지 통합 인프라가 나와 있습니다.</block>
+  <block id="436ecfb9b85682461b5bef001b3da4f1" category="paragraph"><block ref="436ecfb9b85682461b5bef001b3da4f1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5ebb04ca9d563bbc59f02045e89b0296" category="list-text">배포 유효성 검사 보고서에서 * Generate * 를 클릭합니다.</block>
+  <block id="b2d71063ea8fde5885ee791895d5b980" category="list-text">브라우저에서 보고서를 볼 것인지, PDF에서 볼 것인지, 전자 메일을 통해 볼 것인지 선택합니다.</block>
+  <block id="78bf58d229f9d24f426ff1c4f3828e65" category="list-text">보고서를 검토하고 상호 운용성 문제와 배포 유효성 검사 오류를 수정합니다.</block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 예 *</block>
+  <block id="a9a2b2fd01902eb7f49cb1c9804e3a26" category="paragraph">이 샘플 구성에서 Nexus 스위치의 펌웨어 버전은 지원되지 않습니다.</block>
+  <block id="bb64e3d66337e032632e2ed6ec12ae72" category="inline-image-macro">에는 배포 유효성 검사 보고서의 상호 운용성 섹션이 나와 있습니다. 지원되지 않는 펌웨어 버전의 스위치 두 개가 포함되어 있습니다.</block>
+  <block id="dd9c33553627d1d3b83629490b10df63" category="paragraph"><block ref="dd9c33553627d1d3b83629490b10df63" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b095a50bfe33e9fe8853f327e3bd8096" category="paragraph">스위치 연결 문제로 인해 4가지 검증 규칙도 실패했습니다.</block>
+  <block id="60e4bd0929967950652424f215972c08" category="inline-image-macro">에는 배포 유효성 검사 보고서의 오류 섹션이 나와 있습니다. 패브릭 인터커넥트는 해당 Nexus 파이버 채널 패브릭으로 업링크되지 않습니다.</block>
+  <block id="31703635dd32ada82bfb46847cbf2dc6" category="paragraph"><block ref="31703635dd32ada82bfb46847cbf2dc6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1f8f0171baa7230cba1d85a6c7319cb" category="paragraph">펌웨어를 업그레이드하면 구성의 상호 운용성을 수정할 수 있으며 링크를 추가하면 실패한 유효성 검사 규칙을 수정할 수 있습니다.</block>
+  <block id="3c96b2dab570e1aa3d25891c5dd4535a" category="list-text">문제를 수정한 후 데이터를 수집하여 Converged Systems Advisor가 최신 구성 데이터를 보유하고 있는지 확인합니다.</block>
+  <block id="c4502a9584d9a8ef2a0725e38125721e" category="list-text">통합 인프라를 선택합니다.</block>
+  <block id="f3ebaa3a8eccc55285a7255f35ac0959" category="list-text">오른쪽 상단에서 * collect * 를 클릭합니다.</block>
+  <block id="45fafa74ca5c8a674fae2461dafb1b36" category="inline-image-macro">에는 통합 인프라를 선택한 후 사용할 수 있는 오른쪽 상단의 수집 버튼이 나와 있습니다.</block>
+  <block id="a8f5313e16a911a45da81a60a5bf3e0f" category="paragraph"><block ref="a8f5313e16a911a45da81a60a5bf3e0f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ee82c853dbac102b9219eea66b5b703c" category="list-text">보고서를 다시 생성하여 문제가 해결되었는지 확인합니다.</block>
+  <block id="3b44cf4d04f47c573ce4cab54a472577" category="list-text">최종 배포 검증 보고서를 고객에게 보냅니다.</block>
+  <block id="94e52eed71380953e3f8c1a6475f9c91" category="paragraph">이제 통합 인프라는 모범 사례에 따라 설정됩니다.</block>
+  <block id="a2344a362f5275955ff01f4c0302c7e7" category="summary">실패한 규칙 수정, 규칙 억제, 기능 억제된 규칙 목록 보기, 원하는 경우 기능 억제를 종료하도록 선택할 수 있습니다.</block>
+  <block id="e0f02631aa2e940e03b75a523e459eb3" category="doc">인프라 규칙을 모니터링합니다</block>
+  <block id="24744aeb927fc4dede0eec8cf1e1c8d7" category="paragraph">인프라를 모니터링하려면 실패한 규칙을 해결하고 규칙을 억제하고 억제된 규칙 목록을 보고 필요한 경우 억제를 종료하도록 선택합니다.</block>
+  <block id="b4459af605041a7930492df886bb4471" category="section-title">실패한 규칙 및 경고에 대한 경고를 검토합니다</block>
+  <block id="da4489f0980a33fa90b138ab1711c18c" category="paragraph">Converged Systems Advisor는 인프라를 지속적으로 모니터링하고 경고 및 오류를 생성하여 시스템이 모범 사례에 맞게 구성 및 수행되도록 합니다.</block>
+  <block id="fdc06c9d5f91b90f8456a6b05f258299" category="list-text">에 로그인합니다<block ref="eb9f0f7fac75ca880e49216162865e36" category="inline-link-rx"></block> 를 클릭하고 * 규칙 * 을 클릭합니다.</block>
+  <block id="763d1db2c64a3c2393a29e26e3822f16" category="paragraph">규칙 페이지에는 모든 규칙의 요약이 표시됩니다. 각 규칙의 상태는 * Pass *, * Warning * 또는 * Fail * 입니다.</block>
+  <block id="06c6354f899f95a2e0c6a3fe5d570fb3" category="list-text">상태 열에서 필터 아이콘을 클릭하고 * 실패 *, * 경고 * 또는 둘 다를 선택합니다.</block>
+  <block id="202fb926cf9309ce674dce57d623e78a" category="inline-image-macro">표를 필터링하여 통과, 실패 또는 경고를 포함하는 규칙만 표시하도록 하는 필터 아이콘을 표시합니다.</block>
+  <block id="2ad463ee636371e42c7ca5636e28fed7" category="paragraph"><block ref="2ad463ee636371e42c7ca5636e28fed7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c5d5d1929d7a4a13da82909982901f4e" category="list-text">상태 열 옆에 있는 화살표를 클릭하여 개별 규칙에 대한 세부 정보를 검토합니다.</block>
+  <block id="b09ee340cf3bb35ade0990ee9bbcabc8" category="inline-image-macro">설명, 영향 및 해결 방법을 비롯한 규칙에 대한 세부 정보를 표시합니다.</block>
+  <block id="a89ca4858b9e96829f0eaf450d2c6df6" category="paragraph"><block ref="a89ca4858b9e96829f0eaf450d2c6df6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="763b4a62989ab53c3781e84d97960bbc" category="list-text">문제 해결을 위한 지침에 따라 문제를 해결합니다.</block>
+  <block id="6ad500dce2c2a7d8f7b13693cf492abe" category="inline-xref">구성 기록을 검토합니다</block>
+  <block id="2625ad3fd82097f140d0bc8d371ccda9" category="paragraph">필요한 경우 <block ref="8fbdc8d58e24479b2bffb697841f542c" category="inline-xref-macro-rx"></block> 문제 해결에 도움이 되는 인프라</block>
+  <block id="02d591fa96f231677fb827a48cbe57b1" category="paragraph">상담원이 처리한 규칙의 상태는 에이전트의 다음 수집 기간 후에 통과 로 표시되어야 합니다.</block>
+  <block id="802d3156d7f68322e8ca95584629cb30" category="section-title">실패한 규칙 수정</block>
+  <block id="351c1a6b45f8840d4c1a4e9ee589573d" category="paragraph">Converged Systems Advisor는 컨버지드 인프라의 기본 문제를 수정하여 실패한 일부 규칙을 해결할 수 있습니다.</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">이 작업에 대해</block>
+  <block id="4e3abf9ee681918e75136c8643d1b6fb" category="list-text">Premium 라이센스가 있어야 합니다.</block>
+  <block id="97b32378ece8468ddfbdabc0ff920cc3" category="list-text">통합 인프라의 소유자로 할당되어야 합니다.</block>
+  <block id="d8615765e8e292dd939bf87224df7e05" category="list-text">수정할 수 있는 필터 규칙 * 을 선택합니다.</block>
+  <block id="3d7ac1b543a43164220663463e8d2ae7" category="list-text">해결하려는 규칙을 확장합니다.</block>
+  <block id="796f6174c88667af46eeef46c9ebefba" category="inline-image-macro">에서는 실패한 규칙을 자동으로 수정할 수 있는 렌치 아이콘을 보여 줍니다.</block>
+  <block id="3b521101805d8fdb2ea6abac2d2fddcb" category="list-text">을 클릭합니다 <block ref="42948ea8407431ac3aebb834069c3081" category="inline-image-macro-rx" type="image"></block> 확장된 규칙의 오른쪽 위 모서리에 있습니다.</block>
+  <block id="9d090cca2b0bb235d833fc152f4a1e95" category="paragraph">아이콘이 비활성화되면 에이전트가 오프라인이거나 소유자 권한이 없거나 프리미엄 라이센스가 없기 때문입니다.</block>
+  <block id="5034d5c0e6e5f309421842bba0171e21" category="list-text">필요한 경우 입력 값을 입력합니다.</block>
+  <block id="4ed2f0fd2887d376f8661c62f2726132" category="paragraph">실패한 규칙에 따라 문제를 해결하려면 일부 입력 값이 필요합니다.</block>
+  <block id="aac3b6603b045fbde7518cd9ed13f031" category="list-text">교정 작업이 성공적으로 완료된 후 데이터 수집을 수행하려면 * 수정 작업이 완료될 때 수집 * 옵션을 선택합니다.</block>
+  <block id="42a29a38eaebc4cd2f01a5fbdd7560aa" category="list-text">치료 실행 * 을 클릭합니다.</block>
+  <block id="8183c9dbb2354fb933c18a1e36501526" category="list-text">확인 * 을 클릭합니다.</block>
+  <block id="bfc045b4e61163bafe6a55ea0791d7b8" category="list-text">실패한 규칙을 해결하기 위해 취하는 조치를 보려면 * Operations * 아이콘을 클릭하고 * Remediation Action * 을 선택합니다.</block>
+  <block id="aa2e3bc4a59e8dd66e574a74b917b05b" category="inline-image-macro">메뉴를 열어 교정 조치를 확인하는 작업 아이콘을 표시합니다.</block>
+  <block id="7ec3bd6219f41f64a90c3960344b842e" category="paragraph"><block ref="7ec3bd6219f41f64a90c3960344b842e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f715709e86a0e4352fd5030dd232c8cd" category="section-title">실패한 규칙을 억제합니다</block>
+  <block id="293df73a9b50a370a73fb719ee2421b1" category="paragraph">Converged Systems Advisor를 사용하면 규칙을 억제하여 대시보드에 표시되지 않고 규칙 실패 시 이메일 알림을 더 이상 보내지 않도록 할 수 있습니다.</block>
+  <block id="a0063f9781e30cf5197307c2991a6ad2" category="paragraph">예를 들어, 텔넷을 사용하도록 설정하는 것은 권장되지 않지만, 텔넷을 사용하도록 설정하려면 규칙을 억제할 수 있습니다.</block>
+  <block id="4a7307c336893b2d270760d3b3cb38eb" category="paragraph">알림을 구성하려면 프리미엄 라이센스가 있어야 합니다.</block>
+  <block id="25c1c98d63843493c60d7f6fabd12311" category="list-text">대시보드에서 * 규칙 * 을 클릭합니다.</block>
+  <block id="308a821e385567451839a9424c3a0859" category="list-text">표의 내용을 필터링하여 원하는 규칙을 찾습니다.</block>
+  <block id="12f6b83ab6c268342595376953a17e80" category="list-text">경고 또는 실패 상태인 규칙에 대해 하나 이상의 행을 선택한 다음 * 경고 * 아이콘을 클릭합니다.</block>
+  <block id="008427ab5412d6ddcdad9d6bfaa3a149" category="inline-image-macro">표 위에 규칙을 억제할 수 있는 알림 아이콘을 표시합니다.</block>
+  <block id="fcaf1234e9852d27e0b9d5ab8c5cf389" category="paragraph"><block ref="fcaf1234e9852d27e0b9d5ab8c5cf389" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e69c9ca1da916fbe7c75dadd97962038" category="list-text">기간을 선택한 다음 * 제출 * 을 클릭합니다.</block>
+  <block id="dcdfbaafd1cee028472b916b24ae285f" category="admonition">경고를 활성화하려면 동일한 단계를 따르고 * 기능 억제 종료 * 를 선택합니다.</block>
+  <block id="4639e34f277e9cc25cab4e3d77223113" category="paragraph">Converged Systems Advisor는 더 이상 지정된 기간 동안 규칙에 대해 알려주지 않으며 대시보드에는 더 이상 규칙을 표시할 수 없습니다.</block>
+  <block id="c0baf402396dab2430411379fb31fb66" category="section-title">기능 억제된 규칙 표시</block>
+  <block id="1ffeb833453e69841ffa25ed250f8850" category="list-text">설정 * 아이콘을 클릭하고 * 기능 억제 규칙 * 을 선택합니다.</block>
+  <block id="b6b001d1dff9d0dbe8295732f02275ea" category="inline-image-macro">기능 억제 규칙을 선택하기 위해 메뉴를 여는 설정 아이콘을 표시합니다.</block>
+  <block id="2206ba8c8f83e664f85e355245f63e87" category="paragraph"><block ref="2206ba8c8f83e664f85e355245f63e87" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b165f6e721b097b70c6ad4b29a4d279d" category="list-text">표시를 시작할 기능 억제된 규칙을 선택합니다.</block>
+  <block id="ec322b3a2d92a535cd71909b666547c0" category="list-text">알림 * 아이콘을 클릭합니다.</block>
+  <block id="07c26e41b63d0ff3970894104e144d9d" category="list-text">기능 억제 종료 * 를 선택한 다음 * 제출 * 을 클릭합니다.</block>
+  <block id="77f317049f7895469c3d010a42706564" category="paragraph">선택한 규칙에 대해 알림이 활성화되고 규칙이 규칙 테이블 및 대시보드에 표시됩니다.</block>
+  <block id="e518836d5edd45b09ec72b8a2caf2b83" category="paragraph">TACACS+ 서버를 사용하는 경우 스위치에 대한 CSA 사용자 권한을 부여해야 하는 경우, 사용자 권한 그룹을 만들고 CSA가 필요로 하는 특정 설정 명령에 대한 그룹 액세스 권한을 부여해야 합니다. 다음 명령은 TACACS+ 서버의 구성 파일에 기록되어야 합니다.</block>
+  <block id="19a5158f1235c29843008925adb7baf8" category="doc">알림을 구성합니다</block>
+  <block id="d7eb081e4b63d797a86524b23182f6e0" category="summary">시작 날짜, 종료 날짜 및 계약 ID를 포함하여 구성의 각 장치에 대한 지원 계약에 대한 세부 정보를 추가할 수 있습니다.</block>
+  <block id="707403f6f79d0a1227617b22557b065b" category="doc">지원 계약 추적</block>
+  <block id="08dd468a8c74db6c2663baba0ec0d793" category="paragraph">구성의 각 장치에 대한 지원 계약(시작 날짜, 종료 날짜 및 계약 ID)에 대한 세부 정보를 추가할 수 있습니다. 이를 통해 중앙 위치에서 세부 정보를 쉽게 추적할 수 있으므로 각 장치에 대한 지원 계약을 갱신할 시기를 알 수 있습니다.</block>
+  <block id="a6a6a713a212d5be421f5c986e13a878" category="list-text">CI * 선택 을 클릭하고 통합 인프라를 선택합니다.</block>
+  <block id="9f529ff9d992ed0eefdeba5bcf4ccce3" category="list-text">지원 계약 위젯에서 * 계약 편집 * 아이콘을 클릭합니다.</block>
+  <block id="4acbaa402382b53ae1547f7303cf04da" category="list-text">시작 날짜 * 와 * 종료 날짜 * 를 선택하고 * 계약 ID * 를 입력합니다.</block>
+  <block id="4b5d2dd70af718ebe67bfea5b43d8667" category="list-text">제출 * 을 클릭합니다.</block>
+  <block id="3cd95388ab719dadee5bcf6a664ddea7" category="list-text">구성의 각 장치에 대해 이 단계를 반복합니다.</block>
+  <block id="9e1d8362ca0406d31099d22cf48d0b99" category="paragraph">이제 Converged Systems Advisor가 각 장치에 대한 지원 계약 세부 정보를 표시합니다. 활성 및 만료된 지원 계약이 있는 장치를 쉽게 확인할 수 있습니다.</block>
+  <block id="4b95f23f0f314a2b4da695b700811595" category="inline-image-macro">에는 4개의 지원 계약이 만료되었으며 다른 하나는 활성 상태입니다.</block>
+  <block id="ee5940588622152ee61a29d80da69ddc" category="paragraph"><block ref="ee5940588622152ee61a29d80da69ddc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8d2c4ebf93aef876f912d1dbc5d5f446" category="summary">환경에 DHCP 서버가 없는 경우 Converged Systems Advisor 에이전트에서 고정 IP 주소를 설정할 수 있습니다.</block>
+  <block id="bb970f20a14446757048e71ed32f976f" category="doc">에이전트에 정적 IP 주소를 설정합니다</block>
+  <block id="d9a5f12699bae674c63f2c267573224b" category="paragraph">기본 사용자 이름은 * CSA * 이고 기본 암호는 * NetApp * 입니다. 메시지가 나타나면 암호를 변경합니다.</block>
+  <block id="b6de644e9b5b1e58594eba0a09555428" category="list-text">CSA 프롬프트에서 'SUDO su –'를 입력하여 root가 됩니다.</block>
+  <block id="53b9d6386077deb220e39848631a1432" category="list-text">CSA 서비스를 중지하려면 '#systemctl stop csa.service` 를 입력합니다.</block>
+  <block id="23d5cee3449e29c27ec154cf829a69c3" category="list-text">다음을 입력하여 올바른 인터페이스 파일 이름을 확인하십시오.</block>
+  <block id="2bf1d3038022317a128963915a08f202" category="paragraph">이 예에서 인터페이스 파일 이름은 eth0입니다.</block>
+  <block id="bcf28884b8c036a478d2f25650c43a5f" category="paragraph">'#ls/etc/network/interfaces.d/'</block>
+  <block id="f77dbe6328f12a32ab9eb2576246ec8f" category="list-text">활성 인터페이스를 중지하려면 "#/sbin/ifdown eth0"을 입력합니다.</block>
+  <block id="9660dc3d2d47bb1edf0d90bc60359a4f" category="list-text">선택한 편집기로 /etc/network/interfaces.d/eth0 파일을 편집합니다.</block>
+  <block id="cdb12d95400318fd9ca6cc49132ab819" category="paragraph">'#nano/etc/network/interfaces.d/eth0' 또는 '#vi/etc/network/interfaces.d/eth0'</block>
+  <block id="1756345afbc4de489ffcc0f962d00c59" category="paragraph">이 파일에는 다음 항목이 포함되어 있습니다.</block>
+  <block id="96127d77fba94b76446bd73e9a3088e5" category="paragraph">Allow-Hotplug eth0 iface eth0 inet DHCP를 사용합니다</block>
+  <block id="25e011b9fcda92e242aa20ba3c216c64" category="list-text">iface eth0 inet DHCP를 제거하고 다음을 추가합니다. 참고: 아래 예에서 필드 이름 다음에 나오는 모든 항목에 대해 올바른 값을 대체해야 합니다. 예를 들어 192.168.11.1은 이 예에서 게이트웨이의 값입니다. 그러나 192.168.11.1 대신 게이트웨이에 맞는 주소를 입력해야 합니다.</block>
+  <block id="69e9edbe64528504bd6ba53958fd606a" category="paragraph">iface eth0 static address 192.168.11.100 netmask 255.255.255.0 게이트웨이 192.168.11.1 dns-domain example.com dns-nameserver 192.168.11.1</block>
+  <block id="01d3a32280cc94c7c057cd3d14488785" category="list-text">파일을 저장합니다.</block>
+  <block id="38c39deaa2f53315e7b202e17baffc26" category="paragraph">nano에서는 * Ctrl + o * 를 입력한 다음 * Ctrl + x * 를 입력하여 저장합니다.</block>
+  <block id="4cd2bda6af7660c1598f39b9c7d6f529" category="list-text">구성 파일을 열려면 'vi /etc/resolv.conf'를 입력합니다.</block>
+  <block id="2c0c5618501d3f3f63b49af53d2fbd47" category="list-text">파일 맨 위에 이름 서버 &lt;IP_address&gt;'를 추가합니다.</block>
+  <block id="b3030219c1ea1568cd293ed2279fad1e" category="list-text">네트워크 인터페이스를 시작하려면 '#ifup eth0'을 입력합니다.</block>
+  <block id="67579867e6a21ae6d929c597a6c6b46f" category="list-text">stemctl start csa.service` 를 입력하여 Converged Systems Advisor를 다시 시작합니다.</block>
+  <block id="bdb0dc2742052e838432bdb344b2269d" category="summary">Converged Systems Advisor 에이전트 및 포털 시작 단계에는 몇 가지 단계가 있습니다.</block>
+  <block id="d765707c3b28b87a0166a122e0893c44" category="doc">Converged Systems Advisor의 빠른 시작</block>
+  <block id="bb4e793023539d2e73eea517a0009f8f" category="paragraph">FlexPod용 Converged Systems Advisor 에이전트 및 포털 시작 단계에는 몇 가지 단계가 있습니다.</block>
+  <block id="861d7392cf2a3c7ca2ed1442f6237101" category="paragraph">구성에 대한 지원을 확인합니다. <block ref="5db18581d3c751db9049195c8f5e0955" category="inline-link-macro-rx"></block>.</block>
+  <block id="005c54fa8a7e7bd788a9d809d1387a85" category="section-title">FlexPod 장치에서 계정을 만듭니다</block>
+  <block id="2f166ccfcdb92d24539f300510b6c06a" category="inline-link-macro">FlexPod 장치에서 계정을 만듭니다</block>
+  <block id="ef53b42f68445a3ad4051becb0f15d0a" category="paragraph">Cisco UCS Manager, Cisco Nexus 스위치, ONTAP 시스템, VMware 및 APIC에서 계정을 설정합니다. 이러한 계정은 구성 데이터를 수집하는 데 사용됩니다.<block ref="3431097fc9e072fa942c7d7d18ec5a22" category="inline-link-macro-rx"></block>.</block>
+  <block id="2c1c5cb63f66b3d5b5f4eeb79a858979" category="paragraph">TACACS+ 서버를 사용하는 경우, 스위치에 대한 CSA 사용자 권한을 부여하고, 사용자 권한 그룹을 생성하고, CSA에 필요한 특정 설정 명령에 대한 그룹 액세스 권한을 부여해야 합니다.<block ref="4c9d56d5e4670c50abdba1f72cb4866c" category="inline-link-macro-rx"></block></block>
+  <block id="c0fb3c98adaf760968c2a76d78a5b482" category="inline-link-macro">에이전트를 배포합니다</block>
+  <block id="0550cf7fd37a5b054ce87062df5f3254" category="paragraph">VMware ESXi 서버에 Converged Systems Advisor 에이전트를 구축합니다. 에이전트는 FlexPod 통합 인프라의 각 장치에 대한 구성 데이터를 수집하여 해당 데이터를 Converged Systems Advisor 포털로 전송합니다.<block ref="96f9770b130e3bbf775f182c9ade7098" category="inline-link-macro-rx"></block>.</block>
+  <block id="0d68d2879e160e76749e7cf93c2fa146" category="section-title">포털에서 인프라 추가/공유</block>
+  <block id="19262993c294a1c73c8ae843e52a78f8" category="inline-link-macro">포털에서 인프라 추가 및 공유</block>
+  <block id="98e6f4726c519b5915a8c7eda3e7406d" category="paragraph">Converged Systems Advisor 포털에 각 FlexPod 디바이스를 추가하여 모니터링할 수 있는 전체 인프라를 생성합니다. 또한 통합 인프라를 공유하여 다른 사용자가 포털에 로그인하여 구성을 보고 모니터링할 수 있도록 할 수 있습니다.<block ref="8650b55bc84e39256db0ba998f0a5b40" category="inline-link-macro-rx"></block>.</block>
+  <block id="68b25f35698ade6b2d3fe83dec7cf861" category="paragraph">프리미엄 라이센스를 사용하면 이메일 알림을 통해 FlexPod 인프라 변경에 대해 경고하는 알림을 설정할 수 있습니다.<block ref="ebe1a4d3225f5bb69764eba03129edce" category="inline-link-macro-rx"></block></block>
+  <block id="b44a488d2f5dc6040330205f250e7850" category="section-title">고정 IP 주소를 설정합니다</block>
+  <block id="db15846e3abf8485dbf81a496e64d90a" category="paragraph">환경에 DHCP 서버가 없는 경우 Converged Systems Advisor 에이전트에서 고정 IP 주소를 설정할 수 있습니다.<block ref="708dd38422a6a2d257990b66f3dbd251" category="inline-link-macro-rx"></block></block>
+  <block id="b689686306a7a611fc6499acdfee3772" category="summary">Converged Systems Advisor는 FlexPod 인프라 구축을 검증하고 지속적인 모니터링 및 알림을 제공하여 비즈니스 연속성을 보장합니다.</block>
+  <block id="4daf49986af67aba8f5e944968d88167" category="doc">Converged Systems Advisor 개요</block>
+  <block id="b3072b853bb7e155aaf1f74dc7548418" category="paragraph">다음 비디오에서 Converged Systems Advisor에 대한 개요를 확인하십시오.</block>
+  <block id="fccce43bca628d5f348a9d60196dd5ac" category="inline-link">데이터시트를 읽어 보십시오</block>
+  <block id="c4a6f4e43c995f810acb8c7b73e0d5d1" category="paragraph">Converged Systems Advisor가 제공하는 가치에 대한 자세한 내용은<block ref="f25cd14a6ee6a3fdd35c3bb14df6ae32" category="inline-link-rx"></block>.</block>
+  <block id="70a81ab3570971044c051a122f25ee0b" category="summary">다양한 리소스를 통해 도움을 받고 Converged Systems Advisor에 대한 자세한 정보를 확인할 수 있습니다.</block>
+  <block id="3cd12697cda279c9c99b093a265c1ba8" category="doc">도움을 받을 수 있는 곳 및 자세한 정보를 얻을 수 있는 곳</block>
+  <block id="ba69e3ff884a3e60e26bcffcb121315d" category="inline-link">Converged Systems Advisor 데이터시트</block>
+  <block id="5bcf85e8807e9d7961fa86529a7ee3ac" category="list-text"><block ref="5bcf85e8807e9d7961fa86529a7ee3ac" category="inline-link-rx"></block></block>
+  <block id="b1b49e994988385600e529f9e03aeded" category="paragraph">Converged Systems Advisor가 제공하는 가치에 대한 자세한 내용은</block>
+  <block id="5768a4e6671c0fb61f9cc9bccc217998" category="inline-link">NetApp 기술 보고서 4036: FlexPod 데이터 센터 기술 사양</block>
+  <block id="9569519d894aa3e75942763a12a60c12" category="list-text"><block ref="9569519d894aa3e75942763a12a60c12" category="inline-link-rx"></block></block>
+  <block id="d5ae438f326f42644223635842ca89cc" category="paragraph">Converged Systems Advisor가 구성을 비교하는 모범 사례 및 펌웨어 요구사항을 검토합니다.</block>
+  <block id="b1540a3ec25c7d8277b499a1cc1d920b" category="list-text"><block ref="b1540a3ec25c7d8277b499a1cc1d920b" category="inline-link-rx"></block></block>
+  <block id="b9c8769caa39394587c227d447b7343b" category="paragraph">구성에 대한 지원을 확인합니다.</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="inline-link">NetApp 커뮤니티</block>
+  <block id="692fac6072c610332c2f66f183595f71" category="list-text"><block ref="692fac6072c610332c2f66f183595f71" category="inline-link-rx"></block></block>
+  <block id="4c7cda3e1dc1461a889607095bfa6769" category="paragraph">동료와 소통하고, 질문을 하고, 아이디어를 교환하고, 리소스를 찾고, 모범 사례를 공유합니다.</block>
+  <block id="bc4fe2352063642d68529f2aa0ca7ca3" category="inline-link">NetApp 제품 설명서</block>
+  <block id="178e09d5859093549cf62631c31b4e03" category="list-text"><block ref="178e09d5859093549cf62631c31b4e03" category="inline-link-rx"></block></block>
+  <block id="66c5be124e373109c15d21cfd76b84a5" category="paragraph">NetApp 제품 설명서에서 지침, 리소스, 답변을 찾아보십시오.</block>
+  <block id="7732b9007870fcad946e2c77ac91e87d" category="inline-link">지원 케이스를 엽니다</block>
+  <block id="0dcb6d5b41f9b4b5ae94ff5f19c1d12e" category="list-text"><block ref="0dcb6d5b41f9b4b5ae94ff5f19c1d12e" category="inline-link-rx"></block></block>
+  <block id="b4ec9fb497489f10c512e2032e49fb08" category="paragraph">추가 지원을 받으려면 지원 케이스를 여십시오. 지원 케이스는 * Cat1 -&gt; Remote Diagnostic Tools * 및 * CAT2 -&gt; Converged System Advisor * 에서 열어야 합니다.</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">법적 고지</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">저작권</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">상표</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp, NetApp 로고, NetApp 상표 페이지에 나열된 마크는 NetApp Inc.의 상표입니다. 기타 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">특허</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">NetApp 소유 특허 목록은 다음 사이트에서 확인할 수 있습니다.</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">개인 정보 보호 정책</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
+  <block id="e0315085076faa5f8bd08e82d140ee63" category="inline-link-macro">Converged Systems Advisor의 경우</block>
+  <block id="4abf4a1cccc2bcfbc79190153a49a2fb" category="paragraph"><block ref="4abf4a1cccc2bcfbc79190153a49a2fb" category="inline-link-macro-rx"></block></block>
+  <block id="093e4ca191076aaeab8a87c32f3e59b9" category="summary">알려진 문제점은 서비스를 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다. Bugs Online 보고서를 사용할 수 있는 경우 버그 ID에 보고서에 대한 하이퍼링크가 포함됩니다.</block>
+  <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="doc">알려진 문제</block>
+  <block id="07646d96b0a5453c5d151d754d2dbb4b" category="inline-link">1234597</block>
+  <block id="5dc015869ee1fffcfe18ffb7b0380578" category="cell"><block ref="e9377e240fb8deadfedc2e31ee75b093" category="inline-link-rx"></block></block>
+  <block id="ad53fa7bb171e082d2d1cb699a67c551" category="cell">Converged Systems Advisor는 4개 이상의 SVM에 대한 DNS 구성을 개선하지 않습니다.</block>
+  <block id="798bb4078a98dfc398ee27ded37fccb9" category="inline-link">1234603</block>
+  <block id="63b2552c29ae354107fcfb9604981826" category="cell"><block ref="9ea63614a471f724be04717758df478d" category="inline-link-rx"></block></block>
+  <block id="7d459d150271ac4124abd6ef7eb50437" category="cell">수집이 활성화된 상태에서 여러 교정 작업을 생성한 후에는 첫 번째 교정 작업에만 수집이 트리거됩니다.</block>
+  <block id="954aaefe49d225da7ff2a5c6265a3f74" category="inline-link">1335590</block>
+  <block id="56cbc985c9341566bd1bcdccacae3c33" category="cell"><block ref="cb1155f7f28efdd1e05510903264c499" category="inline-link-rx"></block></block>
+  <block id="361198e1f4f8acd67465a74b3b90cabe" category="cell">Converged Systems Advisor에서 "스토리지 페일오버 상태" CA 규칙이 제거되었습니다.</block>
+  <block id="59dd5af94dc714215999ade6dcfc5e6d" category="inline-link">1335593)을 참조하십시오</block>
+  <block id="0737ee285ab66d2b8009bb58d622261c" category="cell"><block ref="8a3f01dd75676a73cfafd2b1daf552ce" category="inline-link-rx"></block></block>
+  <block id="839eaaea535ab65cf6fcf7a1845e1d71" category="cell">Nexus 및 MDS 스위치의 버전 번호가 "Upgrade Advisor" 아래에 잘못 표시됩니다.</block>
+  <block id="b4d4c91661a500ca9f836dd268c8d92a" category="summary">알림에 응답하고, 변경 내역을 검토하고, 인프라를 전체적으로 볼 수 있는 보고서를 생성하여 통합 인프라를 모니터링할 수 있습니다.</block>
+  <block id="382088a5073a61e9b13725ada78c8e59" category="doc">통합 인프라 모니터링</block>
+  <block id="97eb92a13cf2b5bd7063ad249b6f2569" category="section-title">실패한 규칙 및 경고에 대한 경고 검토</block>
+  <block id="6f60fe9da42eedfd7df6bbc30d7b77da" category="section-title">실패한 규칙을 해결하는 중입니다</block>
+  <block id="f052a30a2aeb64391002dc3341563048" category="section-title">실패한 규칙을 억제합니다</block>
+  <block id="e5fb1eac98e8be5c995e7929e8b70da0" category="paragraph">기능 억제된 규칙 목록을 볼 수 있으며, 필요한 경우 를 선택하여 기능 억제를 종료할 수 있습니다.</block>
+  <block id="78d8b6135ca87d41ab89914e626de9a5" category="section-title">인프라 기록 검토</block>
+  <block id="255d8d695266132eb9b6a52c6ee00b71" category="paragraph">실패한 규칙에 대한 알림을 받으면 구성에서 변경된 사항에 대한 기록을 확인하여 문제를 해결할 수 있습니다.</block>
+  <block id="ddb6cc4a6a81ec19ebb07387b482e42f" category="list-text">통합 인프라를 선택합니다.</block>
+  <block id="7a1c2c362657dac6fb6d5de1697d59eb" category="list-text">자세히 &gt; 기록 * 을 클릭합니다.</block>
+  <block id="f5a1e9ab2662a2f1e774fa5b1b22354c" category="inline-image-macro">기록 옵션이 포함된 자세히 메뉴를 표시합니다.</block>
+  <block id="d86f023c281e4c7e1cc6422740a2ce3d" category="paragraph"><block ref="d86f023c281e4c7e1cc6422740a2ce3d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="819726a36e174ef47ab655e2c54e1f30" category="list-text">각 데이터 수집 중에 식별된 경고 및 오류 수를 보려면 달력에서 날짜를 클릭합니다.</block>
+  <block id="ddff6108b62f0e074e78accb27419744" category="admonition">각 날짜에 표시되는 숫자는 상담원이 데이터를 수집한 횟수와 일치합니다. 예를 들어 기본 수집 간격을 24시간으로 유지하는 경우 하루 하나의 컬렉션이 표시됩니다.</block>
+  <block id="b69e4b5d485bc08cef823be6ac4ba22d" category="paragraph">다음 이미지는 해당 월의 27일에 단일 컬렉션을 보여 줍니다.</block>
+  <block id="ff23ac22b6549ebac2e097387d9e1a7e" category="inline-image-macro">월 27일에 첫 번째 및 한 개의 노란색 점을 표시합니다.</block>
+  <block id="d5c441097ffe44c888eb3afd6f7afb21" category="paragraph"><block ref="d5c441097ffe44c888eb3afd6f7afb21" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="017ef171d8620c381816c046d14e0a28" category="list-text">수집된 데이터에 대한 자세한 내용을 보려면 * CI 대시보드로 이동 * 을 클릭합니다.</block>
+  <block id="420fee2342b69a09df56c9f4c8948315" category="list-text">필요한 경우, 경고 또는 오류가 발견되지 않은 마지막 시간의 기록을 봅니다.</block>
+  <block id="7297f536b887e2351b3f1d8d075f4043" category="paragraph">두 수집 기간 간의 데이터를 비교하면 변경된 내용을 확인하는 데 도움이 될 수 있습니다.</block>
+  <block id="567235aef678e48ef18482e34043f721" category="section-title">보고서를 생성하는 중입니다</block>
+  <block id="64b90563965409f7bfe8d73a0d85c567" category="paragraph">프리미엄 라이센스가 있는 경우, 재고 보고서, 상태 보고서, 평가 보고서 등 현재 통합 인프라의 상태에 대한 세부 정보를 제공하는 여러 유형의 보고서를 생성할 수 있습니다.</block>
+  <block id="a911f6618c123405cc3fc8cfe65c731f" category="list-text">보고서 * 를 클릭합니다.</block>
+  <block id="51ed89d13fed8fbbd34332091a1f4cf3" category="list-text">보고서를 선택하고 * Generate * (생성 *)를 클릭합니다.</block>
+  <block id="3b1f0b66bd433b7e1259d5ca6f0f6e84" category="list-text">보고서에 대한 옵션을 선택합니다.</block>
+  <block id="46496ed8b9ac1d5f6eeba7ff09cf405c" category="list-text">필요에 따라 최신 데이터 컬렉션에서 이전 데이터 컬렉션으로 변경합니다.</block>
+  <block id="d6d980dc9979eb210416d40a6eed3028" category="list-text">브라우저, 다운로드한 PDF 또는 이메일을 통해 보고서를 보는 방법을 선택합니다.</block>
+  <block id="4e821fd1fc9d0d94e03013829b560a2f" category="inline-image-macro">에는 통합 인프라 및 스냅샷 선택을 포함한 보고서 생성 옵션과 보고서 보기 방법을 선택하는 옵션이 나와 있습니다.</block>
+  <block id="a4ca0ac64711a4aec786760c86c6dc75" category="paragraph"><block ref="a4ca0ac64711a4aec786760c86c6dc75" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cdfd3e7337dd38ee1623080a3c618e83" category="paragraph">Converged Systems Advisor가 보고서를 생성합니다.</block>
+  <block id="f24126e7aabc8fc06c1874eb6abef5eb" category="section-title">지원 계약 추적</block>
+  <block id="f5a33842927eb03d2f6ec5e320ebfcec" category="summary">상태 보고서 또는 파트너에 대한 배포 유효성 검사 보고서와 같은 여러 유형의 보고서를 생성할 수 있습니다.</block>
+  <block id="7ecd0726b721e17d74d280fdd93e49f8" category="doc">보고서를 생성합니다</block>
+  <block id="6610ef9bd5e35768446c72320c3ad413" category="paragraph">프리미엄 라이센스가 있는 경우, 재고 보고서, 상태 보고서, 평가 보고서, 파트너를 위한 배포 검증 보고서 등 통합 인프라의 현재 상태에 대한 세부 정보를 제공하는 여러 유형의 보고서를 생성할 수 있습니다.</block>
+  <block id="2eb056f6c6b223bb3c50b4fcf727d4eb" category="summary">Converged Systems Advisor는 FlexPod 통합 인프라에 대한 구성 데이터를 수집하여 시스템의 검증 및 모니터링을 지원합니다. 데이터가 수집되는 방식, NetApp으로 데이터를 전송하는 방식, 데이터의 보안과 프라이빗 상태를 유지하는 방법을 이해하고 싶어할 수 있습니다.</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="doc">보안</block>
+  <block id="0dde8a78d38311a247bbf2fa6af88b26" category="section-title">데이터 수집 방법</block>
+  <block id="74a2c114e006124264aa6d139846b389" category="paragraph">Converged Systems Advisor 에이전트에서 FlexPod 통합 인프라의 디바이스에 액세스하려면 자격 증명이 필요합니다. Cisco UCS 및 Nexus 스위치에는 읽기 전용 자격 증명이 필요하지만 ONTAP에는 관리 자격 증명이 필요합니다. 자격 증명은 암호화되어 에이전트에 로컬로 저장되며 클라우드 기반 포털로 전송되지 않습니다.</block>
+  <block id="3d146764dc7da8ff645fe77b5678a05b" category="paragraph">자격 증명을 제공하면 에이전트는 장치에서 _CONFIGURATION_DATA를 수집합니다. _Customer_장치에 있는 데이터는 액세스하거나 전송하지 않습니다. 에이전트가 수집하는 구성 데이터의 대표적인 예는 다음과 같습니다.</block>
+  <block id="3b8f7696879f77dfc8c74aa8df8db24b" category="list-text">용량</block>
+  <block id="c9d686789d1b6040c1e28229509dad68" category="list-text">CPU 및 메모리</block>
+  <block id="39f32b6d9ba3ada83f10b3e2eec6d54b" category="list-text">장치 연결</block>
+  <block id="ba21ed5910360635a1c11252020f1ddc" category="list-text">장치 이름 및 ID입니다</block>
+  <block id="25231a54747f5f95826dacef2fa019da" category="list-text">장치 상태입니다</block>
+  <block id="798084429970e88fa1f49f12b5f60f32" category="list-text">펌웨어 버전입니다</block>
+  <block id="1d9e509ddb93a176b7d369a91ad7deaf" category="list-text">IP 주소</block>
+  <block id="df6170f24d35cedf1aade86eb5bf3677" category="list-text">iSCSI 타겟</block>
+  <block id="f6aca2dcfee051b254bbcb878dc70d09" category="list-text">추가 수익 실적을</block>
+  <block id="3f3982b71a0b2c0fc888ae360cac17e0" category="list-text">MAC 주소</block>
+  <block id="a2f9557c1ef079d139d75178f75297ad" category="list-text">모델 번호</block>
+  <block id="e79c08243e599c00a89a413b1f4a2833" category="list-text">일련 번호</block>
+  <block id="f57b3db31dc3631b0e4002674f7c5224" category="section-title">데이터 전송 방식</block>
+  <block id="ce25f4ff29d29c32de78f11e0ead410b" category="paragraph">에이전트가 FlexPod 통합 인프라에서 구성 데이터를 검색한 후 HTTPS를 사용하여 Converged Systems Advisor 포털로 데이터를 전송합니다. 이 통신은 NetApp의 TLS 1.2 인증서를 사용하여 암호화됩니다.</block>
+  <block id="397c3a0728520f5f02fedcc4d52ce7d4" category="inline-image-macro">에이전트에서 포털로 암호화된 HTTPS 연결을 표시합니다.</block>
+  <block id="925c5ef979c196c708b4af9aed3b0c61" category="paragraph"><block ref="925c5ef979c196c708b4af9aed3b0c61" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1fdc903c6928dc480b8c082d1319427" category="section-title">데이터를 안전하고 비공개로 유지하는 방법</block>
+  <block id="9ea2a5555b9f0b48272507704c0bff54" category="paragraph">구성 데이터는 NetApp 네트워크 내에 상주하며 NetApp IT에서 관리합니다. 데이터는 액세스를 요청하는 각 사용자를 확실하게 식별해야 하는 데이터 액세스 계층에 의해 보호됩니다.</block>
+  <block id="f78cd1b36118788b43de167b4accc127" category="paragraph">에이전트를 구축한 사용자는 NetApp Support 사이트 계정으로 로그인하여 Converged Systems Advisor 포털에서 데이터에 액세스할 수 있습니다. 이 사용자는 컨버지드 인프라에 대한 _owner_privileges를 가지고 있습니다. 소유자는 읽기 전용, 쓰기 또는 소유자 권한을 부여하여 다른 사용자와 통합 인프라를 공유할 수 있습니다. 또한 해당 사용자는 등록된 NetApp Support 사이트 계정이 있어야 포털에 로그인할 수 있습니다.</block>
+  <block id="b254250f174f69b5a6865ed48495f383" category="inline-link-macro">읽기 전용, 쓰기 및 소유자 권한의 차이점을 검토합니다</block>
+  <block id="f68fd2bda477ef42116068a57cdb124f" category="paragraph"><block ref="771ba01147318949b5eb029f7646acb8" category="inline-link-macro-rx"></block>.</block>
+  <block id="571a926cd2e7deab39daf05b2533b8d8" category="doc">인프라 기록을 검토합니다</block>
+  <block id="115b9f0ff63d039cd385c57b40bf95a9" category="sidebar">Converged Systems Advisor 문서</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 정보</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
+  <block id="96573196b0bc5ca16f36a7ab51440d98" category="sidebar">새로운 아카이브</block>
+  <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">개념</block>
+  <block id="cb59b87e00d11222bfd9159d0d23836f" category="sidebar">시작하기</block>
+  <block id="fcfe3322250efe8a9b82e67dc1a52629" category="sidebar">에이전트 설정 및 배포</block>
+  <block id="2db72662c8c544bb8061d0dd7316e260" category="sidebar">포털에 인프라를 추가합니다</block>
+  <block id="ed921ee7e2f886f27ab4462f27404241" category="sidebar">에이전트에 정적 IP를 설정합니다</block>
+  <block id="6cf8e922cda64d990e6cd69cd9ddde4f" category="sidebar">인프라를 모니터링합니다</block>
+  <block id="6c9d9b02e3e64a4c7870f630c5d9dbc2" category="sidebar">인프라 기록을 검토합니다</block>
+  <block id="b7b722eea69a1d2e85256ecaa18b4620" category="sidebar">규칙 모니터링</block>
+  <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">문제 해결</block>
+  <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="sidebar">관련 링크</block>
+</blocks>

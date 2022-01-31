@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: task_troubleshooting.html 
+keywords: troubleshoot, agent, connectivity, browser, discover, error, internet, connection 
+summary: Converged Systems Advisor를 사용하는 동안 문제가 발생하는 경우 다음 정보를 참조하여 문제를 해결할 수 있습니다. 
+---
+= Converged Systems Advisor 문제 해결
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Converged Systems Advisor를 사용하는 동안 문제가 발생하는 경우 다음 정보를 참조하여 문제를 해결할 수 있습니다.
+
+
+
+== 웹 브라우저를 통해 상담원에게 연결할 수 없습니다
+
+웹 브라우저를 통해 에이전트에 연결하여 FlexPod 장치 검색을 구성해야 합니다. 웹 브라우저를 통해 연결할 수 없는 경우 상담원이 csa.netapp.com 에 대한 아웃바운드 인터넷 연결을 가지고 있는지 확인합니다. 인터넷 연결 없이는 Agent 애플리케이션을 시작할 수 없으므로 웹 인터페이스에 액세스할 수 없습니다.
+
+인터넷 액세스에 프록시 서버가 필요한 경우 link:task_getting_started.html#setting-up-networking-for-the-agent["에이전트 가상 머신을 사용하도록 구성합니다"].
+
+
+
+== 상담원이 장치를 검색할 수 없습니다
+
+상담원이 FlexPod 장치를 검색할 수 없는 경우 다음을 확인하십시오.
+
+* 에이전트가 각 FlexPod 장치에 대해 열려 있는지 확인합니다.
++
+확인하려면 에이전트에서 각 장치를 Ping합니다.
+
+* 로컬 네트워크가 172.17.x.x 서브넷을 사용 중인지 확인합니다.
++
+에이전트는 내부적으로 172.17.x.x 서브넷을 사용합니다. 로컬 네트워크가 동일한 서브넷을 사용하는 경우 에이전트의 서브넷을 변경해야 합니다.
+
++
+.. 에이전트의 가상 머신 콘솔에 로그인합니다.
++
+기본 사용자 이름은 CSA이며 기본 암호는 NetApp입니다. 로그인한 후 기본 암호를 변경해야 합니다.
+
+.. 다음 내용으로 파일 '/etc/docker/daemon.json'을 추가합니다.
++
+ { "bip": "172.44.x.x"}
++
+BIP 주소는 충돌하지 않는 IP 주소일 수 있습니다. 172 범위에 있을 필요는 없습니다.
+
+.. 가상 머신을 재부팅합니다.
+
+
+
+
+
+
+== SSH를 사용하여 에이전트 VM에 연결할 수 없습니다
+
+에이전트 VM에 대한 SSH는 기본적으로 해제되어 있습니다.
+
+* SSH를 시작하려면 vCenter의 콘솔을 통해 에이전트 VM에 로그인하고 다음 명령을 실행합니다.
++
+'SUDO su'의 'stemctl start ssh'입니다
+
+* SSH가 설정되어 있는지 확인하려면 다음 명령을 실행합니다.
++
+'stemctl is-enabled ssh'를 선택합니다
+
+* 에이전트 VM에서 SSH의 상태를 확인하려면 다음 명령을 실행합니다.
++
+'stemctl status ssh'입니다
+
+* 재부팅 후에도 SSH가 유지되도록 하려면 다음 명령을 실행합니다.
++
+'SUDO su's stemctl enable ssh'를 선택합니다
+
+

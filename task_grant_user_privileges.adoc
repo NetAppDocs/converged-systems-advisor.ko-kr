@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: task_grant_user_privileges.html 
+keywords: grant, user, privileges, TACACS+, server, group, command, commands, access, CSA, user, account 
+summary: TACACS+ 서버를 사용하는 경우 스위치에 대한 CSA 사용자 권한을 부여해야 하는 경우, 사용자 권한 그룹을 만들고 CSA가 필요로 하는 특정 설정 명령에 대한 그룹 액세스 권한을 부여해야 합니다. 
+---
+= TACACS+ 서버를 사용하여 CSA 사용자 권한을 부여합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+TACACS+ 서버를 사용하는 경우 스위치에 대한 CSA 사용자 권한을 부여해야 하는 경우, 사용자 권한 그룹을 만들고 CSA가 필요로 하는 특정 설정 명령에 대한 그룹 액세스 권한을 부여해야 합니다. 다음 명령은 TACACS+ 서버의 구성 파일에 기록되어야 합니다.
+
+.단계
+. 다음 명령을 입력하여 읽기 전용 액세스 권한이 있는 사용자 권한 그룹을 생성합니다. group=group_name{default service=deny service=exec{priv-lvl=0}}
+. CSA에 필요한 명령에 대한 액세스 권한을 부여하려면 다음을 입력합니다. cmd= show{permit" environment "permit" version "permit" feature-set "permit" feature-set "permit" feature-set" interface "permit" interface transceiver "permit" inventory "permit" inventory" license "permit" module "permit" port-channel database "permit" ntp "ntp-config" running-config-config" mgmt0-config "CDP neighbor detail" permit "VLAN" permit "VPC" permit "VPC peer-keepalive" permit "Mac address-table" permit" lacp port-channel "permit" policy-map "permit" policy-map "permit" policy-map system type queuing "permit" policy-map system type network-qos -qos" zoneset active "permit" zoneset active "permit" logeset active "permit" 데이터베이스 세부 정보" "zoneset active" permit "vsan" permit "vsan usage" permit "vsan membership"}
+. CSA 사용자 계정을 새로 생성된 그룹에 추가하려면 다음을 입력합니다. user=user_account{member=group_name login=file/etc/passwd}
+

@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: index.html 
+keywords: converged systems advisor, netapp, documentation, flexpod, converged, infrastructure, validation, monitoring, getting started, new 
+summary: NetApp Converged Systems Advisor는 FlexPod 통합 인프라 구현을 검증, 모니터링 및 최적화하여 비즈니스 애플리케이션에 최고의 성능과 가용성을 보장합니다. 
+---
+= Converged Systems Advisor
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Converged Systems Advisor는 FlexPod 통합 인프라 구현을 검증, 모니터링 및 최적화하여 비즈니스 애플리케이션에 최고의 성능과 가용성을 보장합니다.
+
+
+
+== 새로운 기능 알아보기
+
+link:reference_new.html["Converged Systems Advisor의 새로운 기능"]
+
+
+
+== 시작하십시오
+
+link:task_quick_start.html["빠른 시작"]
+
+
+
+== Converged Systems Advisor에 대해 자세히 알아보십시오
+
+* link:concept_overview.html["개요"]
+* link:concept_architecture.html["있습니다"]
+* link:concept_licensing.html["라이센싱"]
+
+
+
+
+== 도움을 얻고 동료들과 교류하십시오
+
+https://community.netapp.com/t5/Converged-Infrastructure/ct-p/flexpod-and-converged-infrastructure["NetApp 커뮤니티: 통합 인프라"^]

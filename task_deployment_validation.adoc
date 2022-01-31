@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: task_deployment_validation.html 
+keywords: partner, validate, deployment validation 
+summary: NetApp 파트너인 경우 구축 검증을 실행하기 전에 고객과 함께 에이전트를 구축하고 포털을 설정할 수 있는 Converged Systems Advisor를 시작할 수 있습니다. 
+---
+= 파트너를 위한 배포 검증 보고서
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp 파트너는 구축 검증을 실행하여 FlexPod 통합 인프라가 올바르게 구성되었는지 확인할 수 있습니다. 그런 다음 파트너는 고객에게 보고서를 제공할 수 있습니다.
+
+.단계
+. 에 로그인합니다 https://csa.netapp.com/["Converged Systems Advisor 포털"^].
+. 고객 목록에서 고객의 구성을 확장합니다.
++
+image:screenshot_partner_customer_list.gif["에는 고객을 위한 3가지 통합 인프라가 나와 있습니다."]
+
+. 배포 유효성 검사 보고서에서 * Generate * 를 클릭합니다.
+. 브라우저에서 보고서를 볼 것인지, PDF에서 볼 것인지, 전자 메일을 통해 볼 것인지 선택합니다.
+. 보고서를 검토하고 상호 운용성 문제와 배포 유효성 검사 오류를 수정합니다.
++
+* 예 *
+
++
+이 샘플 구성에서 Nexus 스위치의 펌웨어 버전은 지원되지 않습니다.
+
++
+image:screenshot_validation_interop.gif["에는 배포 유효성 검사 보고서의 상호 운용성 섹션이 나와 있습니다. 지원되지 않는 펌웨어 버전의 스위치 두 개가 포함되어 있습니다."]
+
++
+스위치 연결 문제로 인해 4가지 검증 규칙도 실패했습니다.
+
++
+image:screenshot_validation_errors.gif["에는 배포 유효성 검사 보고서의 오류 섹션이 나와 있습니다. 패브릭 인터커넥트는 해당 Nexus 파이버 채널 패브릭으로 업링크되지 않습니다."]
+
++
+펌웨어를 업그레이드하면 구성의 상호 운용성을 수정할 수 있으며 링크를 추가하면 실패한 유효성 검사 규칙을 수정할 수 있습니다.
+
+. 문제를 수정한 후 데이터를 수집하여 Converged Systems Advisor가 최신 구성 데이터를 보유하고 있는지 확인합니다.
++
+.. 통합 인프라를 선택합니다.
+.. 오른쪽 상단에서 * collect * 를 클릭합니다.
++
+image:screenshot_collect_button.gif["에는 통합 인프라를 선택한 후 사용할 수 있는 오른쪽 상단의 수집 버튼이 나와 있습니다."]
+
+
+
+. 보고서를 다시 생성하여 문제가 해결되었는지 확인합니다.
+. 최종 배포 검증 보고서를 고객에게 보냅니다.
+
+
+이제 통합 인프라는 모범 사례에 따라 설정됩니다.

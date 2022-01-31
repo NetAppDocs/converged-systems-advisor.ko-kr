@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: task_setting_static_ip.html 
+keywords: networking, ip address, static, static ip, agent 
+summary: 환경에 DHCP 서버가 없는 경우 Converged Systems Advisor 에이전트에서 고정 IP 주소를 설정할 수 있습니다. 
+---
+= 에이전트에 정적 IP 주소를 설정합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+환경에 DHCP 서버가 없는 경우 Converged Systems Advisor 에이전트에서 고정 IP 주소를 설정할 수 있습니다.
+
+.단계
+. VMware vSphere Client를 사용하여 에이전트의 가상 머신 콘솔에 로그인합니다.
++
+기본 사용자 이름은 * CSA * 이고 기본 암호는 * NetApp * 입니다. 메시지가 나타나면 암호를 변경합니다.
+
+. CSA 프롬프트에서 'SUDO su –'를 입력하여 root가 됩니다.
+. CSA 서비스를 중지하려면 '#systemctl stop csa.service` 를 입력합니다.
+. 다음을 입력하여 올바른 인터페이스 파일 이름을 확인하십시오.
++
+이 예에서 인터페이스 파일 이름은 eth0입니다.
+
++
+'#ls/etc/network/interfaces.d/'
+
+. 활성 인터페이스를 중지하려면 "#/sbin/ifdown eth0"을 입력합니다.
+. 선택한 편집기로 /etc/network/interfaces.d/eth0 파일을 편집합니다.
++
+'#nano/etc/network/interfaces.d/eth0' 또는 '#vi/etc/network/interfaces.d/eth0'
+
++
+이 파일에는 다음 항목이 포함되어 있습니다.
+
++
+Allow-Hotplug eth0 iface eth0 inet DHCP를 사용합니다
+
+. iface eth0 inet DHCP를 제거하고 다음을 추가합니다. 참고: 아래 예에서 필드 이름 다음에 나오는 모든 항목에 대해 올바른 값을 대체해야 합니다. 예를 들어 192.168.11.1은 이 예에서 게이트웨이의 값입니다. 그러나 192.168.11.1 대신 게이트웨이에 맞는 주소를 입력해야 합니다.
++
+iface eth0 static address 192.168.11.100 netmask 255.255.255.0 게이트웨이 192.168.11.1 dns-domain example.com dns-nameserver 192.168.11.1
+
+. 파일을 저장합니다.
++
+nano에서는 * Ctrl + o * 를 입력한 다음 * Ctrl + x * 를 입력하여 저장합니다.
+
+. 구성 파일을 열려면 'vi /etc/resolv.conf'를 입력합니다.
+. 파일 맨 위에 이름 서버 <IP_address>'를 추가합니다.
+. 네트워크 인터페이스를 시작하려면 '#ifup eth0'을 입력합니다.
+. stemctl start csa.service` 를 입력하여 Converged Systems Advisor를 다시 시작합니다.
+

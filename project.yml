@@ -1,0 +1,68 @@
+---
+settings:
+  name: Converged Systems Advisor
+  rss_page: reference_new.html
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: ko-kr,us-en,ja-jp,zh-cn
+sidebar:
+  entries:
+  - title: Converged Systems Advisor 문서
+    url: "/index.html"
+  - title: 릴리스 정보
+    entries:
+    - title: 새로운 소식
+      url: "/reference_new.html"
+    - title: 새로운 아카이브
+      url: "/reference_archive.html"
+    - title: 알려진 문제
+      url: "/reference_issues.html"
+  - title: 개념
+    entries:
+    - title: 개요
+      url: "/concept_overview.html"
+    - title: 있습니다
+      url: "/concept_architecture.html"
+    - title: 라이센싱
+      url: "/concept_licensing.html"
+    - title: 보안
+      url: "/concept_security.html"
+    - title: 사용자 역할
+      url: "/reference_user_roles.html"
+  - title: 시작하기
+    entries:
+    - title: 빠른 시작
+      url: "/task_quick_start.html"
+    - title: 환경을 준비합니다
+      url: "/task_prepare_environment.html"
+    - title: FlexPod 장치용 계정을 만듭니다
+      url: "/task_create_accounts_flexpod_devices.html"
+    - title: 에이전트 설정 및 배포
+      url: "/task_setup_deploy_agent.html"
+    - title: 포털에 인프라를 추가합니다
+      url: "/task_add_infrastructure.html"
+    - title: 알림을 구성합니다
+      url: "/task_configure_notifications.html"
+    - title: 에이전트에 정적 IP를 설정합니다
+      url: "/task_setting_static_ip.html"
+  - title: 인프라를 모니터링합니다
+    entries:
+    - title: 인프라 기록을 검토합니다
+      url: "/task_review_infrastructure_history.html"
+    - title: 규칙 모니터링
+      url: "/task_monitor_rules.html"
+    - title: 보고서를 생성합니다
+      url: "/task_generate_reports.html"
+    - title: 지원 계약 추적
+      url: "/task_track_contracts.html"
+  - title: 파트너 및 리셀러를 위한 배포를 검증합니다
+    url: "/task_deployment_validation_partners_resellers.html"
+  - title: 문제 해결
+    url: "/task_troubleshooting.html"
+  - title: 관련 링크
+    url: "/reference_additional_info.html"
+  - title: 법적 고지
+    url: "/reference_legal_notices.html"

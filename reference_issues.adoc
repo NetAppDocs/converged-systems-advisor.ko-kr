@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: reference_issues.html 
+keywords: new, features, bugs, known issues, limitations, known limitations, supported, unsupported, release notes 
+summary: 알려진 문제점은 서비스를 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다. Bugs Online 보고서를 사용할 수 있는 경우 버그 ID에 보고서에 대한 하이퍼링크가 포함됩니다. 
+---
+= 알려진 문제
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+알려진 문제점은 서비스를 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다. Bugs Online 보고서를 사용할 수 있는 경우 버그 ID에 보고서에 대한 하이퍼링크가 포함됩니다.
+
+[cols="12,53"]
+|===
+| 버그 ID | 설명 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1234597["1234597"^] | Converged Systems Advisor는 4개 이상의 SVM에 대한 DNS 구성을 개선하지 않습니다. 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1234603["1234603"^] | 수집이 활성화된 상태에서 여러 교정 작업을 생성한 후에는 첫 번째 교정 작업에만 수집이 트리거됩니다. 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1335590["1335590"^] | Converged Systems Advisor에서 "스토리지 페일오버 상태" CA 규칙이 제거되었습니다. 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1335593["1335593)을 참조하십시오"^] | Nexus 및 MDS 스위치의 버전 번호가 "Upgrade Advisor" 아래에 잘못 표시됩니다. 
+|===

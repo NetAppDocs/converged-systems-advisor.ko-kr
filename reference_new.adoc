@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: reference_new.html 
+keywords: new, features, what's new, enhancements, release notes 
+summary: NetApp은 주기적으로 Converged Systems Advisor를 업데이트하여 새로운 기능, 개선 사항 및 버그 수정을 제공합니다. 
+---
+= Converged Systems Advisor의 새로운 기능
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp은 주기적으로 Converged Systems Advisor를 업데이트하여 새로운 기능, 개선 사항 및 버그 수정을 제공합니다.
+
+FlexPod 구성 요소가 CSA 에이전트에서 지원되는지 확인하려면 을 참조하십시오 http://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴"^] (IMT).
+
+
+
+== 2020년 7월 31일
+
+이번 릴리즈에는 다음과 같은 향상된 기능이 포함되어 있습니다.
+
+* <<New functionality for storage change detection (diffs)>>
+* <<Expanded configuration assurance for cluster interconnect switches>>
+* <<Initial coverage of NVMe designs>>
+
+
+
+
+== 스토리지 변경 감지(diffs)를 위한 새로운 기능
+
+이제 스토리지 시스템에서 발생한 변경 사항을 감지할 수 있습니다. 변경 사항을 확인하려면 * Storage Inventory * 페이지에서 * View Configuration Difference * 를 클릭합니다. 그런 다음 이전 구성 데이터 및 시간을 선택합니다. 이 데이터는 최신 스토리지 구성과 비교됩니다. 변경 사항은 빠른 검토를 위해 강조 표시됩니다.
+
+
+
+== 클러스터 인터커넥트 스위치에 대한 확장 구성 보증
+
+Converged Systems Advisor 포털에서는 다음과 같은 모델의 ONTAP 클러스터 인터커넥트 스위칭의 지원 가능성을 모니터링하기 위해 구성 보증 검사가 확장되었습니다.
+
+* Cisco Nexus 3132Q-V
+* Cisco Nexus 3232C
+* Cisco Nexus 92300YC
+
+
+
+
+== NVMe 설계를 위한 최초 적용 범위
+
+ONTAP의 NVMe FlexPod 스토리지 설계 지원 가능성을 모니터링하기 위해 초기 구성 보증 검사가 추가되었습니다.

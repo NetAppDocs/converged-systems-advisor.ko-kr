@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: task_add_infrastructure.html 
+keywords: add, infrastructure, FlexPod, configuration, Cisco, ACI, UCS, server, FlexPod, converged, infrastructure, sharing, portal 
+summary: 포털에 인프라를 추가합니다. 
+---
+= 포털에 인프라를 추가합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+에이전트를 구성한 후 각 FlexPod 디바이스에 대한 정보를 Converged Systems Advisor 포털로 전송합니다. 이제 포털에서 이러한 각 구성 요소를 선택하여 모니터링할 수 있는 전체 인프라를 생성해야 합니다.
+
+.단계
+. 에 있습니다 https://csa.netapp.com/["Converged Systems Advisor 포털"^]에서 * 인프라 추가 * 를 클릭합니다.
+. 다음 단계를 완료하여 인프라를 추가합니다.
++
+.. 인프라에 대한 기본 세부 정보를 입력합니다.
++
+Cisco ACI 인프라를 추가하려는 경우, FlexPod에서 Cisco UCS Manager를 사용하는지 묻는 메시지에 * 예 * 를 입력하고, FlexPod에 포함된 네트워크 구성 유형을 묻는 메시지가 표시되면 * ACI 모드에서 * Nexus 스위치를 입력합니다.
+
+.. FlexPod 구성에 포함된 각 장치를 선택합니다.
++
+
+TIP: 장치를 선택하면 자격 열에 * 자격 * 또는 * 자격 없음 * 이 표시됩니다. 다른 상담원이 장치를 발견한 경우 해당 장치는 사용할 수 없습니다.
+
+
+
+. 필요한 구성 요소를 모두 선택하면 각 장치 유형 옆에 녹색 확인 표시가 나타납니다.
++
+image:screenshot_add_infrastructure_pikesupdate.gif["표에 선택된 4개의 장치와 각 장치에 대한 녹색 확인 표시가 나타나 필요한 구성 요소를 모두 선택했음을 나타냅니다."]
+
++
+.. 을 추가합니다 link:concept_licensing.html["Converged Systems Advisor 일련 번호"] 키 기능을 잠금 해제하려면
+.. 요약 내용을 검토하고 라이센스 계약 조건에 동의하고 * 인프라 추가 * 를 클릭합니다.
+
+
++
+
+NOTE: 파트너 또는 리셀러인 경우 라이센스 또는 일련 번호 추가 단계를 건너뛰고 * 인프라 추가 * 를 클릭하면 됩니다.
+
+
+
+Converged Systems Advisor는 포털에 인프라를 추가하고 각 디바이스에 대한 구성 데이터를 수집하기 시작합니다. 상담원이 장치에서 정보를 수집할 때까지 몇 분 정도 기다립니다.
+
+
+
+= 다른 사용자와 인프라 공유
+
+통합 인프라를 공유하면 다른 사람이 Converged Systems Advisor 포털에 로그인해서 구성을 보고 모니터링할 수 있습니다. 인프라를 공유하는 사람에게 이 있어야 합니다 https://mysupport.netapp.com["NetApp Support 사이트"^] 계정.
+
+.단계
+. Converged Systems Advisor 포털에서 * 설정 아이콘 * 을 클릭한 다음 * 사용자 * 를 클릭합니다.
++
+image:screenshot_settings.gif["사용자 페이지에 대한 링크가 포함된 설정 메뉴를 표시합니다."]
+
+. User 테이블에서 구성을 선택합니다.
+. 를 클릭합니다 image:screenshot_share_icon.gif["인프라 공유 아이콘입니다."] 아이콘을 클릭합니다.
+. 제공할 사용자 역할 옆에 하나 이상의 이메일 주소를 입력합니다.
++
+link:reference_user_roles.html["각 역할 간의 차이점을 확인합니다"].
+
++
+
+TIP: 첫 번째 이메일 주소 다음에 * Enter * 를 눌러 단일 필드에 여러 이메일 주소를 입력할 수 있습니다.
+
+. 보내기 * 를 클릭합니다.
+
+
+사용자는 Converged Systems Advisor 액세스에 대한 지침이 포함된 이메일을 받아야 합니다.

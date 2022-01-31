@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: concept_licensing.html 
+keywords: licenses, standard, premium, features, licensing, alerts, notifications, emails, reports, term, subscription, reporting 
+summary: Converged Systems Advisor의 기능을 잠금 해제하려면 라이센스가 필요합니다. 각 FlexPod 통합 인프라에 대한 몇 가지 라이센스 옵션 중에서 선택할 수 있습니다. 
+---
+= 라이센싱
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Converged Systems Advisor의 기능을 잠금 해제하려면 라이센스가 필요합니다. 각 FlexPod 통합 인프라에 대한 몇 가지 라이센스 옵션 중에서 선택할 수 있습니다.
+
+[cols="12,64,24"]
+|===
+| 라이센스 | 피처 | 약관 
+
+
+| 라이센스가 없습니다  a| 
+제품 기능을 보여 주는 제한적 버전:
+
+* 24시간 평가 기간 동안 FlexPod 구성 모니터링
+* FlexPod 모범 사례 규정 준수를 확인할 수 있는 상태 대시보드
+* 제한된 인벤토리 및 수정(라이선스 버전으로 제공)
+
+ a| 
+* 무료
+* 1회 사용(24시간)
+
+
+
+
+| 표준  a| 
+* FlexPod 구성을 지속적으로 모니터링합니다
+* FlexPod 모범 사례 규정 준수를 확인할 수 있는 상태 대시보드
+* 컴퓨팅, 네트워크, 스토리지 및 하이퍼바이저를 위한 펌웨어 상호 운용성
+* 변경 사항을 파악하고 구성 드리프트를 방지하는 라이프사이클 관리 도구입니다
+* 고급 문제 해결을 위한 상세 인벤토리 및 시스템 다이어그램
+* NetApp에서 직접 제공하는 지원
+
+ a| 
+구독 기반 라이센스:
+
+* 최소 12개월
+* 최대 60개월
+
+
+
+
+| 프리미엄  a| 
+표준 라이센스에 포함된 모든 기능과 함께 다음 기능이 제공됩니다.
+
+* 보고
++
+FlexPod 상태, 상호 운용성 및 인벤토리에 대한 포괄적인 실시간 보고
+
+* 알림 및 알림
++
+구성 상태 및 상태 변경에 대한 정기적인 알림
+
+
+ a| 
+구독 기반 라이센스:
+
+* 최소 12개월
+* 최대 60개월
+
+
+|===

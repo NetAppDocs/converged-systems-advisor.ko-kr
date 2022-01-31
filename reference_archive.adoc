@@ -1,0 +1,375 @@
+---
+sidebar: sidebar 
+permalink: reference_archive.html 
+keywords: archive, new, features, what&apos;s new, enhancements, release notes 
+summary: NetApp은 주기적으로 Converged Systems Advisor를 업데이트하여 새로운 기능, 개선 사항 및 버그 수정을 제공합니다. 
+---
+= "Converged Systems Advisor의 새로운 기능" 아카이브
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp은 주기적으로 Converged Systems Advisor를 업데이트하여 새로운 기능, 개선 사항 및 버그 수정을 제공합니다.
+
+FlexPod 구성 요소가 CSA 에이전트에서 지원되는지 확인하려면 을 참조하십시오 http://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴"^] (IMT).
+
+
+
+== 목차
+
+이 아카이브에는 다음 릴리스의 정보가 포함되어 있습니다.
+
+* <<30 April 2020>>
+* <<3 February 2020>>
+* <<7 November 2019>>
+* <<24 July 2019>>
+* <<25 April 2019>>
+* <<28 March 2019>>
+* <<17 January 2019>>
+* <<13 September 2018>>
+
+
+
+
+== 2020년 4월 30일
+
+이 릴리스에는 다음과 같은 향상된 기능이 포함되어 있습니다.
+
+* <<Upgrade Advisor>>
+* <<Cluster interconnect switch>>
+* <<Capacity card enhancements>>
+* <<System diagram alerts>>
+
+
+
+
+=== Upgrade Advisor
+
+이제 VMware vCenter 및 ONTAP 버전과 Nexus 및 UCS 구성 요소의 호환성을 확인할 수 있습니다. 호환성을 확인하려면 펌웨어 상호 운용성 아래의 대시보드에서 Upgrade Advisor를 사용하십시오. 표시되는 모든 버전이 지원됩니다.image:screenshot_upgrade_advisor_screen_no_change.png["스크린샷, width=65%, align=left"]
+
+
+
+=== 클러스터 인터커넥트 스위치
+
+* 클러스터 인터커넥트 스위치 * 가 대시보드 보기의 * 펌웨어 상호 운용성 * 에 추가되었습니다. 이제 다음 모델에서 ONTAP 클러스터 인터커넥트 스위치의 지원 가능성을 모니터링할 수 있습니다.
+
+* Cisco Nexus 3132Q-V
+* Cisco Nexus 3232C
+* Cisco Nexus 92300YC
+
+
+image:screenshot_firmware_interoperability_CIS.png["스크린샷, width=65%, align=left"]
+
+이제 에이전트에서 클러스터 인터커넥트 스위치를 * 장치 정보 추가 * 드롭다운 메뉴에 장치로 추가할 수 있습니다.
+
+image:screenshot_add_device_cis.png["스크린샷, 너비 = 35%, 맞춤 = 왼쪽"]
+
+
+
+=== 향상된 용량 카드
+
+또한 FlexPod 인프라를 모니터링하고 확장하는 데 도움이 되는 네트워크 포트 사용률 및 UCS 블레이드 서버 활용률에 대한 링크도 추가되었습니다. 대시보드 보기에서 용량 으로 이동하면 두 개의 새 링크가 표시됩니다.image:screenshot_capacity_card_with_port_and_UCS_blade_utilization.png["스크린샷, 너비 = 35%, 맞춤 = 왼쪽"]
+
+Port Utilization 네트워크 계층의 인터페이스에 대한 자세한 정보로 이동합니다.image:screenshot_network_port_utilization_screen.png["스크린샷, width=65%, align=left"]
+
+UCS 블레이드 서버 활용도 링크를 클릭하면 컴퓨팅 계층의 블레이드에 대한 자세한 정보로 이동합니다.image:screenshot_compute_detailed_information_for_UCS_blade_utilization.png["스크린샷, width=65%, align=left"]
+
+
+
+=== 시스템 다이어그램 경고
+
+이제 시스템 다이어그램 보기에 알림이 표시되므로 인프라를 더 잘 모니터링할 수 있습니다.image:screenshot_diagram_with_alert_bubble.jpg["스크린샷, width=65%, align=left"]
+
+
+
+=== 해결된 문제
+
+이 릴리즈에서 해결된 알려진 문제는 다음과 같습니다.
+
+[cols="12,53"]
+|===
+| 버그 ID | 설명 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1253405["1253405를 참조하십시오"^] | Converged Systems Advisor에서 Nexus 스위치 포트 상태가 잘못 표시될 수 있습니다. 
+|===
+* 로 돌아갑니다 <<Contents>>
+
+
+
+
+== 2020년 2월 3일
+
+이 릴리스에는 다음과 같은 향상된 기능이 포함되어 있습니다.
+
+* <<Navigation enhancements>>
+* <<Aggregate details>>
+
+
+
+
+=== 탐색 기능 향상
+
+* 이 릴리스를 통해 * 모든 시스템 보기 * 에서 모든 시스템을 볼 수 있습니다.
+* 구성 요소 계층의 구조를 쉽게 확인하고 탐색할 수 있습니다. 드롭다운 메뉴 및 화살표를 사용하여 장치를 볼 수 있습니다.
+* 또한 Breadcrumb 추적을 사용하여 대시보드(홈) 보기로 쉽게 이동할 수 있습니다.
+
+
+image:screenshot-new_storage_dropdown.gif["스크린샷, 너비 = 35%, 맞춤 = 왼쪽"]
+
+
+
+=== 세부 정보를 집계합니다
+
+대시보드 보기에서 용량 으로 이동하면 * 집계 세부 정보 * 에 대한 링크를 볼 수 있습니다. 제공된 링크를 사용하여 스토리지 계층의 애그리게이트에 대한 자세한 정보를 확인할 수 있습니다.
+
+image:screenshot_redcloud_new-capacity-card.gif["스크린샷, width=65%, align=left"]
+
+image:screenshot_redcloud_new-aggregate_details.gif["스크린샷, width=65%, align=left"]
+
+
+
+=== 해결된 문제
+
+이 릴리즈에서 해결된 알려진 문제는 다음과 같습니다.
+
+[cols="12,53"]
+|===
+| 버그 ID | 설명 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1279956["1279956"^] | 단일 노드 MetroCluster에서는 클러스터 세부 정보 페이지의 개요 및 규칙 요약에 IOXM 확장 모듈을 표시하지 않습니다. 
+|===
+* 로 돌아갑니다 <<Contents>>
+
+
+
+
+== 2019년 11월 7일
+
+
+NOTE: FlexPod를 Converged Systems Advisor에 추가하면 이 릴리즈의 모든 새로운 기능과 개선 사항이 자동으로 포함됩니다. 의 지침을 따릅니다 link:task_getting_started.html["시작하기"] Converged Systems Advisor에 FlexPod를 통합 인프라로서 추가합니다.
+
+이 릴리즈에는 다음과 같은 새로운 기능과 향상된 기능이 포함되어 있습니다.
+
+* <<MetroCluster awareness>>
+* <<NVMe awareness>>
+* <<Improved interoperability functionality>>
+
+
+
+
+=== MetroCluster 인식
+
+Converged Systems Advisor는 이제 MetroCluster FlexPod의 단일 사이트를 통합 인프라로 추가할 수 있도록 지원합니다. 이제 분석을 통해 MetroCluster의 양쪽 상태를 확인할 수 있습니다.
+
+
+
+=== NVMe 인식
+
+Converged Systems Advisor는 이제 분석을 실행하여 ONTAP 9.4 이상에서 지원되는 NVMe 프로토콜의 구성을 확인합니다.
+
+
+
+=== 향상된 상호 운용성 기능
+
+Converged Systems Advisor에는 업데이트된 상호 운용성 카드가 있으며, 각 구성 요소에 지원되는 현재, 가장 가까운 및 최신 버전을 보여주는 팝업으로 연결됩니다. 팝업에는 구성 요소 계층별 개별 상호 운용성 보고서를 표시하는 새 보고서가 추가되었습니다.
+
+* 로 돌아갑니다 <<Contents>>
+
+
+
+
+== 2019년 7월 24일
+
+이 릴리즈에는 다음과 같은 새로운 기능과 향상된 기능이 포함되어 있습니다.
+
+* <<Support for Cisco ACI in FlexPod>>
+* <<Support for multiple clusters in a single FlexPod>>
+
+
+
+
+=== FlexPod에서 Cisco ACI 지원
+
+이제 Converged Systems Advisor는 Cisco ACI 네트워킹을 사용하여 FlexPod 설계를 지원합니다. FlexPod의 모든 장치에 대한 지원 및 구성은 다른 FlexPod 장치에 연결된 2개의 동적 결정 리프 스위치도 평가됩니다.
+
+
+
+=== 단일 FlexPod에서 여러 클러스터 지원
+
+이제 Converged Systems Advisor는 단일 FlexPod에서 여러 클러스터를 지원합니다. Storage ONTAP 규칙은 모든 클러스터에서 처리되고 모든 클러스터는 시스템 다이어그램에 반영됩니다.
+
+* 로 돌아갑니다 <<Contents>>
+
+
+
+
+== 2019년 4월 25일
+
+이 릴리즈에는 다음과 같은 새로운 기능과 향상된 기능이 포함되어 있습니다.
+
+* <<Automatically resolving failed rules>>
+* <<Displaying suppressed rules>>
+
+
+
+
+=== 실패한 규칙을 자동으로 해결합니다
+
+Converged Systems Advisor는 이제 특정 규칙에 장애가 발생하는 문제를 자동으로 해결할 수 있습니다. 이 기능은 에이전트를 다시 시작하여 자동으로 활성화됩니다.
+
+
+
+=== 기능 억제된 규칙 표시
+
+이제 Converged Systems Advisor 내에서 억제된 규칙의 전체 목록을 표시하고 목록에서 억제된 규칙에 대한 경고를 다시 활성화할 수 있습니다.
+
+
+
+=== 해결된 문제
+
+이 릴리즈에서 해결된 알려진 문제는 다음과 같습니다.
+
+[cols="12,53"]
+|===
+| 버그 ID | 설명 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1211321["1211321을 참조하십시오"^] | 통합 인프라의 경우 시스템 다이어그램 이미지가 표시되지 않을 수 있습니다 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1211987["1211987)을 참조하십시오"^] | 스토리지 클러스터 효율성 값이 잘못 표시됩니다 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1211995["1211995)를 참조하십시오"^] | Nexus 스위치 포트 상태가 잘못 표시될 수 있습니다 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1211999["1211999"^] | 공간 예약 상태가 잘못 표시됩니다 
+|===
+* 로 돌아갑니다 <<Contents>>
+
+
+
+
+== 2019년 3월 28일
+
+이 릴리즈에서 해결된 알려진 문제는 다음과 같습니다.
+
+[cols="8,50"]
+|===
+| 버그 ID | 설명 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1211993["1211993)을 참조하십시오"] | CSA에서 씬 프로비저닝 상태가 잘못 표시됩니다 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1211998["1211998)을 참조하십시오"] | CSA에서 디스크 공간 사용률 비율이 잘못 표시됩니다 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1211990["1211990)을 참조하십시오"] | Nexus 스위치에서 VLAN에 매핑된 인터페이스가 CSA의 실제 장치 출력과 일치하지 않을 수 있습니다 
+
+
+| https://mysupport.netapp.com/NOW/cgi-bin/bol?Type=Detail&Display=1212001["1212001)을 참조하십시오"] | CSA에서 랙 장착 서버의 전원 공급 장치 정보가 잘못 표시될 수 있습니다 
+|===
+* 로 돌아갑니다 <<Contents>>
+
+
+
+
+== 2019년 1월 17일
+
+이 릴리즈에는 다음과 같은 새로운 기능과 향상된 기능이 포함되어 있습니다.
+
+* <<Support for new FlexPod devices>>
+* <<Detailed information about hosts and virtual machines>>
+* <<Simplified experience when adding an infrastructure>>
+* <<Device import using a file>>
+* <<Integration with NetApp Active IQ>>
+
+
+
+
+=== 새로운 FlexPod 장치 지원
+
+이제 Converged Systems Advisor는 다음과 같은 FlexPod 디바이스를 지원합니다.
+
+* Cisco UCS C-Series 랙 서버
+* Nexus 3000 시리즈 스위치
+* Cisco UCS 스위치는 NetApp 컨트롤러에 직접 연결됩니다
+
+
+지원되는 장치의 전체 목록은 를 참조하십시오 http://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴"^].
+
+
+
+=== 호스트 및 가상 시스템에 대한 자세한 정보입니다
+
+이제 Converged Systems Advisor가 가상화 환경에 대한 자세한 정보를 제공합니다. 드릴다운하여 다이어그램, 인벤토리 목록 및 규칙 요약 등 개별 호스트 및 가상 머신에 대한 정보를 볼 수 있습니다.
+
+image:screenshot_virtualization.gif["스크린샷, width=65%, align=left"]
+
+
+
+=== 인프라를 추가할 때 간편해진 환경
+
+이제 Converged Systems Advisor에 인프라를 더 쉽게 추가할 수 있습니다. 포털을 통해 단계별로 정보를 입력할 수 있습니다.
+
+image:screenshot_add_infrastructure_overview.gif["스크린샷, width=65%, align=left"]
+
+link:task_getting_started.html#adding-an-infrastructure-to-the-portal["Converged Systems Advisor에 인프라를 추가하는 방법에 대해 알아보십시오"].
+
+
+
+=== 파일을 사용하여 장치를 가져옵니다
+
+이제 각 장치에 대한 정보가 포함된 파일을 가져와서 FlexPod 인프라를 검색하도록 Converged Systems Advisor 에이전트를 구성할 수 있습니다. 각 장치를 하나씩 수동으로 추가하는 대신 장치를 가져올 수 있습니다.
+
+image:screenshot_import_devices.gif["스크린샷, width=65%, align=left"]
+
+link:task_getting_started.html#configuring-the-agent-to-discover-your-flexpod-infrastructure["에이전트를 구성하여 FlexPod 인프라를 검색하는 방법에 대해 알아봅니다"].
+
+
+
+=== NetApp Active IQ와 통합
+
+이제 Converged Systems Advisor에서 Active IQ를 시작할 수 있습니다. 다음 예에서는 스토리지 페이지에서 사용할 수 있는 Active IQ 링크를 보여 줍니다.
+
+image:screenshot_active_iq.gif["스크린샷, width=65%, align=left"]
+
+
+
+=== 해결된 문제
+
+이 릴리즈에서 해결된 알려진 문제는 다음과 같습니다.
+
+[cols="8,50"]
+|===
+| 버그 ID | 설명 
+
+
+| 4671 | Converged Systems Advisor 포털을 탐색할 때 Firefox가 응답하지 않을 수 있습니다. 
+
+
+| 4500을 | 제한 시간이 만료된 후에도 Converged Systems Advisor 포털이 사용자를 로그아웃하지 않습니다. 로그인 상태를 유지하지만 FlexPod 시스템을 볼 수 없습니다. 
+
+
+| 2794 | VMware 툴이 가상 시스템에 설치되어 있지 않더라도 "VMware 툴 검사"라는 규칙에 대해 Converged Systems Advisor는 "통과"를 표시합니다. 
+|===
+* 로 돌아갑니다 <<Contents>>
+
+
+
+
+== 2018년 9월 13일
+
+이번 릴리즈의 Converged Systems Advisor에는 다음과 같은 새로운 기능이 포함되어 있습니다.
+
+* 고객의 FlexPod 운영을 단순화하는 새로운 사용자 인터페이스 및 사용자 경험
+* VMware 가상화에 대한 상태 및 Best Practice 검증
+* 확장된 Fibre Channel 지원을 통해 Cisco MDS 스위치 지원
+

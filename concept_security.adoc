@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: concept_security.html 
+keywords: security, data, transfer, privacy, encrypted, encryption, https, tls, customer, business 
+summary: Converged Systems Advisor는 FlexPod 통합 인프라에 대한 구성 데이터를 수집하여 시스템의 검증 및 모니터링을 지원합니다. 데이터가 수집되는 방식, NetApp으로 데이터를 전송하는 방식, 데이터의 보안과 프라이빗 상태를 유지하는 방법을 이해하고 싶어할 수 있습니다. 
+---
+= 보안
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Converged Systems Advisor는 FlexPod 통합 인프라에 대한 구성 데이터를 수집하여 시스템의 검증 및 모니터링을 지원합니다. 데이터가 수집되는 방식, NetApp으로 데이터를 전송하는 방식, 데이터의 보안과 프라이빗 상태를 유지하는 방법을 이해하고 싶어할 수 있습니다.
+
+
+
+== 데이터 수집 방법
+
+Converged Systems Advisor 에이전트에서 FlexPod 통합 인프라의 디바이스에 액세스하려면 자격 증명이 필요합니다. Cisco UCS 및 Nexus 스위치에는 읽기 전용 자격 증명이 필요하지만 ONTAP에는 관리 자격 증명이 필요합니다. 자격 증명은 암호화되어 에이전트에 로컬로 저장되며 클라우드 기반 포털로 전송되지 않습니다.
+
+자격 증명을 제공하면 에이전트는 장치에서 _CONFIGURATION_DATA를 수집합니다. _Customer_장치에 있는 데이터는 액세스하거나 전송하지 않습니다. 에이전트가 수집하는 구성 데이터의 대표적인 예는 다음과 같습니다.
+
+* 용량
+* CPU 및 메모리
+* 장치 연결
+* 장치 이름 및 ID입니다
+* 장치 상태입니다
+* 펌웨어 버전입니다
+* IP 주소
+* iSCSI 타겟
+* 추가 수익 실적을
+* MAC 주소
+* 모델 번호
+* 일련 번호
+
+
+
+
+== 데이터 전송 방식
+
+에이전트가 FlexPod 통합 인프라에서 구성 데이터를 검색한 후 HTTPS를 사용하여 Converged Systems Advisor 포털로 데이터를 전송합니다. 이 통신은 NetApp의 TLS 1.2 인증서를 사용하여 암호화됩니다.
+
+image:diagram_data_transfer.gif["에이전트에서 포털로 암호화된 HTTPS 연결을 표시합니다."]
+
+
+
+== 데이터를 안전하고 비공개로 유지하는 방법
+
+구성 데이터는 NetApp 네트워크 내에 상주하며 NetApp IT에서 관리합니다. 데이터는 액세스를 요청하는 각 사용자를 확실하게 식별해야 하는 데이터 액세스 계층에 의해 보호됩니다.
+
+에이전트를 구축한 사용자는 NetApp Support 사이트 계정으로 로그인하여 Converged Systems Advisor 포털에서 데이터에 액세스할 수 있습니다. 이 사용자는 컨버지드 인프라에 대한 _owner_privileges를 가지고 있습니다. 소유자는 읽기 전용, 쓰기 또는 소유자 권한을 부여하여 다른 사용자와 통합 인프라를 공유할 수 있습니다. 또한 해당 사용자는 등록된 NetApp Support 사이트 계정이 있어야 포털에 로그인할 수 있습니다.
+
+link:reference_user_roles.html["읽기 전용, 쓰기 및 소유자 권한의 차이점을 검토합니다"].

@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task_configure_notifications.html 
+keywords: configure, Converged, Systems, Advisor, infrastructure, email, notifications, alert, portal, collection, failures, offline, agent, daily, alert, digest 
+summary: 프리미엄 라이센스가 있는 경우 Converged Systems Advisor는 이메일 알림을 통해 FlexPod 인프라의 변경 사항에 대해 경고할 수 있습니다. 
+---
+= 알림을 구성합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+프리미엄 라이센스가 있는 경우 Converged Systems Advisor는 이메일 알림을 통해 FlexPod 인프라의 변경 사항에 대해 경고할 수 있습니다.
+
+.단계
+. Converged Systems Advisor 포털에서 * 설정 아이콘 * 을 클릭한 다음 * 알림 설정 * 을 클릭합니다.
+. 프리미엄 라이센스가 있는 각 통합 인프라에 대해 수신하려는 알림을 확인하십시오.
++
+각 알림에는 다음 정보가 포함됩니다.
+
++
+수집 실패:: Converged Systems Advisor가 통합 인프라에서 데이터를 수집할 수 없는 경우 알림
+오프라인 에이전트:: Converged Systems Advisor 에이전트가 온라인 상태가 아닐 때 알림을 표시합니다.
+일일 경고 다이제스트:: 이전 날짜에 발생한 실패한 규칙에 대한 알림을 제공합니다.
+
+
+. 저장 * 을 클릭합니다.
+
+
+이제 Converged Systems Advisor가 통합 인프라와 관련된 사용자에게 이메일 알림을 보냅니다.
