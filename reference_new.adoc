@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference_new.html 
-keywords: new, features, what's new, enhancements, release notes 
+keywords: 'new, features, what"s new, enhancements, release notes' 
 summary: NetApp은 주기적으로 Converged Systems Advisor를 업데이트하여 새로운 기능, 개선 사항 및 버그 수정을 제공합니다. 
 ---
 = Converged Systems Advisor의 새로운 기능
