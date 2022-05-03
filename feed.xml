@@ -2,22 +2,22 @@
 
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>converged-systems-advisor</title>
+    <title>converged-systems-advisor | NetApp Documentation</title>
     <atom:link href="https://docs.netapp.com/ko-kr/converged-systems-advisor/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://docs.netapp.com/ko-kr/converged-systems-advisor</link>
-    <description>The latest updates from NetApp Cloud Docs</description>
+    <description>The latest updates from NetApp Documentation</description>
     <language>ko-kr</language>
     <ttl>60</ttl>
-    <pubDate>Mon, 21 Feb 2022 07:51:03 +0000</pubDate>
-    <lastBuildDate>Mon, 21 Feb 2022 07:51:03 +0000</lastBuildDate>
+    <pubDate>Tue, 03 May 2022 10:09:47 +0000</pubDate>
+    <lastBuildDate>Tue, 03 May 2022 10:09:47 +0000</lastBuildDate>
     
     
     
     <item>
-      <title>Converged Systems Advisor의 새로운 기능 (21 Feb 2022)</title>
-      <pubDate>Mon, 21 Feb 2022 07:48:16 +0000</pubDate>
-      <link>https://docs.netapp.com/ko-kr/converged-systems-advisor/reference_new.html?time=1645429696</link>
-      <guid isPermaLink="false">Mon, 21 Feb 2022 07:48:16 +0000</guid>
+      <title>Converged Systems Advisor의 새로운 기능 (3 May 2022)</title>
+      <pubDate>Tue, 03 May 2022 10:07:08 +0000</pubDate>
+      <link>https://docs.netapp.com/ko-kr/converged-systems-advisor/reference_new.html?time=1651572428</link>
+      <guid isPermaLink="false">Tue, 03 May 2022 10:07:08 +0000</guid>
       <description><![CDATA[ NetApp은 주기적으로 Converged Systems Advisor를 업데이트하여 새로운 기능, 개선 사항 및 버그 수정을 제공합니다. ]]></description>
     </item>
     
