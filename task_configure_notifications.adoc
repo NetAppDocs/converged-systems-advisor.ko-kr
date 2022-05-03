@@ -6,6 +6,7 @@ summary: 프리미엄 라이센스가 있는 경우 Converged Systems Advisor는
 ---
 = 알림을 구성합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

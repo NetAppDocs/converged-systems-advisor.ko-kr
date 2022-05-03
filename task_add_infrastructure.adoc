@@ -6,6 +6,7 @@ summary: 포털에 인프라를 추가합니다.
 ---
 = 포털에 인프라를 추가합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

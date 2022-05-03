@@ -6,6 +6,7 @@ summary: Converged Systems Advisor의 기능을 잠금 해제하려면 라이센
 ---
 = 라이센싱
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

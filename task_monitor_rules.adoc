@@ -6,6 +6,7 @@ summary: 실패한 규칙 수정, 규칙 억제, 기능 억제된 규칙 목록 
 ---
 = 인프라 규칙을 모니터링합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

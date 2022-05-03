@@ -6,6 +6,7 @@ summary: Converged Systems Advisor는 FlexPod 통합 인프라에 대한 구성 
 ---
 = 보안
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 환경에 DHCP 서버가 없는 경우 Converged Systems Advisor 에이
 ---
 = 에이전트에 정적 IP 주소를 설정합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

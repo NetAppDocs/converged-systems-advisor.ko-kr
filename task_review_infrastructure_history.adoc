@@ -6,6 +6,7 @@ summary: 실패한 규칙에 대한 알림을 받으면 구성에서 변경된 �
 ---
 = 인프라 기록을 검토합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

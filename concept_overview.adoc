@@ -6,6 +6,7 @@ summary: Converged Systems Advisor는 FlexPod 인프라 구축을 검증하고 �
 ---
 = Converged Systems Advisor 개요
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: Converged Systems Advisor를 시작하려면 환경을 준비해야 합
 ---
 = 환경을 준비합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 알림에 응답하고, 변경 내역을 검토하고, 인프라를 전
 ---
 = 통합 인프라 모니터링
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

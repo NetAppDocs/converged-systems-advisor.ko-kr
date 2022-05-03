@@ -6,6 +6,7 @@ summary: 통합 인프라를 다른 사용자와 공유하는 경우 읽기 전�
 ---
 = 사용자 역할
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

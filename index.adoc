@@ -6,6 +6,7 @@ summary: NetApp Converged Systems Advisor는 FlexPod 통합 인프라 구현을 
 ---
 = Converged Systems Advisor
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

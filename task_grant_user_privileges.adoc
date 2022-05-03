@@ -6,6 +6,7 @@ summary: TACACS+ 서버를 사용하는 경우 스위치에 대한 CSA 사용자
 ---
 = TACACS+ 서버를 사용하여 CSA 사용자 권한을 부여합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

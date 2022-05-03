@@ -6,6 +6,7 @@ summary: 시작 날짜, 종료 날짜 및 계약 ID를 포함하여 구성의 �
 ---
 = 지원 계약 추적
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

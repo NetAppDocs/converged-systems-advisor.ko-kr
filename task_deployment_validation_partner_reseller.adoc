@@ -6,6 +6,7 @@ summary: 파트너 또는 리셀러로서 클라이언트 인프라의 배포를
 ---
 = 파트너 및 리셀러를 위한 배포를 검증합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: NetApp은 주기적으로 Converged Systems Advisor를 업데이트하�
 ---
 = Converged Systems Advisor의 새로운 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

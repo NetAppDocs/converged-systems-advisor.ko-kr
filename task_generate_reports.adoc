@@ -6,6 +6,7 @@ summary: 상태 보고서 또는 파트너에 대한 배포 유효성 검사 보
 ---
 = 보고서를 생성합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: NetApp 파트너인 경우 구축 검증을 실행하기 전에 고객�
 ---
 = 파트너를 위한 배포 검증 보고서
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

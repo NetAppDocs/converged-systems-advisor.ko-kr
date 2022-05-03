@@ -6,6 +6,7 @@ summary: 'Converged Systems Advisor는 서비스형 소프트웨어(SaaS) 플랫
 ---
 = Converged Systems Advisor의 작동 방식
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
