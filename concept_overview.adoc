@@ -18,5 +18,5 @@ Converged Systems Advisor는 FlexPod 인프라 구축을 검증하고 지속적�
 
 다음 비디오에서 Converged Systems Advisor에 대한 개요를 확인하십시오.
 
-video::CZHu0Xp33BY[youtube, width=848,height=480]
+video::CZHu0Xp33BY[youtube,width=848,height=480]
 Converged Systems Advisor가 제공하는 가치에 대한 자세한 내용은 https://www.netapp.com/us/media/ds-3896.pdf["데이터시트를 읽어 보십시오"^].
