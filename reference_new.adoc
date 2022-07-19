@@ -24,9 +24,9 @@ FlexPod 구성 요소가 CSA 에이전트에서 지원되는지 확인하려면 
 
 이번 릴리즈에는 다음과 같은 향상된 기능이 포함되어 있습니다.
 
-* <<New functionality for storage change detection (diffs)>>
-* <<Expanded configuration assurance for cluster interconnect switches>>
-* <<Initial coverage of NVMe designs>>
+*  functionality for storage change detection (diffs)
+*  configuration assurance for cluster interconnect switches
+*  coverage of NVMe designs
 
 
 

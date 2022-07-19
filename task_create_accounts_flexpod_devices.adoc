@@ -15,12 +15,12 @@ summary: 시작하려면 FlexPod 장치에 대한 계정을 설정합니다.
 
 시작하려면 FlexPod 장치에 대한 계정을 설정합니다.
 
-* <<Create a read-only account for Cisco UCS Manager>>
-* <<Create a read-only account for Nexus switches>>
-* <<Create an admin account for ONTAP>>
-* <<Create a read-only account for VMware>>
-* <<Create a read-only account on the APIC>>
-* <<Grant CSA user privileges using a TACACS+ server>>
+*  a read-only account for Cisco UCS Manager
+*  a read-only account for Nexus switches
+*  an admin account for ONTAP
+*  a read-only account for VMware
+*  a read-only account on the APIC
+*  CSA user privileges using a TACACS+ server
 
 
 에이전트는 이러한 계정을 사용하여 각 장치에서 구성 정보를 수집합니다.
