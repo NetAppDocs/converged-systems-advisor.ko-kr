@@ -233,7 +233,6 @@
   <block id="ed3bafb82e73ad72d2174d40ff5e566e" category="paragraph">FlexPod 인프라의 각 장치가 표에 확인 표시를 하여 표시되어야 합니다.<block ref="7e0f6190afd11994fbf2acbbb620f788" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7a49965d9cfff28dae6c97f9b420a932" category="summary">NetApp Converged Systems Advisor는 FlexPod 통합 인프라 구현을 검증, 모니터링 및 최적화하여 비즈니스 애플리케이션에 최고의 성능과 가용성을 보장합니다.</block>
   <block id="04fbad68af42342b74d64c44c053aeb6" category="doc">Converged Systems Advisor</block>
-  <block id="1fde0727b387439572ade83eecff4f68" category="section-title">새로운 기능 알아보기</block>
   <block id="9019b4a8afd649f588dde381d9d2c1cb" category="inline-link-macro">Converged Systems Advisor의 새로운 기능</block>
   <block id="cfaf20a40a53abf04e998d745a541106" category="paragraph"><block ref="cfaf20a40a53abf04e998d745a541106" category="inline-link-macro-rx"></block></block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="section-title">시작하십시오</block>
@@ -636,17 +635,14 @@
   <block id="d765707c3b28b87a0166a122e0893c44" category="doc">Converged Systems Advisor의 빠른 시작</block>
   <block id="bb4e793023539d2e73eea517a0009f8f" category="paragraph">FlexPod용 Converged Systems Advisor 에이전트 및 포털 시작 단계에는 몇 가지 단계가 있습니다.</block>
   <block id="861d7392cf2a3c7ca2ed1442f6237101" category="paragraph">구성에 대한 지원을 확인합니다. <block ref="5db18581d3c751db9049195c8f5e0955" category="inline-link-macro-rx"></block>.</block>
-  <block id="005c54fa8a7e7bd788a9d809d1387a85" category="section-title">FlexPod 장치에서 계정을 만듭니다</block>
   <block id="2f166ccfcdb92d24539f300510b6c06a" category="inline-link-macro">FlexPod 장치에서 계정을 만듭니다</block>
   <block id="ef53b42f68445a3ad4051becb0f15d0a" category="paragraph">Cisco UCS Manager, Cisco Nexus 스위치, ONTAP 시스템, VMware 및 APIC에서 계정을 설정합니다. 이러한 계정은 구성 데이터를 수집하는 데 사용됩니다.<block ref="3431097fc9e072fa942c7d7d18ec5a22" category="inline-link-macro-rx"></block>.</block>
   <block id="2c1c5cb63f66b3d5b5f4eeb79a858979" category="paragraph">TACACS+ 서버를 사용하는 경우, 스위치에 대한 CSA 사용자 권한을 부여하고, 사용자 권한 그룹을 생성하고, CSA에 필요한 특정 설정 명령에 대한 그룹 액세스 권한을 부여해야 합니다.<block ref="4c9d56d5e4670c50abdba1f72cb4866c" category="inline-link-macro-rx"></block></block>
   <block id="c0fb3c98adaf760968c2a76d78a5b482" category="inline-link-macro">에이전트를 배포합니다</block>
   <block id="0550cf7fd37a5b054ce87062df5f3254" category="paragraph">VMware ESXi 서버에 Converged Systems Advisor 에이전트를 구축합니다. 에이전트는 FlexPod 통합 인프라의 각 장치에 대한 구성 데이터를 수집하여 해당 데이터를 Converged Systems Advisor 포털로 전송합니다.<block ref="96f9770b130e3bbf775f182c9ade7098" category="inline-link-macro-rx"></block>.</block>
-  <block id="0d68d2879e160e76749e7cf93c2fa146" category="section-title">포털에서 인프라 추가/공유</block>
   <block id="19262993c294a1c73c8ae843e52a78f8" category="inline-link-macro">포털에서 인프라 추가 및 공유</block>
   <block id="98e6f4726c519b5915a8c7eda3e7406d" category="paragraph">Converged Systems Advisor 포털에 각 FlexPod 디바이스를 추가하여 모니터링할 수 있는 전체 인프라를 생성합니다. 또한 통합 인프라를 공유하여 다른 사용자가 포털에 로그인하여 구성을 보고 모니터링할 수 있도록 할 수 있습니다.<block ref="8650b55bc84e39256db0ba998f0a5b40" category="inline-link-macro-rx"></block>.</block>
   <block id="68b25f35698ade6b2d3fe83dec7cf861" category="paragraph">프리미엄 라이센스를 사용하면 이메일 알림을 통해 FlexPod 인프라 변경에 대해 경고하는 알림을 설정할 수 있습니다.<block ref="ebe1a4d3225f5bb69764eba03129edce" category="inline-link-macro-rx"></block></block>
-  <block id="b44a488d2f5dc6040330205f250e7850" category="section-title">고정 IP 주소를 설정합니다</block>
   <block id="db15846e3abf8485dbf81a496e64d90a" category="paragraph">환경에 DHCP 서버가 없는 경우 Converged Systems Advisor 에이전트에서 고정 IP 주소를 설정할 수 있습니다.<block ref="708dd38422a6a2d257990b66f3dbd251" category="inline-link-macro-rx"></block></block>
   <block id="b689686306a7a611fc6499acdfee3772" category="summary">Converged Systems Advisor는 FlexPod 인프라 구축을 검증하고 지속적인 모니터링 및 알림을 제공하여 비즈니스 연속성을 보장합니다.</block>
   <block id="4daf49986af67aba8f5e944968d88167" category="doc">Converged Systems Advisor 개요</block>
@@ -777,4 +773,21 @@
   <block id="b7b722eea69a1d2e85256ecaa18b4620" category="sidebar">규칙 모니터링</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">문제 해결</block>
   <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="sidebar">관련 링크</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">작업을 마친 후</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">결과</block>
+  <block id="6e5bc02812454d72aa1b3361bc2f6c73" category="inline-image-macro">1번</block>
+  <block id="559f8475e1ff74d0a5b077794558916f" category="section-title"><block ref="dc5de6e35d5028cc4c0b89b89e621258" category="inline-image-macro-rx" type="image"></block> 환경을 준비합니다</block>
+  <block id="3db14b7ee6183c9d58f1e9d5e8e63efd" category="inline-image-macro">2번</block>
+  <block id="bc83ea51badfd0910cc8d7bae37d8acd" category="section-title"><block ref="8a21168e601d45e544969f8d2c358917" category="inline-image-macro-rx" type="image"></block> FlexPod 장치에서 계정을 만듭니다</block>
+  <block id="9f3ebc84fe13f3200262a9c4b7c9807d" category="inline-image-macro">3번</block>
+  <block id="3e12ab5fae17206c542331228866ed0d" category="section-title"><block ref="436aa95806ef0877809848921c187b08" category="inline-image-macro-rx" type="image"></block> TACACS+ 서버를 사용하여 CSA 사용자 권한을 부여합니다</block>
+  <block id="86f188df3015051c771264e12c69d0e4" category="inline-image-macro">4번</block>
+  <block id="511da2848c80f269eb677e5a5710cbcd" category="section-title"><block ref="b0069e021ff5287a729b22bfea26bbe1" category="inline-image-macro-rx" type="image"></block> 에이전트를 설정하고 배포합니다</block>
+  <block id="5870ed875d2bc967928d9a48d0bcac54" category="inline-image-macro">5번</block>
+  <block id="3a9f59ee192096314f07968a153e54b2" category="section-title"><block ref="c76f59d4b1b742813df5111ab3a44f58" category="inline-image-macro-rx" type="image"></block> 포털에서 인프라 추가/공유</block>
+  <block id="efd2db6ed66cb68b1ef85f7fc95f01ef" category="inline-image-macro">번호6</block>
+  <block id="000de680812539d81f6b9eb895793c90" category="section-title"><block ref="434171cc767ea1c526904692eaabbd08" category="inline-image-macro-rx" type="image"></block> 알림을 구성합니다</block>
+  <block id="71bb2e8e85702bc6dc8fe49bc2ca2664" category="inline-image-macro">번호7</block>
+  <block id="ec82488760b9c067f6a1effc164db7f9" category="section-title"><block ref="a30b4945ccf5eb8b859e8a3c07b0e494" category="inline-image-macro-rx" type="image"></block> 고정 IP 주소를 설정합니다</block>
+  <block id="492e5546e60705134bff8d7f80511a8d" category="section-title">새로운 기능 알아보기</block>
 </blocks>

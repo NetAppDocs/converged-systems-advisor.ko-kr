@@ -31,4 +31,5 @@ image:screenshot_reports_generate.gif["에는 통합 인프라 및 스냅샷 선
 
 
 
+.결과
 Converged Systems Advisor가 보고서를 생성합니다.

@@ -31,4 +31,5 @@ summary: 프리미엄 라이센스가 있는 경우 Converged Systems Advisor는
 . 저장 * 을 클릭합니다.
 
 
+.결과
 이제 Converged Systems Advisor가 통합 인프라와 관련된 사용자에게 이메일 알림을 보냅니다.

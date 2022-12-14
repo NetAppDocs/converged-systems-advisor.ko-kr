@@ -18,49 +18,49 @@ FlexPod용 Converged Systems Advisor 에이전트 및 포털 시작 단계에는
 
 
 
-== 환경을 준비합니다
+== image:number1.png["1번"] 환경을 준비합니다
 
 [role="quick-margin-para"]
 구성에 대한 지원을 확인합니다. link:task_prepare_environment.html["환경을 준비합니다"].
 
 
 
-== FlexPod 장치에서 계정을 만듭니다
+== image:number2.png["2번"] FlexPod 장치에서 계정을 만듭니다
 
 [role="quick-margin-para"]
 Cisco UCS Manager, Cisco Nexus 스위치, ONTAP 시스템, VMware 및 APIC에서 계정을 설정합니다. 이러한 계정은 구성 데이터를 수집하는 데 사용됩니다.link:task_create_accounts_flexpod_devices.html["FlexPod 장치에서 계정을 만듭니다"].
 
 
 
-== TACACS+ 서버를 사용하여 CSA 사용자 권한을 부여합니다
+== image:number3.png["3번"] TACACS+ 서버를 사용하여 CSA 사용자 권한을 부여합니다
 
 [role="quick-margin-para"]
 TACACS+ 서버를 사용하는 경우, 스위치에 대한 CSA 사용자 권한을 부여하고, 사용자 권한 그룹을 생성하고, CSA에 필요한 특정 설정 명령에 대한 그룹 액세스 권한을 부여해야 합니다.link:task_grant_user_privileges.html["TACACS+ 서버를 사용하여 CSA 사용자 권한을 부여합니다"]
 
 
 
-== 에이전트를 설정하고 배포합니다
+== image:number4.png["4번"] 에이전트를 설정하고 배포합니다
 
 [role="quick-margin-para"]
 VMware ESXi 서버에 Converged Systems Advisor 에이전트를 구축합니다. 에이전트는 FlexPod 통합 인프라의 각 장치에 대한 구성 데이터를 수집하여 해당 데이터를 Converged Systems Advisor 포털로 전송합니다.link:task_setup_deploy_agent.html["에이전트를 배포합니다"].
 
 
 
-== 포털에서 인프라 추가/공유
+== image:number5.png["5번"] 포털에서 인프라 추가/공유
 
 [role="quick-margin-para"]
 Converged Systems Advisor 포털에 각 FlexPod 디바이스를 추가하여 모니터링할 수 있는 전체 인프라를 생성합니다. 또한 통합 인프라를 공유하여 다른 사용자가 포털에 로그인하여 구성을 보고 모니터링할 수 있도록 할 수 있습니다.link:task_add_infrastructure.html["포털에서 인프라 추가 및 공유"].
 
 
 
-== 알림을 구성합니다
+== image:number6.png["번호6"] 알림을 구성합니다
 
 [role="quick-margin-para"]
 프리미엄 라이센스를 사용하면 이메일 알림을 통해 FlexPod 인프라 변경에 대해 경고하는 알림을 설정할 수 있습니다.link:task_configure_notifications.html["알림을 구성합니다"]
 
 
 
-== 고정 IP 주소를 설정합니다
+== image:number7.png["번호7"] 고정 IP 주소를 설정합니다
 
 [role="quick-margin-para"]
 환경에 DHCP 서버가 없는 경우 Converged Systems Advisor 에이전트에서 고정 IP 주소를 설정할 수 있습니다.link:task_setting_static_ip.html["에이전트에 정적 IP 주소를 설정합니다"]

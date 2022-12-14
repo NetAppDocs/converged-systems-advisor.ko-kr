@@ -32,6 +32,7 @@ summary: 파트너 또는 리셀러로서 클라이언트 인프라의 배포를
 * 필요에 따라 다른 사용자와 인프라를 공유했습니다.
 
 
+.단계
 파트너와 리셀러는 고유한 NetApp 자격 증명을 사용하여 CSA 포털에 로그인하여 검증 프로세스를 시작합니다.
 
 . 에 로그인합니다 https://csa.netapp.com/["Converged Systems Advisor 포털"^] NetApp 자격 증명을 사용합니다.
