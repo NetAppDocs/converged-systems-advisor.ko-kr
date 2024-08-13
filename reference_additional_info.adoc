@@ -16,11 +16,11 @@ summary: 다양한 리소스를 통해 도움을 받고 Converged Systems Adviso
 [role="lead"]
 다양한 리소스를 통해 도움을 받고 Converged Systems Advisor에 대한 자세한 정보를 확인할 수 있습니다.
 
-* https://www.netapp.com/us/media/ds-3896.pdf["Converged Systems Advisor 데이터시트"^]
+* https://www.netapp.com/data-storage/flexpod/cooperative-support/["Converged Systems Advisor 데이터시트"^]
 +
 Converged Systems Advisor가 제공하는 가치에 대한 자세한 내용은
 
-* https://www.netapp.com/us/media/tr-4036.pdf["NetApp 기술 보고서 4036: FlexPod 데이터 센터 기술 사양"^]
+* https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_solution_overview.html["NetApp 기술 보고서 4036: FlexPod 데이터 센터 기술 사양"^]
 +
 Converged Systems Advisor가 구성을 비교하는 모범 사례 및 펌웨어 요구사항을 검토합니다.
 

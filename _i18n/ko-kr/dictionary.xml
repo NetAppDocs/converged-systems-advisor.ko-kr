@@ -648,14 +648,11 @@
   <block id="4daf49986af67aba8f5e944968d88167" category="doc">Converged Systems Advisor 개요</block>
   <block id="b3072b853bb7e155aaf1f74dc7548418" category="paragraph">다음 비디오에서 Converged Systems Advisor에 대한 개요를 확인하십시오.</block>
   <block id="fccce43bca628d5f348a9d60196dd5ac" category="inline-link">데이터시트를 읽어 보십시오</block>
-  <block id="c4a6f4e43c995f810acb8c7b73e0d5d1" category="paragraph">Converged Systems Advisor가 제공하는 가치에 대한 자세한 내용은<block ref="f25cd14a6ee6a3fdd35c3bb14df6ae32" category="inline-link-rx"></block>.</block>
   <block id="70a81ab3570971044c051a122f25ee0b" category="summary">다양한 리소스를 통해 도움을 받고 Converged Systems Advisor에 대한 자세한 정보를 확인할 수 있습니다.</block>
   <block id="3cd12697cda279c9c99b093a265c1ba8" category="doc">도움을 받을 수 있는 곳 및 자세한 정보를 얻을 수 있는 곳</block>
   <block id="ba69e3ff884a3e60e26bcffcb121315d" category="inline-link">Converged Systems Advisor 데이터시트</block>
-  <block id="5bcf85e8807e9d7961fa86529a7ee3ac" category="list-text"><block ref="5bcf85e8807e9d7961fa86529a7ee3ac" category="inline-link-rx"></block></block>
   <block id="b1b49e994988385600e529f9e03aeded" category="paragraph">Converged Systems Advisor가 제공하는 가치에 대한 자세한 내용은</block>
   <block id="5768a4e6671c0fb61f9cc9bccc217998" category="inline-link">NetApp 기술 보고서 4036: FlexPod 데이터 센터 기술 사양</block>
-  <block id="9569519d894aa3e75942763a12a60c12" category="list-text"><block ref="9569519d894aa3e75942763a12a60c12" category="inline-link-rx"></block></block>
   <block id="d5ae438f326f42644223635842ca89cc" category="paragraph">Converged Systems Advisor가 구성을 비교하는 모범 사례 및 펌웨어 요구사항을 검토합니다.</block>
   <block id="b1540a3ec25c7d8277b499a1cc1d920b" category="list-text"><block ref="b1540a3ec25c7d8277b499a1cc1d920b" category="inline-link-rx"></block></block>
   <block id="b9c8769caa39394587c227d447b7343b" category="paragraph">구성에 대한 지원을 확인합니다.</block>
@@ -790,4 +787,7 @@
   <block id="71bb2e8e85702bc6dc8fe49bc2ca2664" category="inline-image-macro">번호7</block>
   <block id="ec82488760b9c067f6a1effc164db7f9" category="section-title"><block ref="a30b4945ccf5eb8b859e8a3c07b0e494" category="inline-image-macro-rx" type="image"></block> 고정 IP 주소를 설정합니다</block>
   <block id="492e5546e60705134bff8d7f80511a8d" category="section-title">새로운 기능 알아보기</block>
+  <block id="671f9fcb308d27b5e6c67487a132689b" category="paragraph">Converged Systems Advisor가 제공하는 가치에 대한 자세한 내용은 을 참조하십시오<block ref="fc23d3c004c60b82dbfd031bd239bfab" category="inline-link-rx"></block>.</block>
+  <block id="87f06a4b2aacd95154431aea948042fa" category="list-text"><block ref="87f06a4b2aacd95154431aea948042fa" category="inline-link-rx"></block></block>
+  <block id="cf7b58ed3bc4022cb990fe98807b8da5" category="list-text"><block ref="cf7b58ed3bc4022cb990fe98807b8da5" category="inline-link-rx"></block></block>
 </blocks>
